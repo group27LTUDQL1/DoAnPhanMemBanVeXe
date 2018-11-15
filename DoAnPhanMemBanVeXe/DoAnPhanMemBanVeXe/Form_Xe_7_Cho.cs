@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DoAnPhanMemBanVeXe
 {
-    public partial class Form1 : Form
+    public partial class Form_Xe_7_Cho : Form
     {
-        public Form1()
+        public Form_Xe_7_Cho()
         {
             InitializeComponent();
         }
