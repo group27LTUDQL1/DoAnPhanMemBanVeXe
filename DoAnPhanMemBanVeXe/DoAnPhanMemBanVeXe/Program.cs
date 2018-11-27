@@ -9,7 +9,7 @@ namespace DoAnPhanMemBanVeXe
     static class Program
     {
         /// <summary>
-        /// The main entry point for the application.//hellowolrd
+        /// The main entry point for the application.//hello
         /// </summary>
         [STAThread]
         static void Main()
