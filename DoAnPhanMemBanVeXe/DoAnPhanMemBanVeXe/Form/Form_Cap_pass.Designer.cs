@@ -36,7 +36,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "Form_Cap_pass";
-            this.Text = "Form1";
+            this.Text = "Cấp Password";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 

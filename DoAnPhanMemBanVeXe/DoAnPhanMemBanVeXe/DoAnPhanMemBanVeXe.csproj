@@ -46,75 +46,75 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form_Cap_pass.cs">
+    <Compile Include="Form\Form_Cap_pass.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Cap_pass.Designer.cs">
+    <Compile Include="Form\Form_Cap_pass.Designer.cs">
       <DependentUpon>Form_Cap_pass.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_ChiTietTuyen.cs">
+    <Compile Include="Form\Form_ChiTietTuyen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_ChiTietTuyen.Designer.cs">
+    <Compile Include="Form\Form_ChiTietTuyen.Designer.cs">
       <DependentUpon>Form_ChiTietTuyen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Login.cs">
+    <Compile Include="Form\Form_Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Login.Designer.cs">
+    <Compile Include="Form\Form_Login.Designer.cs">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Main.cs">
+    <Compile Include="Form\Form_Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Main.Designer.cs">
+    <Compile Include="Form\Form_Main.Designer.cs">
       <DependentUpon>Form_Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Xe_16_Cho.cs">
+    <Compile Include="Form\Form_Xe_16_Cho.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Xe_16_Cho.Designer.cs">
+    <Compile Include="Form\Form_Xe_16_Cho.Designer.cs">
       <DependentUpon>Form_Xe_16_Cho.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Xe_25_Cho.cs">
+    <Compile Include="Form\Form_Xe_25_Cho.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Xe_25_Cho.Designer.cs">
+    <Compile Include="Form\Form_Xe_25_Cho.Designer.cs">
       <DependentUpon>Form_Xe_25_Cho.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Xe_45_Cho.cs">
+    <Compile Include="Form\Form_Xe_45_Cho.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Xe_45_Cho.Designer.cs">
+    <Compile Include="Form\Form_Xe_45_Cho.Designer.cs">
       <DependentUpon>Form_Xe_45_Cho.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Phan_Quyen.cs">
+    <Compile Include="Form\Form_Phan_Quyen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Phan_Quyen.Designer.cs">
+    <Compile Include="Form\Form_Phan_Quyen.Designer.cs">
       <DependentUpon>Form_Phan_Quyen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Xe_30_Cho.cs">
+    <Compile Include="Form\Form_Xe_30_Cho.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Xe_30_Cho.Designer.cs">
+    <Compile Include="Form\Form_Xe_30_Cho.Designer.cs">
       <DependentUpon>Form_Xe_30_Cho.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Xe_7_Cho.cs">
+    <Compile Include="Form\Form_Xe_7_Cho.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Xe_7_Cho.Designer.cs">
+    <Compile Include="Form\Form_Xe_7_Cho.Designer.cs">
       <DependentUpon>Form_Xe_7_Cho.cs</DependentUpon>
     </Compile>
-    <Compile Include="Information.cs">
+    <Compile Include="Form\Information.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Information.Designer.cs">
+    <Compile Include="Form\Information.Designer.cs">
       <DependentUpon>Information.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form_Cap_pass.resx">
+    <EmbeddedResource Include="Form\Form_Cap_pass.resx">
       <DependentUpon>Form_Cap_pass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -125,6 +125,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -138,6 +139,126 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Library\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-user-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bus-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_ok.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cap_pass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\configure.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\db_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\db_add1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\db_comit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\db_remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\db_status.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\db_update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_add.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editdelete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-user-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ferme.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fermer-session.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GanXe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GanXe1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hanh_khach.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logout1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Money-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\payment-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phanquyen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phanquyen1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove-user-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\twitter-bus-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\twitter-bus-purple-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upload-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-icon11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-login-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
