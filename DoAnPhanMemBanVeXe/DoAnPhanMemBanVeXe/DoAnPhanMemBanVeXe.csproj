@@ -112,6 +112,8 @@
     <Compile Include="Form\Information.Designer.cs">
       <DependentUpon>Information.cs</DependentUpon>
     </Compile>
+    <Compile Include="Library\Ban_ve.cs" />
+    <Compile Include="Library\Ket_noi.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form\Form_Cap_pass.resx">
@@ -140,9 +142,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Library\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\add-user-icon.png" />
   </ItemGroup>
