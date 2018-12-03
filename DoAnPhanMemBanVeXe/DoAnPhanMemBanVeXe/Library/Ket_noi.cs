@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace DoAnPhanMemBanVeXe.Library
 {
-    class Ket_noi
+    public class Ket_noi
     {
         public static SqlConnection connect;
 
@@ -21,7 +21,7 @@ namespace DoAnPhanMemBanVeXe.Library
             }
         }
 
-        public static DataTable Doc_bang(string lenh)
+        public DataTable Doc_bang(string lenh)
         {
             Tao_ket_noi();
             System.Data.DataTable bang = new System.Data.DataTable();

@@ -32,10 +32,9 @@ namespace DoAnPhanMemBanVeXe.Library
         private void doc_bang_ve()
         {
             Ket_noi ketnoi = new Ket_noi();
-            lenh = "Select IdVe, TenHanhKhach, SDTHanhKhach, TenTuyen, NgayDi, Gio, So_Xe from BanVe, ChuyenXe, TuyenXe ";
-            lenh += " where BanVe.IdChuyen = ChuyenXe.IdChuyen and ChuyenXe.IdTuyen = TuyenXe.IdTuyen";
+            lenh = "Select IdVe, TenHanhKhach, SDTHanhKhach, TenTuyen, NgayDi, Gio, So_Xe from BanVe, ChuyenXe, TuyenXe where BanVe.IdChuyen = ChuyenXe.IdChuyen and ChuyenXe.IdTuyen = TuyenXe.IdTuyen";
             
-            bang_dat_ve = Doc_bang(lenh);
+            bang_dat_ve = ketnoi.Doc_bang(lenh);
             {
                 var withBlock = Form_Main.cbo_MaSoVe;
                 withBlock.DataSource = bang_dat_ve;
