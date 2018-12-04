@@ -19,7 +19,18 @@ namespace DoAnPhanMemBanVeXe
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
+        }
 
+        /// <summary>
+        /// sự kiện đóng form ấn button thoát
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void cmdExit_Click(object sender, EventArgs e)
+        {
+            Timer_Doi_Anh.Stop();
+            this.Close();
         }
     }
 }

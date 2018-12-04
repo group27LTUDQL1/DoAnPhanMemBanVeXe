@@ -28,14 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txt_IdNguoiDung = new System.Windows.Forms.TextBox();
             this.txt_NewPassword = new System.Windows.Forms.TextBox();
+            this.txt_IdNguoiDung = new System.Windows.Forms.TextBox();
             this.btn_DongY = new System.Windows.Forms.Button();
             this.cmdExit = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Timer_Doi_Anh = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -74,19 +76,19 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nhập thông tin tài khoản mới";
             // 
-            // txt_IdNguoiDung
-            // 
-            this.txt_IdNguoiDung.Location = new System.Drawing.Point(114, 30);
-            this.txt_IdNguoiDung.Name = "txt_IdNguoiDung";
-            this.txt_IdNguoiDung.Size = new System.Drawing.Size(230, 26);
-            this.txt_IdNguoiDung.TabIndex = 2;
-            // 
             // txt_NewPassword
             // 
             this.txt_NewPassword.Location = new System.Drawing.Point(114, 66);
             this.txt_NewPassword.Name = "txt_NewPassword";
             this.txt_NewPassword.Size = new System.Drawing.Size(230, 26);
             this.txt_NewPassword.TabIndex = 3;
+            // 
+            // txt_IdNguoiDung
+            // 
+            this.txt_IdNguoiDung.Location = new System.Drawing.Point(114, 30);
+            this.txt_IdNguoiDung.Name = "txt_IdNguoiDung";
+            this.txt_IdNguoiDung.Size = new System.Drawing.Size(230, 26);
+            this.txt_IdNguoiDung.TabIndex = 2;
             // 
             // btn_DongY
             // 
@@ -105,6 +107,7 @@
             this.cmdExit.TabIndex = 4;
             this.cmdExit.Text = "Thoát";
             this.cmdExit.UseVisualStyleBackColor = true;
+            this.cmdExit.Click += new System.EventHandler(this.cmdExit_Click);
             // 
             // pictureBox1
             // 
@@ -115,6 +118,10 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
+            // 
+            // Timer_Doi_Anh
+            // 
+            this.Timer_Doi_Anh.Interval = 1000;
             // 
             // Form_Cap_pass
             // 
@@ -145,6 +152,7 @@
         private System.Windows.Forms.Button btn_DongY;
         private System.Windows.Forms.Button cmdExit;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Timer Timer_Doi_Anh;
     }
 }
 
