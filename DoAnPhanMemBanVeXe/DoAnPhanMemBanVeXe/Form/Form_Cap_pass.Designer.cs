@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -37,7 +36,6 @@
             this.btn_DongY = new System.Windows.Forms.Button();
             this.cmdExit = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Timer_Doi_Anh = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -119,10 +117,6 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
-            // Timer_Doi_Anh
-            // 
-            this.Timer_Doi_Anh.Interval = 1000;
-            // 
             // Form_Cap_pass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -152,7 +146,6 @@
         private System.Windows.Forms.Button btn_DongY;
         private System.Windows.Forms.Button cmdExit;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Timer Timer_Doi_Anh;
     }
 }
 
