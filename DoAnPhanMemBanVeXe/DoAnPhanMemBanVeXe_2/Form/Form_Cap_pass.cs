@@ -37,5 +37,10 @@ namespace DoAnPhanMemBanVeXe_2
             Timer_Doi_Anh.Stop();
             this.Close();
         }
+
+        private void ReflectionLabel_ChaoMung_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

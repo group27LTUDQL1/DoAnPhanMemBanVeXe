@@ -98,6 +98,7 @@
             this.ReflectionLabel_ChaoMung.Size = new System.Drawing.Size(521, 67);
             this.ReflectionLabel_ChaoMung.TabIndex = 8;
             this.ReflectionLabel_ChaoMung.Text = "CẤP PASS CHO NGƯỜI DÙNG";
+            this.ReflectionLabel_ChaoMung.Click += new System.EventHandler(this.ReflectionLabel_ChaoMung_Click);
             // 
             // LinkLabelLanguague
             // 
