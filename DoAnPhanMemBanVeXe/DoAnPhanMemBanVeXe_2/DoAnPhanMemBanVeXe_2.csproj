@@ -65,6 +65,12 @@
     <Compile Include="Form\Form_Cap_pass.Designer.cs">
       <DependentUpon>Form_Cap_pass.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\Form_ChiTietTuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form_ChiTietTuyen.Designer.cs">
+      <DependentUpon>Form_ChiTietTuyen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -75,6 +81,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Form_Cap_pass.resx">
       <DependentUpon>Form_Cap_pass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form_ChiTietTuyen.resx">
+      <DependentUpon>Form_ChiTietTuyen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
