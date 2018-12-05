@@ -31,6 +31,7 @@
             this.PanelEx1 = new DevComponents.DotNetBar.PanelEx();
             this.ReflectionLabel1 = new DevComponents.DotNetBar.Controls.ReflectionLabel();
             this.GroupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.labelX13 = new DevComponents.DotNetBar.LabelX();
             this.LabelX11 = new DevComponents.DotNetBar.LabelX();
             this.LabelX10 = new DevComponents.DotNetBar.LabelX();
             this.LabelX9 = new DevComponents.DotNetBar.LabelX();
@@ -44,7 +45,6 @@
             this.LabelX4 = new DevComponents.DotNetBar.LabelX();
             this.LabelX3 = new DevComponents.DotNetBar.LabelX();
             this.LabelX1 = new DevComponents.DotNetBar.LabelX();
-            this.labelX13 = new DevComponents.DotNetBar.LabelX();
             this.PanelEx1.SuspendLayout();
             this.GroupPanel2.SuspendLayout();
             this.GroupPanel1.SuspendLayout();
@@ -88,6 +88,7 @@
             // 
             // GroupPanel2
             // 
+            this.GroupPanel2.BackColor = System.Drawing.Color.White;
             this.GroupPanel2.CanvasColor = System.Drawing.SystemColors.Control;
             this.GroupPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.GroupPanel2.Controls.Add(this.labelX13);
@@ -131,6 +132,19 @@
             this.GroupPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.GroupPanel2.TabIndex = 0;
             this.GroupPanel2.Text = "Đôi nét về chúng tôi";
+            // 
+            // labelX13
+            // 
+            // 
+            // 
+            // 
+            this.labelX13.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX13.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelX13.Location = new System.Drawing.Point(61, 148);
+            this.labelX13.Name = "labelX13";
+            this.labelX13.Size = new System.Drawing.Size(178, 23);
+            this.labelX13.TabIndex = 1;
+            this.labelX13.Text = "1660348: Nguyễn Hoàng Minh";
             // 
             // LabelX11
             // 
@@ -182,7 +196,7 @@
             this.LabelX8.Name = "LabelX8";
             this.LabelX8.Size = new System.Drawing.Size(272, 23);
             this.LabelX8.TabIndex = 0;
-            this.LabelX8.Text = "- Tất cả đều là sinh viên lớp 08ck2 khóa 2008";
+            this.LabelX8.Text = "- Tất cả đều là sinh viên lớp 16CK2 khóa 2016";
             // 
             // LabelX12
             // 
@@ -333,19 +347,6 @@
             this.LabelX1.Size = new System.Drawing.Size(404, 23);
             this.LabelX1.TabIndex = 0;
             this.LabelX1.Text = "Phần mềm hố trợ công ty xe khách đường dài bán vé xe cho khách hàng.";
-            // 
-            // labelX13
-            // 
-            // 
-            // 
-            // 
-            this.labelX13.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX13.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelX13.Location = new System.Drawing.Point(61, 148);
-            this.labelX13.Name = "labelX13";
-            this.labelX13.Size = new System.Drawing.Size(178, 23);
-            this.labelX13.TabIndex = 1;
-            this.labelX13.Text = "1660348: Nguyễn Hoàng Minh";
             // 
             // Infomation
             // 
