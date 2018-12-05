@@ -68,7 +68,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         private void TimerClosing_Tick(object sender, EventArgs e)
         {
-            /*this.Opacity -= 0.05;
+            this.Opacity -= 0.05;
             if (this.Opacity == 0)
             {
                 TimerClosing.Stop();
@@ -76,9 +76,9 @@ namespace DoAnPhanMemBanVeXe_2
                 Timer1.Stop();
                 flag = false;
                 this.Visible = false;
-                Form_Main.Show();
-                Form_Main.WindowState = FormWindowState.Maximized;
-            }*/
+                /*Form_Main.Show();
+                Form_Main.WindowState = FormWindowState.Maximized;*/
+            }
         }
     }
 }
