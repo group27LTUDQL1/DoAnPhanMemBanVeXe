@@ -188,5 +188,8 @@
   <ItemGroup>
     <None Include="Resources\user-login-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Form\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
