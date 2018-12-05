@@ -77,6 +77,7 @@
             // 
             // PictureBox1
             // 
+            this.PictureBox1.Image = global::DoAnPhanMemBanVeXe_2.Properties.Resources.ferme;
             this.PictureBox1.Location = new System.Drawing.Point(22, 100);
             this.PictureBox1.Name = "PictureBox1";
             this.PictureBox1.Size = new System.Drawing.Size(132, 120);
