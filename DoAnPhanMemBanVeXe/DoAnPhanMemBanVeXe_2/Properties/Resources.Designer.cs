@@ -103,6 +103,16 @@ namespace DoAnPhanMemBanVeXe_2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap login1 {
+            get {
+                object obj = ResourceManager.GetObject("login1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap user_login_icon {
             get {
                 object obj = ResourceManager.GetObject("user-login-icon", resourceCulture);
