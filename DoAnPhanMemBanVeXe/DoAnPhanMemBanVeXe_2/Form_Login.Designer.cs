@@ -34,8 +34,6 @@
             this.Timer2 = new System.Windows.Forms.Timer(this.components);
             this.TimerClosing = new System.Windows.Forms.Timer(this.components);
             this.Timer1 = new System.Windows.Forms.Timer(this.components);
-            this.PictureBox2 = new System.Windows.Forms.PictureBox();
-            this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.ReflectionLabel1 = new DevComponents.DotNetBar.Controls.ReflectionLabel();
             this.lblChaoMung = new DevComponents.DotNetBar.Controls.ReflectionLabel();
             this.LinkLabel_Language = new System.Windows.Forms.LinkLabel();
@@ -53,10 +51,12 @@
             this.DockContainerItem2 = new DevComponents.DotNetBar.DockContainerItem();
             this.DockContainerItem1 = new DevComponents.DotNetBar.DockContainerItem();
             this.DockContainerItem4 = new DevComponents.DotNetBar.DockContainerItem();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
+            this.PictureBox2 = new System.Windows.Forms.PictureBox();
+            this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.PanelEx1.SuspendLayout();
             this.PanelLogin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // styleManager1
@@ -68,31 +68,17 @@
             // 
             this.Timer2.Enabled = true;
             this.Timer2.Interval = 300;
+            this.Timer2.Tick += new System.EventHandler(this.Timer2_Tick);
+            // 
+            // TimerClosing
+            // 
+            this.TimerClosing.Tick += new System.EventHandler(this.TimerClosing_Tick);
             // 
             // Timer1
             // 
             this.Timer1.Enabled = true;
             this.Timer1.Interval = 400;
-            // 
-            // PictureBox2
-            // 
-            this.PictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.PictureBox2.Location = new System.Drawing.Point(24, 69);
-            this.PictureBox2.Name = "PictureBox2";
-            this.PictureBox2.Size = new System.Drawing.Size(157, 140);
-            this.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictureBox2.TabIndex = 10;
-            this.PictureBox2.TabStop = false;
-            // 
-            // PictureBox1
-            // 
-            this.PictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.PictureBox1.Location = new System.Drawing.Point(24, 69);
-            this.PictureBox1.Name = "PictureBox1";
-            this.PictureBox1.Size = new System.Drawing.Size(157, 140);
-            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictureBox1.TabIndex = 9;
-            this.PictureBox1.TabStop = false;
+            this.Timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
             // ReflectionLabel1
             // 
@@ -101,11 +87,12 @@
             // 
             this.ReflectionLabel1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ReflectionLabel1.ForeColor = System.Drawing.Color.Blue;
-            this.ReflectionLabel1.Location = new System.Drawing.Point(24, 267);
+            this.ReflectionLabel1.Location = new System.Drawing.Point(12, 267);
             this.ReflectionLabel1.Name = "ReflectionLabel1";
-            this.ReflectionLabel1.Size = new System.Drawing.Size(158, 43);
+            this.ReflectionLabel1.Size = new System.Drawing.Size(219, 43);
             this.ReflectionLabel1.TabIndex = 8;
-            this.ReflectionLabel1.Text = "<b><font size=\"+4\"><font color=\"#B02B2C\">Have a nice day!</font></font></b>";
+            this.ReflectionLabel1.Text = "<b><font size=\"+4\"><font color=\"#B02B2C\">Chúc một ngày tốt lành</font></font></b>" +
+    "";
             // 
             // lblChaoMung
             // 
@@ -114,11 +101,11 @@
             // 
             this.lblChaoMung.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblChaoMung.ForeColor = System.Drawing.Color.Blue;
-            this.lblChaoMung.Location = new System.Drawing.Point(68, 222);
+            this.lblChaoMung.Location = new System.Drawing.Point(51, 222);
             this.lblChaoMung.Name = "lblChaoMung";
-            this.lblChaoMung.Size = new System.Drawing.Size(71, 43);
+            this.lblChaoMung.Size = new System.Drawing.Size(130, 43);
             this.lblChaoMung.TabIndex = 8;
-            this.lblChaoMung.Text = "<b><font size=\"+8\"><font color=\"#B02B2C\">Login!</font></font></b>";
+            this.lblChaoMung.Text = "<b><font size=\"+8\"><font color=\"#B02B2C\">Đăng nhập</font></font></b>";
             // 
             // LinkLabel_Language
             // 
@@ -209,7 +196,7 @@
             this.Label_HuongDan.Name = "Label_HuongDan";
             this.Label_HuongDan.Size = new System.Drawing.Size(282, 36);
             this.Label_HuongDan.TabIndex = 0;
-            this.Label_HuongDan.Text = "Please enter your own UserName and Password";
+            this.Label_HuongDan.Text = "Nhập UserName và Password của bạn";
             // 
             // cmdExit
             // 
@@ -222,7 +209,8 @@
             this.cmdExit.Size = new System.Drawing.Size(84, 23);
             this.cmdExit.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cmdExit.TabIndex = 6;
-            this.cmdExit.Text = "&Exit";
+            this.cmdExit.Text = "Thoát";
+            this.cmdExit.Click += new System.EventHandler(this.cmdExit_Click);
             // 
             // cmdLogin
             // 
@@ -234,7 +222,7 @@
             this.cmdLogin.Name = "cmdLogin";
             this.cmdLogin.Size = new System.Drawing.Size(87, 23);
             this.cmdLogin.TabIndex = 5;
-            this.cmdLogin.Text = "&Login";
+            this.cmdLogin.Text = "Đăng nhập";
             // 
             // txtUserName
             // 
@@ -318,6 +306,28 @@
             this.DockContainerItem4.Name = "DockContainerItem4";
             this.DockContainerItem4.Text = "DockContainerItem4";
             // 
+            // PictureBox2
+            // 
+            this.PictureBox2.Image = global::DoAnPhanMemBanVeXe_2.Properties.Resources.bus_icon;
+            this.PictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.PictureBox2.Location = new System.Drawing.Point(37, 76);
+            this.PictureBox2.Name = "PictureBox2";
+            this.PictureBox2.Size = new System.Drawing.Size(157, 140);
+            this.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBox2.TabIndex = 12;
+            this.PictureBox2.TabStop = false;
+            // 
+            // PictureBox1
+            // 
+            this.PictureBox1.Image = global::DoAnPhanMemBanVeXe_2.Properties.Resources.user_login_icon;
+            this.PictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.PictureBox1.Location = new System.Drawing.Point(37, 76);
+            this.PictureBox1.Name = "PictureBox1";
+            this.PictureBox1.Size = new System.Drawing.Size(157, 140);
+            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBox1.TabIndex = 11;
+            this.PictureBox1.TabStop = false;
+            // 
             // Form_Login
             // 
             this.AcceptButton = this.cmdLogin;
@@ -330,11 +340,11 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             this.PanelEx1.ResumeLayout(false);
             this.PanelLogin.ResumeLayout(false);
             this.PanelLogin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -345,8 +355,6 @@
         internal System.Windows.Forms.Timer Timer2;
         internal System.Windows.Forms.Timer TimerClosing;
         internal System.Windows.Forms.Timer Timer1;
-        internal System.Windows.Forms.PictureBox PictureBox2;
-        internal System.Windows.Forms.PictureBox PictureBox1;
         internal DevComponents.DotNetBar.Controls.ReflectionLabel ReflectionLabel1;
         internal DevComponents.DotNetBar.Controls.ReflectionLabel lblChaoMung;
         internal System.Windows.Forms.LinkLabel LinkLabel_Language;
@@ -364,5 +372,7 @@
         internal DevComponents.DotNetBar.DockContainerItem DockContainerItem2;
         internal DevComponents.DotNetBar.DockContainerItem DockContainerItem1;
         internal DevComponents.DotNetBar.DockContainerItem DockContainerItem4;
+        internal System.Windows.Forms.PictureBox PictureBox2;
+        internal System.Windows.Forms.PictureBox PictureBox1;
     }
 }

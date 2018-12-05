@@ -63,9 +63,29 @@ namespace DoAnPhanMemBanVeXe_2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bus_icon {
+            get {
+                object obj = ResourceManager.GetObject("bus-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconfinder_key_36509 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_key_36509", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_login_icon {
+            get {
+                object obj = ResourceManager.GetObject("user-login-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
