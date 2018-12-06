@@ -38,8 +38,6 @@
             this.lblChaoMung = new DevComponents.DotNetBar.Controls.ReflectionLabel();
             this.PanelEx1 = new DevComponents.DotNetBar.PanelEx();
             this.PanelLogin = new DevComponents.DotNetBar.PanelEx();
-            this.PictureBox2 = new System.Windows.Forms.PictureBox();
-            this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.LinkLabelLanguague = new System.Windows.Forms.LinkLabel();
             this.Label_HuongDan = new DevComponents.DotNetBar.LabelX();
             this.cmdExit = new DevComponents.DotNetBar.ButtonX();
@@ -52,6 +50,8 @@
             this.DockContainerItem2 = new DevComponents.DotNetBar.DockContainerItem();
             this.DockContainerItem1 = new DevComponents.DotNetBar.DockContainerItem();
             this.DockContainerItem4 = new DevComponents.DotNetBar.DockContainerItem();
+            this.PictureBox2 = new System.Windows.Forms.PictureBox();
+            this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.PanelEx1.SuspendLayout();
             this.PanelLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).BeginInit();
@@ -164,28 +164,6 @@
             this.PanelLogin.StyleMouseOver.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.PanelLogin.TabIndex = 1;
             // 
-            // PictureBox2
-            // 
-            this.PictureBox2.Image = global::DoAnPhanMemBanVeXe_2.Properties.Resources.bus_icon;
-            this.PictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.PictureBox2.Location = new System.Drawing.Point(37, 76);
-            this.PictureBox2.Name = "PictureBox2";
-            this.PictureBox2.Size = new System.Drawing.Size(157, 140);
-            this.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictureBox2.TabIndex = 12;
-            this.PictureBox2.TabStop = false;
-            // 
-            // PictureBox1
-            // 
-            this.PictureBox1.Image = global::DoAnPhanMemBanVeXe_2.Properties.Resources.user_login_icon;
-            this.PictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.PictureBox1.Location = new System.Drawing.Point(37, 76);
-            this.PictureBox1.Name = "PictureBox1";
-            this.PictureBox1.Size = new System.Drawing.Size(157, 140);
-            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictureBox1.TabIndex = 11;
-            this.PictureBox1.TabStop = false;
-            // 
             // LinkLabelLanguague
             // 
             this.LinkLabelLanguague.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -211,7 +189,7 @@
             // 
             this.cmdExit.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.cmdExit.AutoSize = true;
-            this.cmdExit.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.cmdExit.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
             this.cmdExit.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.cmdExit.Location = new System.Drawing.Point(402, 222);
             this.cmdExit.Name = "cmdExit";
@@ -225,7 +203,7 @@
             // 
             this.cmdLogin.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.cmdLogin.AutoSize = true;
-            this.cmdLogin.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.cmdLogin.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
             this.cmdLogin.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.cmdLogin.Location = new System.Drawing.Point(265, 222);
             this.cmdLogin.Name = "cmdLogin";
@@ -314,6 +292,28 @@
             // 
             this.DockContainerItem4.Name = "DockContainerItem4";
             this.DockContainerItem4.Text = "DockContainerItem4";
+            // 
+            // PictureBox2
+            // 
+            this.PictureBox2.Image = global::DoAnPhanMemBanVeXe_2.Properties.Resources.bus_icon;
+            this.PictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.PictureBox2.Location = new System.Drawing.Point(37, 76);
+            this.PictureBox2.Name = "PictureBox2";
+            this.PictureBox2.Size = new System.Drawing.Size(157, 140);
+            this.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBox2.TabIndex = 12;
+            this.PictureBox2.TabStop = false;
+            // 
+            // PictureBox1
+            // 
+            this.PictureBox1.Image = global::DoAnPhanMemBanVeXe_2.Properties.Resources.user_login_icon;
+            this.PictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.PictureBox1.Location = new System.Drawing.Point(37, 76);
+            this.PictureBox1.Name = "PictureBox1";
+            this.PictureBox1.Size = new System.Drawing.Size(157, 140);
+            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBox1.TabIndex = 11;
+            this.PictureBox1.TabStop = false;
             // 
             // Form_Login
             // 
