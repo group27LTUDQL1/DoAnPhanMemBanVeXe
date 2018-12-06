@@ -7,15 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 namespace DoAnPhanMemBanVeXe_2
 {
-    public partial class Form_ChiTietTuyen : Form
+    public partial class Form_Main : Form
     {
-        public Form_ChiTietTuyen()
+        public Form_Main()
         {
             InitializeComponent();
         }
+
+        
     }
 }
