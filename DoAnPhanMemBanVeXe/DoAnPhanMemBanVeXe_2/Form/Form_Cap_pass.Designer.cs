@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.Panel_Cappass = new DevComponents.DotNetBar.PanelEx();
+            this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.ReflectionLabel_ChaoMung = new DevComponents.DotNetBar.Controls.ReflectionLabel();
             this.LinkLabelLanguague = new System.Windows.Forms.LinkLabel();
             this.cmdExit = new DevComponents.DotNetBar.ButtonX();
@@ -39,7 +40,6 @@
             this.Label_Password = new DevComponents.DotNetBar.LabelX();
             this.Label_UserName = new DevComponents.DotNetBar.LabelX();
             this.Timer_Doi_Anh = new System.Windows.Forms.Timer(this.components);
-            this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.Panel_Cappass.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -74,6 +74,17 @@
             this.Panel_Cappass.StyleMouseOver.BackColor1.Color = System.Drawing.Color.PaleGreen;
             this.Panel_Cappass.StyleMouseOver.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.Panel_Cappass.TabIndex = 7;
+      
+            // 
+            // PictureBox1
+            // 
+            this.PictureBox1.Image = global::DoAnPhanMemBanVeXe_2.Properties.Resources.ferme;
+            this.PictureBox1.Location = new System.Drawing.Point(22, 100);
+            this.PictureBox1.Name = "PictureBox1";
+            this.PictureBox1.Size = new System.Drawing.Size(132, 120);
+            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBox1.TabIndex = 9;
+            this.PictureBox1.TabStop = false;
             // 
             // ReflectionLabel_ChaoMung
             // 
@@ -89,7 +100,6 @@
             this.ReflectionLabel_ChaoMung.Size = new System.Drawing.Size(521, 67);
             this.ReflectionLabel_ChaoMung.TabIndex = 8;
             this.ReflectionLabel_ChaoMung.Text = "CẤP PASS CHO NGƯỜI DÙNG";
-            this.ReflectionLabel_ChaoMung.Click += new System.EventHandler(this.ReflectionLabel_ChaoMung_Click);
             // 
             // LinkLabelLanguague
             // 
@@ -111,6 +121,7 @@
             this.cmdExit.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cmdExit.TabIndex = 6;
             this.cmdExit.Text = "&Thoát";
+            this.cmdExit.Click += new System.EventHandler(this.cmdExit_Click);
             // 
             // btn_DongY
             // 
@@ -123,6 +134,7 @@
             this.btn_DongY.Size = new System.Drawing.Size(87, 23);
             this.btn_DongY.TabIndex = 5;
             this.btn_DongY.Text = "&Đồng ý";
+            this.btn_DongY.Click += new System.EventHandler(this.btn_DongY_Click);
             // 
             // txt_IdNguoiDung
             // 
@@ -190,16 +202,6 @@
             // 
             this.Timer_Doi_Anh.Enabled = true;
             this.Timer_Doi_Anh.Interval = 1000;
-            // 
-            // PictureBox1
-            // 
-            this.PictureBox1.Image = global::DoAnPhanMemBanVeXe_2.Properties.Resources.ferme;
-            this.PictureBox1.Location = new System.Drawing.Point(22, 100);
-            this.PictureBox1.Name = "PictureBox1";
-            this.PictureBox1.Size = new System.Drawing.Size(132, 120);
-            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictureBox1.TabIndex = 9;
-            this.PictureBox1.TabStop = false;
             // 
             // Form_Cap_pass
             // 
