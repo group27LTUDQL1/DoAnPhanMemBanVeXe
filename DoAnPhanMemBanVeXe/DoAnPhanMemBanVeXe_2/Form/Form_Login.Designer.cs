@@ -36,9 +36,10 @@
             this.Timer1 = new System.Windows.Forms.Timer(this.components);
             this.ReflectionLabel1 = new DevComponents.DotNetBar.Controls.ReflectionLabel();
             this.lblChaoMung = new DevComponents.DotNetBar.Controls.ReflectionLabel();
-            this.LinkLabel_Language = new System.Windows.Forms.LinkLabel();
             this.PanelEx1 = new DevComponents.DotNetBar.PanelEx();
             this.PanelLogin = new DevComponents.DotNetBar.PanelEx();
+            this.PictureBox2 = new System.Windows.Forms.PictureBox();
+            this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.LinkLabelLanguague = new System.Windows.Forms.LinkLabel();
             this.Label_HuongDan = new DevComponents.DotNetBar.LabelX();
             this.cmdExit = new DevComponents.DotNetBar.ButtonX();
@@ -51,8 +52,6 @@
             this.DockContainerItem2 = new DevComponents.DotNetBar.DockContainerItem();
             this.DockContainerItem1 = new DevComponents.DotNetBar.DockContainerItem();
             this.DockContainerItem4 = new DevComponents.DotNetBar.DockContainerItem();
-            this.PictureBox2 = new System.Windows.Forms.PictureBox();
-            this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.PanelEx1.SuspendLayout();
             this.PanelLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).BeginInit();
@@ -107,17 +106,6 @@
             this.lblChaoMung.TabIndex = 8;
             this.lblChaoMung.Text = "<b><font size=\"+8\"><font color=\"#B02B2C\">Đăng nhập</font></font></b>";
             // 
-            // LinkLabel_Language
-            // 
-            this.LinkLabel_Language.AutoSize = true;
-            this.LinkLabel_Language.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.LinkLabel_Language.Location = new System.Drawing.Point(451, 284);
-            this.LinkLabel_Language.Name = "LinkLabel_Language";
-            this.LinkLabel_Language.Size = new System.Drawing.Size(69, 13);
-            this.LinkLabel_Language.TabIndex = 7;
-            this.LinkLabel_Language.TabStop = true;
-            this.LinkLabel_Language.Text = "Vienamese";
-            // 
             // PanelEx1
             // 
             this.PanelEx1.CanvasColor = System.Drawing.SystemColors.Control;
@@ -149,7 +137,6 @@
             this.PanelLogin.Controls.Add(this.PictureBox1);
             this.PanelLogin.Controls.Add(this.ReflectionLabel1);
             this.PanelLogin.Controls.Add(this.lblChaoMung);
-            this.PanelLogin.Controls.Add(this.LinkLabel_Language);
             this.PanelLogin.Controls.Add(this.LinkLabelLanguague);
             this.PanelLogin.Controls.Add(this.Label_HuongDan);
             this.PanelLogin.Controls.Add(this.cmdExit);
@@ -176,6 +163,28 @@
             this.PanelLogin.StyleMouseOver.BackColor1.Color = System.Drawing.Color.PaleGreen;
             this.PanelLogin.StyleMouseOver.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.PanelLogin.TabIndex = 1;
+            // 
+            // PictureBox2
+            // 
+            this.PictureBox2.Image = global::DoAnPhanMemBanVeXe_2.Properties.Resources.bus_icon;
+            this.PictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.PictureBox2.Location = new System.Drawing.Point(37, 76);
+            this.PictureBox2.Name = "PictureBox2";
+            this.PictureBox2.Size = new System.Drawing.Size(157, 140);
+            this.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBox2.TabIndex = 12;
+            this.PictureBox2.TabStop = false;
+            // 
+            // PictureBox1
+            // 
+            this.PictureBox1.Image = global::DoAnPhanMemBanVeXe_2.Properties.Resources.user_login_icon;
+            this.PictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.PictureBox1.Location = new System.Drawing.Point(37, 76);
+            this.PictureBox1.Name = "PictureBox1";
+            this.PictureBox1.Size = new System.Drawing.Size(157, 140);
+            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBox1.TabIndex = 11;
+            this.PictureBox1.TabStop = false;
             // 
             // LinkLabelLanguague
             // 
@@ -306,28 +315,6 @@
             this.DockContainerItem4.Name = "DockContainerItem4";
             this.DockContainerItem4.Text = "DockContainerItem4";
             // 
-            // PictureBox2
-            // 
-            this.PictureBox2.Image = global::DoAnPhanMemBanVeXe_2.Properties.Resources.bus_icon;
-            this.PictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.PictureBox2.Location = new System.Drawing.Point(37, 76);
-            this.PictureBox2.Name = "PictureBox2";
-            this.PictureBox2.Size = new System.Drawing.Size(157, 140);
-            this.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictureBox2.TabIndex = 12;
-            this.PictureBox2.TabStop = false;
-            // 
-            // PictureBox1
-            // 
-            this.PictureBox1.Image = global::DoAnPhanMemBanVeXe_2.Properties.Resources.user_login_icon;
-            this.PictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.PictureBox1.Location = new System.Drawing.Point(37, 76);
-            this.PictureBox1.Name = "PictureBox1";
-            this.PictureBox1.Size = new System.Drawing.Size(157, 140);
-            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictureBox1.TabIndex = 11;
-            this.PictureBox1.TabStop = false;
-            // 
             // Form_Login
             // 
             this.AcceptButton = this.cmdLogin;
@@ -357,7 +344,6 @@
         internal System.Windows.Forms.Timer Timer1;
         internal DevComponents.DotNetBar.Controls.ReflectionLabel ReflectionLabel1;
         internal DevComponents.DotNetBar.Controls.ReflectionLabel lblChaoMung;
-        internal System.Windows.Forms.LinkLabel LinkLabel_Language;
         internal DevComponents.DotNetBar.PanelEx PanelEx1;
         internal DevComponents.DotNetBar.PanelEx PanelLogin;
         internal System.Windows.Forms.LinkLabel LinkLabelLanguague;
