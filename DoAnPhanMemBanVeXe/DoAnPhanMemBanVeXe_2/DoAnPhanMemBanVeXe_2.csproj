@@ -47,6 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ban_ve.cs" />
+    <Compile Include="Chuyen_xe.cs" />
     <Compile Include="Form\Form_Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,8 +115,14 @@
     <Compile Include="Form\Form_Xe_45_Cho.Designer.cs">
       <DependentUpon>Form_Xe_45_Cho.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ket_noi.cs" />
+    <Compile Include="Nguoi_dung.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Thoi_diem.cs" />
+    <Compile Include="Tuyen_xe.cs" />
+    <Compile Include="Update_he_thong.cs" />
+    <Compile Include="Xe.cs" />
     <EmbeddedResource Include="Form\Form_Login.resx">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </EmbeddedResource>
