@@ -95,10 +95,10 @@
     <Compile Include="Form\Form_Xe_25_Cho.Designer.cs">
       <DependentUpon>Form_Xe_25_Cho.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Main.cs">
+    <Compile Include="Form\Form_Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Main.Designer.cs">
+    <Compile Include="Form\Form_Main.Designer.cs">
       <DependentUpon>Form_Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -127,7 +127,7 @@
     <EmbeddedResource Include="Form\Form_Xe_25_Cho.resx">
       <DependentUpon>Form_Xe_25_Cho.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Main.resx">
+    <EmbeddedResource Include="Form\Form_Main.resx">
       <DependentUpon>Form_Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

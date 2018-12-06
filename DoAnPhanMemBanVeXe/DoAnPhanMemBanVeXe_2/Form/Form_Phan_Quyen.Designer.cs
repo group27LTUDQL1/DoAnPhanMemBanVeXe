@@ -245,7 +245,7 @@
             // btn_DongY
             // 
             this.btn_DongY.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btn_DongY.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.btn_DongY.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
             this.btn_DongY.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_DongY.ImageFixedSize = new System.Drawing.Size(50, 50);
             this.btn_DongY.Location = new System.Drawing.Point(338, 85);
@@ -258,7 +258,7 @@
             // ButtonThoat
             // 
             this.ButtonThoat.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.ButtonThoat.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.ButtonThoat.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
             this.ButtonThoat.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonThoat.ImageFixedSize = new System.Drawing.Size(40, 40);
             this.ButtonThoat.Location = new System.Drawing.Point(338, 165);

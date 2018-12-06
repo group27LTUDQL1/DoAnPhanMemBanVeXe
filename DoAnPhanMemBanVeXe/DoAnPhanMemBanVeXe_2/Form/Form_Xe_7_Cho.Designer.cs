@@ -32,12 +32,12 @@
             this.btn_Thoat = new DevComponents.DotNetBar.ButtonX();
             this.grb_7 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.btn_2 = new DevComponents.DotNetBar.ButtonX();
-            this.btn_TaiXe = new DevComponents.DotNetBar.ButtonX();
             this.btn_1 = new DevComponents.DotNetBar.ButtonX();
             this.btn_5 = new DevComponents.DotNetBar.ButtonX();
             this.btn_4 = new DevComponents.DotNetBar.ButtonX();
             this.btn_3 = new DevComponents.DotNetBar.ButtonX();
             this.btn_6 = new DevComponents.DotNetBar.ButtonX();
+            this.btn_TaiXe = new DevComponents.DotNetBar.ButtonX();
             this.PanelEx_Xe16.SuspendLayout();
             this.grb_7.SuspendLayout();
             this.SuspendLayout();
@@ -52,7 +52,7 @@
             this.PanelEx_Xe16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelEx_Xe16.Location = new System.Drawing.Point(0, 0);
             this.PanelEx_Xe16.Name = "PanelEx_Xe16";
-            this.PanelEx_Xe16.Size = new System.Drawing.Size(461, 420);
+            this.PanelEx_Xe16.Size = new System.Drawing.Size(489, 434);
             this.PanelEx_Xe16.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.PanelEx_Xe16.Style.BackColor1.Color = System.Drawing.Color.DeepSkyBlue;
             this.PanelEx_Xe16.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -136,20 +136,6 @@
             this.btn_2.TabIndex = 10;
             this.btn_2.Text = "2";
             // 
-            // btn_TaiXe
-            // 
-            this.btn_TaiXe.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btn_TaiXe.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.btn_TaiXe.Image = global::DoAnPhanMemBanVeXe_2.Properties.Resources.login;
-            this.btn_TaiXe.ImageFixedSize = new System.Drawing.Size(50, 50);
-            this.btn_TaiXe.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btn_TaiXe.Location = new System.Drawing.Point(32, 22);
-            this.btn_TaiXe.Name = "btn_TaiXe";
-            this.btn_TaiXe.Size = new System.Drawing.Size(107, 90);
-            this.btn_TaiXe.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btn_TaiXe.TabIndex = 13;
-            this.btn_TaiXe.Text = "Tài xế";
-            // 
             // btn_1
             // 
             this.btn_1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -216,11 +202,25 @@
             this.btn_6.TabIndex = 6;
             this.btn_6.Text = "6";
             // 
+            // btn_TaiXe
+            // 
+            this.btn_TaiXe.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btn_TaiXe.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
+            this.btn_TaiXe.Image = global::DoAnPhanMemBanVeXe_2.Properties.Resources.login;
+            this.btn_TaiXe.ImageFixedSize = new System.Drawing.Size(50, 50);
+            this.btn_TaiXe.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btn_TaiXe.Location = new System.Drawing.Point(32, 22);
+            this.btn_TaiXe.Name = "btn_TaiXe";
+            this.btn_TaiXe.Size = new System.Drawing.Size(107, 90);
+            this.btn_TaiXe.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btn_TaiXe.TabIndex = 13;
+            this.btn_TaiXe.Text = "Tài xế";
+            // 
             // Form_Xe_7_Cho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(461, 420);
+            this.ClientSize = new System.Drawing.Size(489, 434);
             this.Controls.Add(this.PanelEx_Xe16);
             this.Name = "Form_Xe_7_Cho";
             this.Text = "Form_Xe_7_Cho";

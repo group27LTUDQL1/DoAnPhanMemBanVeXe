@@ -51,11 +51,11 @@
             this.btn_7 = new DevComponents.DotNetBar.ButtonX();
             this.btn_17 = new DevComponents.DotNetBar.ButtonX();
             this.btn_1 = new DevComponents.DotNetBar.ButtonX();
-            this.btn_TaiXe = new DevComponents.DotNetBar.ButtonX();
             this.btn_3 = new DevComponents.DotNetBar.ButtonX();
             this.PanelEx_Xe30 = new DevComponents.DotNetBar.PanelEx();
             this.btn_Thoat = new DevComponents.DotNetBar.ButtonX();
             this.grb_25 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.btn_TaiXe = new DevComponents.DotNetBar.ButtonX();
             this.PanelEx_Xe30.SuspendLayout();
             this.grb_25.SuspendLayout();
             this.SuspendLayout();
@@ -382,20 +382,6 @@
             this.btn_1.TabIndex = 9;
             this.btn_1.Text = "1";
             // 
-            // btn_TaiXe
-            // 
-            this.btn_TaiXe.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btn_TaiXe.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.btn_TaiXe.Image = global::DoAnPhanMemBanVeXe_2.Properties.Resources.login2;
-            this.btn_TaiXe.ImageFixedSize = new System.Drawing.Size(60, 60);
-            this.btn_TaiXe.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btn_TaiXe.Location = new System.Drawing.Point(29, 3);
-            this.btn_TaiXe.Name = "btn_TaiXe";
-            this.btn_TaiXe.Size = new System.Drawing.Size(115, 80);
-            this.btn_TaiXe.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btn_TaiXe.TabIndex = 10;
-            this.btn_TaiXe.Text = "Bác tài";
-            // 
             // btn_3
             // 
             this.btn_3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -421,7 +407,7 @@
             this.PanelEx_Xe30.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PanelEx_Xe30.Location = new System.Drawing.Point(0, 0);
             this.PanelEx_Xe30.Name = "PanelEx_Xe30";
-            this.PanelEx_Xe30.Size = new System.Drawing.Size(481, 704);
+            this.PanelEx_Xe30.Size = new System.Drawing.Size(506, 728);
             this.PanelEx_Xe30.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.PanelEx_Xe30.Style.BackColor1.Color = System.Drawing.Color.DeepSkyBlue;
             this.PanelEx_Xe30.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -510,11 +496,25 @@
             this.grb_25.TabIndex = 1;
             this.grb_25.Text = "Kết cấu xe 25 chỗ";
             // 
+            // btn_TaiXe
+            // 
+            this.btn_TaiXe.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btn_TaiXe.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
+            this.btn_TaiXe.Image = global::DoAnPhanMemBanVeXe_2.Properties.Resources.login2;
+            this.btn_TaiXe.ImageFixedSize = new System.Drawing.Size(60, 60);
+            this.btn_TaiXe.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btn_TaiXe.Location = new System.Drawing.Point(29, 3);
+            this.btn_TaiXe.Name = "btn_TaiXe";
+            this.btn_TaiXe.Size = new System.Drawing.Size(115, 80);
+            this.btn_TaiXe.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btn_TaiXe.TabIndex = 10;
+            this.btn_TaiXe.Text = "Bác tài";
+            // 
             // Form_Xe_25_Cho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(481, 704);
+            this.ClientSize = new System.Drawing.Size(506, 728);
             this.Controls.Add(this.PanelEx_Xe30);
             this.Name = "Form_Xe_25_Cho";
             this.Text = "Form_Xe_25_Cho";

@@ -34,7 +34,6 @@
             this.btn_2 = new DevComponents.DotNetBar.ButtonX();
             this.btn_13 = new DevComponents.DotNetBar.ButtonX();
             this.btn_10 = new DevComponents.DotNetBar.ButtonX();
-            this.btn_TaiXe = new DevComponents.DotNetBar.ButtonX();
             this.btn_12 = new DevComponents.DotNetBar.ButtonX();
             this.btn_9 = new DevComponents.DotNetBar.ButtonX();
             this.btn_1 = new DevComponents.DotNetBar.ButtonX();
@@ -47,6 +46,7 @@
             this.PanelEx_Xe16 = new DevComponents.DotNetBar.PanelEx();
             this.btn_Thoat = new DevComponents.DotNetBar.ButtonX();
             this.grb_16 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.btn_TaiXe = new DevComponents.DotNetBar.ButtonX();
             this.PanelEx_Xe16.SuspendLayout();
             this.grb_16.SuspendLayout();
             this.SuspendLayout();
@@ -128,20 +128,6 @@
             this.btn_10.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_10.TabIndex = 16;
             this.btn_10.Text = "10";
-            // 
-            // btn_TaiXe
-            // 
-            this.btn_TaiXe.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btn_TaiXe.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.btn_TaiXe.Image = global::DoAnPhanMemBanVeXe_2.Properties.Resources.login1;
-            this.btn_TaiXe.ImageFixedSize = new System.Drawing.Size(50, 50);
-            this.btn_TaiXe.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btn_TaiXe.Location = new System.Drawing.Point(65, 6);
-            this.btn_TaiXe.Name = "btn_TaiXe";
-            this.btn_TaiXe.Size = new System.Drawing.Size(90, 90);
-            this.btn_TaiXe.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btn_TaiXe.TabIndex = 13;
-            this.btn_TaiXe.Text = "Tài xế";
             // 
             // btn_12
             // 
@@ -350,6 +336,20 @@
             this.grb_16.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.grb_16.TabIndex = 1;
             this.grb_16.Text = "Kết cấu chỗ ngồi xe 16 chỗ";
+            // 
+            // btn_TaiXe
+            // 
+            this.btn_TaiXe.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btn_TaiXe.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
+            this.btn_TaiXe.Image = global::DoAnPhanMemBanVeXe_2.Properties.Resources.login1;
+            this.btn_TaiXe.ImageFixedSize = new System.Drawing.Size(50, 50);
+            this.btn_TaiXe.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btn_TaiXe.Location = new System.Drawing.Point(65, 6);
+            this.btn_TaiXe.Name = "btn_TaiXe";
+            this.btn_TaiXe.Size = new System.Drawing.Size(90, 90);
+            this.btn_TaiXe.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btn_TaiXe.TabIndex = 13;
+            this.btn_TaiXe.Text = "Tài xế";
             // 
             // Form_Xe_16_Cho
             // 
