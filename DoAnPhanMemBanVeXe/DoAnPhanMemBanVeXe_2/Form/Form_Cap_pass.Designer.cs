@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.Panel_Cappass = new DevComponents.DotNetBar.PanelEx();
-            this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.ReflectionLabel_ChaoMung = new DevComponents.DotNetBar.Controls.ReflectionLabel();
             this.LinkLabelLanguague = new System.Windows.Forms.LinkLabel();
             this.cmdExit = new DevComponents.DotNetBar.ButtonX();
@@ -40,6 +39,7 @@
             this.Label_Password = new DevComponents.DotNetBar.LabelX();
             this.Label_UserName = new DevComponents.DotNetBar.LabelX();
             this.Timer_Doi_Anh = new System.Windows.Forms.Timer(this.components);
+            this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.Panel_Cappass.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -62,7 +62,7 @@
             this.Panel_Cappass.Location = new System.Drawing.Point(2, 2);
             this.Panel_Cappass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Panel_Cappass.Name = "Panel_Cappass";
-            this.Panel_Cappass.Size = new System.Drawing.Size(771, 394);
+            this.Panel_Cappass.Size = new System.Drawing.Size(740, 393);
             this.Panel_Cappass.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.Panel_Cappass.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
             this.Panel_Cappass.Style.BackColor2.Color = System.Drawing.Color.MediumSpringGreen;
@@ -75,17 +75,6 @@
             this.Panel_Cappass.StyleMouseOver.BackColor1.Color = System.Drawing.Color.PaleGreen;
             this.Panel_Cappass.StyleMouseOver.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.Panel_Cappass.TabIndex = 7;
-            // 
-            // PictureBox1
-            // 
-            this.PictureBox1.Image = global::DoAnPhanMemBanVeXe_2.Properties.Resources.ferme;
-            this.PictureBox1.Location = new System.Drawing.Point(33, 154);
-            this.PictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.PictureBox1.Name = "PictureBox1";
-            this.PictureBox1.Size = new System.Drawing.Size(198, 185);
-            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictureBox1.TabIndex = 9;
-            this.PictureBox1.TabStop = false;
             // 
             // ReflectionLabel_ChaoMung
             // 
@@ -211,6 +200,17 @@
             // 
             this.Timer_Doi_Anh.Enabled = true;
             this.Timer_Doi_Anh.Interval = 1000;
+            // 
+            // PictureBox1
+            // 
+            this.PictureBox1.Image = global::DoAnPhanMemBanVeXe_2.Properties.Resources.ferme;
+            this.PictureBox1.Location = new System.Drawing.Point(46, 156);
+            this.PictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.PictureBox1.Name = "PictureBox1";
+            this.PictureBox1.Size = new System.Drawing.Size(198, 185);
+            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBox1.TabIndex = 9;
+            this.PictureBox1.TabStop = false;
             // 
             // Form_Cap_pass
             // 

@@ -263,6 +263,16 @@ namespace DoAnPhanMemBanVeXe_2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Fermer_session {
+            get {
+                object obj = ResourceManager.GetObject("Fermer_session", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap GanXe {
             get {
                 object obj = ResourceManager.GetObject("GanXe", resourceCulture);
