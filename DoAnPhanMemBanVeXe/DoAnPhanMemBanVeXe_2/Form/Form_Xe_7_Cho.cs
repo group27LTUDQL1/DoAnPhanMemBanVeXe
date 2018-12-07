@@ -17,5 +17,15 @@ namespace DoAnPhanMemBanVeXe_2
         {
             InitializeComponent();
         }
+
+        private void treeGX1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form_Xe_7_Cho_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
