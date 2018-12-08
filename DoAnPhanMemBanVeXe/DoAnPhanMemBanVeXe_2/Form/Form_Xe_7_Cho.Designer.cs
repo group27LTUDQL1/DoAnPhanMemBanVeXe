@@ -38,14 +38,8 @@
             this.btn_4 = new DevComponents.DotNetBar.ButtonX();
             this.btn_3 = new DevComponents.DotNetBar.ButtonX();
             this.btn_6 = new DevComponents.DotNetBar.ButtonX();
-            this.treeGX1 = new DevComponents.Tree.TreeGX();
-            this.node1 = new DevComponents.Tree.Node();
-            this.nodeConnector2 = new DevComponents.Tree.NodeConnector();
-            this.elementStyle1 = new DevComponents.Tree.ElementStyle();
-            this.nodeConnector1 = new DevComponents.Tree.NodeConnector();
             this.PanelEx_Xe16.SuspendLayout();
             this.grb_7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.treeGX1)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelEx_Xe16
@@ -230,81 +224,17 @@
             this.btn_6.Text = "6";
             this.btn_6.Click += new System.EventHandler(this.btn_6_Click);
             // 
-            // treeGX1
-            // 
-            this.treeGX1.AllowDrop = true;
-            this.treeGX1.AutoScroll = true;
-            this.treeGX1.AutoScrollMinSize = new System.Drawing.Size(46, 29);
-            this.treeGX1.CommandBackColorGradientAngle = 90;
-            this.treeGX1.CommandMouseOverBackColor2SchemePart = DevComponents.Tree.eColorSchemePart.ItemHotBackground2;
-            this.treeGX1.CommandMouseOverBackColorGradientAngle = 90;
-            this.treeGX1.ExpandLineColorSchemePart = DevComponents.Tree.eColorSchemePart.BarDockedBorder;
-            this.treeGX1.Location = new System.Drawing.Point(201, 0);
-            this.treeGX1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.treeGX1.Name = "treeGX1";
-            this.treeGX1.Nodes.AddRange(new DevComponents.Tree.Node[] {
-            this.node1});
-            this.treeGX1.NodesConnector = this.nodeConnector2;
-            this.treeGX1.NodeStyle = this.elementStyle1;
-            this.treeGX1.PathSeparator = ";";
-            this.treeGX1.RootConnector = this.nodeConnector1;
-            this.treeGX1.Size = new System.Drawing.Size(50, 15);
-            this.treeGX1.Styles.Add(this.elementStyle1);
-            this.treeGX1.SuspendPaint = false;
-            this.treeGX1.TabIndex = 10;
-            this.treeGX1.Text = "treeGX1";
-            // 
-            // node1
-            // 
-            this.node1.Expanded = true;
-            this.node1.Name = "node1";
-            this.node1.Text = "node1";
-            // 
-            // nodeConnector2
-            // 
-            this.nodeConnector2.LineWidth = 5;
-            // 
-            // elementStyle1
-            // 
-            this.elementStyle1.BackColor2SchemePart = DevComponents.Tree.eColorSchemePart.BarBackground2;
-            this.elementStyle1.BackColorGradientAngle = 90;
-            this.elementStyle1.BackColorSchemePart = DevComponents.Tree.eColorSchemePart.BarBackground;
-            this.elementStyle1.BorderBottom = DevComponents.Tree.eStyleBorderType.Solid;
-            this.elementStyle1.BorderBottomWidth = 1;
-            this.elementStyle1.BorderColorSchemePart = DevComponents.Tree.eColorSchemePart.BarDockedBorder;
-            this.elementStyle1.BorderLeft = DevComponents.Tree.eStyleBorderType.Solid;
-            this.elementStyle1.BorderLeftWidth = 1;
-            this.elementStyle1.BorderRight = DevComponents.Tree.eStyleBorderType.Solid;
-            this.elementStyle1.BorderRightWidth = 1;
-            this.elementStyle1.BorderTop = DevComponents.Tree.eStyleBorderType.Solid;
-            this.elementStyle1.BorderTopWidth = 1;
-            this.elementStyle1.CornerDiameter = 4;
-            this.elementStyle1.CornerType = DevComponents.Tree.eCornerType.Rounded;
-            this.elementStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.elementStyle1.Name = "elementStyle1";
-            this.elementStyle1.PaddingBottom = 3;
-            this.elementStyle1.PaddingLeft = 3;
-            this.elementStyle1.PaddingRight = 3;
-            this.elementStyle1.PaddingTop = 3;
-            this.elementStyle1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))));
-            // 
-            // nodeConnector1
-            // 
-            this.nodeConnector1.LineWidth = 5;
-            // 
             // Form_Xe_7_Cho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(489, 434);
-            this.Controls.Add(this.treeGX1);
             this.Controls.Add(this.PanelEx_Xe16);
             this.Name = "Form_Xe_7_Cho";
             this.Text = "Form_Xe_7_Cho";
             this.Load += new System.EventHandler(this.Form_Xe_7_Cho_Load);
             this.PanelEx_Xe16.ResumeLayout(false);
             this.grb_7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.treeGX1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -321,10 +251,5 @@
         internal DevComponents.DotNetBar.ButtonX btn_4;
         internal DevComponents.DotNetBar.ButtonX btn_3;
         internal DevComponents.DotNetBar.ButtonX btn_6;
-        private DevComponents.Tree.TreeGX treeGX1;
-        private DevComponents.Tree.Node node1;
-        private DevComponents.Tree.NodeConnector nodeConnector2;
-        private DevComponents.Tree.ElementStyle elementStyle1;
-        private DevComponents.Tree.NodeConnector nodeConnector1;
     }
 }
