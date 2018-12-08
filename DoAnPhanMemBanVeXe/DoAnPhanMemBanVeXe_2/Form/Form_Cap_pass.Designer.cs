@@ -186,9 +186,9 @@
             this.Panel_Cappass.Controls.Add(this.Label_UserName);
             this.Panel_Cappass.DisabledBackColor = System.Drawing.Color.Empty;
             this.Panel_Cappass.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.Panel_Cappass.Location = new System.Drawing.Point(1, 1);
+            this.Panel_Cappass.Location = new System.Drawing.Point(-1, -1);
             this.Panel_Cappass.Name = "Panel_Cappass";
-            this.Panel_Cappass.Size = new System.Drawing.Size(481, 237);
+            this.Panel_Cappass.Size = new System.Drawing.Size(517, 283);
             this.Panel_Cappass.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.Panel_Cappass.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
             this.Panel_Cappass.Style.BackColor2.Color = System.Drawing.Color.MediumSpringGreen;
@@ -207,7 +207,7 @@
             this.AcceptButton = this.btn_DongY;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(483, 239);
+            this.ClientSize = new System.Drawing.Size(516, 286);
             this.Controls.Add(this.Panel_Cappass);
             this.Name = "Form_Cap_pass";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

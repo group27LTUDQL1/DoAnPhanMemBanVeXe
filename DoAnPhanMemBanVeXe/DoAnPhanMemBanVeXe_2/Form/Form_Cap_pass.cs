@@ -52,28 +52,28 @@ namespace DoAnPhanMemBanVeXe_2
         
         private void btn_DongY_Click(object sender, EventArgs e)
         {
-            //if (txt_NewPassword.Text.Trim().Length < 5)
-            //{
-            //    Interaction.MsgBox("Password không được ít hơn 5 kí tự!", MsgBoxStyle.Exclamation, "Thông báo lỗi");
-            //    txt_NewPassword.Focus();
-            //}
-            //else
-            //{
-            //    string lenh = "Update NguoiDung Set PassND = '" + txt_NewPassword.Text + "' where IdNguoiDung = '" + txt_IdNguoiDung.Text + "'";
-            //    SqlCommand bo_lenh = new SqlCommand(lenh, Ket_noi.connect);
-            //    try
-            //    {
-            //        Ket_noi.connect.Open();
-            //        bo_lenh.ExecuteNonQuery();
-            //        Ket_noi.connect.Close();
-            //        MessageBox.Show("Pass mới đã được cập nhật", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //        Nguoi_dung.UpdateNguoiDung();
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        MessageBox.Show("Cấp pass không thành công, yêu cầu kiểm tra lại kết nối", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    }
-            //}
+            if (txt_NewPassword.Text.Trim().Length < 5)
+            {
+                Interaction.MsgBox("Password không được ít hơn 5 kí tự!", MsgBoxStyle.Exclamation, "Thông báo lỗi");
+                txt_NewPassword.Focus();
+            }
+            else
+            {
+                string lenh = "Update NguoiDung Set PassND = '" + txt_NewPassword.Text + "' where IdNguoiDung = '" + txt_IdNguoiDung.Text + "'";
+                SqlCommand bo_lenh = new SqlCommand(lenh, Ket_noi.connect);
+                try
+                {
+                    Ket_noi.connect.Open();
+                    bo_lenh.ExecuteNonQuery();
+                    Ket_noi.connect.Close();
+                    MessageBox.Show("Pass mới đã được cập nhật", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Nguoi_dung.UpdateNguoiDung();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Cấp pass không thành công, yêu cầu kiểm tra lại kết nối", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void cmdExit_Click(object sender, EventArgs e)
