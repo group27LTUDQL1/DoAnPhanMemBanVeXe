@@ -254,6 +254,7 @@
             this.btn_DongY.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_DongY.TabIndex = 2;
             this.btn_DongY.Text = "&Đồng ý";
+            this.btn_DongY.Click += new System.EventHandler(this.btn_DongY_Click);
             // 
             // ButtonThoat
             // 
@@ -268,6 +269,7 @@
             this.ButtonThoat.TabIndex = 2;
             this.ButtonThoat.Tag = "";
             this.ButtonThoat.Text = "&Thoát";
+            this.ButtonThoat.Click += new System.EventHandler(this.ButtonThoat_Click);
             // 
             // Form_Phan_Quyen
             // 
@@ -277,6 +279,7 @@
             this.Controls.Add(this.PanelEx1);
             this.Name = "Form_Phan_Quyen";
             this.Text = "Form_Phan_Quyen";
+            this.Load += new System.EventHandler(this.Form_Phan_Quyen_Load);
             this.PanelEx1.ResumeLayout(false);
             this.grb_PhanQuyen.ResumeLayout(false);
             this.grb_PhanQuyen.PerformLayout();
