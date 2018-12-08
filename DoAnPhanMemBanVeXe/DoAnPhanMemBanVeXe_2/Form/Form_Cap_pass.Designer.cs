@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.Panel_Cappass = new DevComponents.DotNetBar.PanelEx();
+            this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.ReflectionLabel_ChaoMung = new DevComponents.DotNetBar.Controls.ReflectionLabel();
             this.LinkLabelLanguague = new System.Windows.Forms.LinkLabel();
             this.cmdExit = new DevComponents.DotNetBar.ButtonX();
@@ -39,7 +40,6 @@
             this.Label_Password = new DevComponents.DotNetBar.LabelX();
             this.Label_UserName = new DevComponents.DotNetBar.LabelX();
             this.Timer_Doi_Anh = new System.Windows.Forms.Timer(this.components);
-            this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.Panel_Cappass.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -59,10 +59,9 @@
             this.Panel_Cappass.Controls.Add(this.Label_UserName);
             this.Panel_Cappass.DisabledBackColor = System.Drawing.Color.Empty;
             this.Panel_Cappass.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.Panel_Cappass.Location = new System.Drawing.Point(2, 2);
-            this.Panel_Cappass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Panel_Cappass.Location = new System.Drawing.Point(1, 1);
             this.Panel_Cappass.Name = "Panel_Cappass";
-            this.Panel_Cappass.Size = new System.Drawing.Size(740, 393);
+            this.Panel_Cappass.Size = new System.Drawing.Size(481, 237);
             this.Panel_Cappass.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.Panel_Cappass.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
             this.Panel_Cappass.Style.BackColor2.Color = System.Drawing.Color.MediumSpringGreen;
@@ -76,6 +75,16 @@
             this.Panel_Cappass.StyleMouseOver.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.Panel_Cappass.TabIndex = 7;
             // 
+            // PictureBox1
+            // 
+            this.PictureBox1.Image = global::DoAnPhanMemBanVeXe_2.Properties.Resources.ferme;
+            this.PictureBox1.Location = new System.Drawing.Point(31, 101);
+            this.PictureBox1.Name = "PictureBox1";
+            this.PictureBox1.Size = new System.Drawing.Size(132, 120);
+            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBox1.TabIndex = 9;
+            this.PictureBox1.TabStop = false;
+            // 
             // ReflectionLabel_ChaoMung
             // 
             this.ReflectionLabel_ChaoMung.BackColor = System.Drawing.Color.ForestGreen;
@@ -86,9 +95,8 @@
             this.ReflectionLabel_ChaoMung.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ReflectionLabel_ChaoMung.ForeColor = System.Drawing.Color.White;
             this.ReflectionLabel_ChaoMung.Location = new System.Drawing.Point(0, 0);
-            this.ReflectionLabel_ChaoMung.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ReflectionLabel_ChaoMung.Name = "ReflectionLabel_ChaoMung";
-            this.ReflectionLabel_ChaoMung.Size = new System.Drawing.Size(782, 103);
+            this.ReflectionLabel_ChaoMung.Size = new System.Drawing.Size(521, 67);
             this.ReflectionLabel_ChaoMung.TabIndex = 8;
             this.ReflectionLabel_ChaoMung.Text = "CẤP PASS CHO NGƯỜI DÙNG";
             // 
@@ -96,9 +104,8 @@
             // 
             this.LinkLabelLanguague.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.LinkLabelLanguague.Location = new System.Drawing.Point(0, 0);
-            this.LinkLabelLanguague.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LinkLabelLanguague.Name = "LinkLabelLanguague";
-            this.LinkLabelLanguague.Size = new System.Drawing.Size(150, 35);
+            this.LinkLabelLanguague.Size = new System.Drawing.Size(100, 23);
             this.LinkLabelLanguague.TabIndex = 0;
             // 
             // cmdExit
@@ -107,8 +114,7 @@
             this.cmdExit.AutoSize = true;
             this.cmdExit.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
             this.cmdExit.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.cmdExit.Location = new System.Drawing.Point(603, 342);
-            this.cmdExit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmdExit.Location = new System.Drawing.Point(402, 222);
             this.cmdExit.Name = "cmdExit";
             this.cmdExit.Size = new System.Drawing.Size(84, 26);
             this.cmdExit.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -122,8 +128,7 @@
             this.btn_DongY.AutoSize = true;
             this.btn_DongY.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
             this.btn_DongY.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btn_DongY.Location = new System.Drawing.Point(398, 342);
-            this.btn_DongY.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_DongY.Location = new System.Drawing.Point(265, 222);
             this.btn_DongY.Name = "btn_DongY";
             this.btn_DongY.Size = new System.Drawing.Size(87, 26);
             this.btn_DongY.TabIndex = 5;
@@ -142,10 +147,9 @@
             this.txt_IdNguoiDung.Border.Class = "TextBoxBorder";
             this.txt_IdNguoiDung.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txt_IdNguoiDung.FocusHighlightEnabled = true;
-            this.txt_IdNguoiDung.Location = new System.Drawing.Point(468, 182);
-            this.txt_IdNguoiDung.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_IdNguoiDung.Location = new System.Drawing.Point(312, 118);
             this.txt_IdNguoiDung.Name = "txt_IdNguoiDung";
-            this.txt_IdNguoiDung.Size = new System.Drawing.Size(240, 27);
+            this.txt_IdNguoiDung.Size = new System.Drawing.Size(160, 21);
             this.txt_IdNguoiDung.TabIndex = 4;
             // 
             // txt_NewPassword
@@ -160,11 +164,10 @@
             this.txt_NewPassword.Border.Class = "TextBoxBorder";
             this.txt_NewPassword.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txt_NewPassword.FocusHighlightEnabled = true;
-            this.txt_NewPassword.Location = new System.Drawing.Point(468, 249);
-            this.txt_NewPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_NewPassword.Location = new System.Drawing.Point(312, 162);
             this.txt_NewPassword.Name = "txt_NewPassword";
             this.txt_NewPassword.PasswordChar = '●';
-            this.txt_NewPassword.Size = new System.Drawing.Size(240, 27);
+            this.txt_NewPassword.Size = new System.Drawing.Size(160, 21);
             this.txt_NewPassword.TabIndex = 4;
             this.txt_NewPassword.UseSystemPasswordChar = true;
             // 
@@ -175,10 +178,9 @@
             // 
             this.Label_Password.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.Label_Password.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.Label_Password.Location = new System.Drawing.Point(300, 249);
-            this.Label_Password.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Label_Password.Location = new System.Drawing.Point(200, 162);
             this.Label_Password.Name = "Label_Password";
-            this.Label_Password.Size = new System.Drawing.Size(144, 35);
+            this.Label_Password.Size = new System.Drawing.Size(96, 23);
             this.Label_Password.TabIndex = 3;
             this.Label_Password.Text = "&Password mới";
             // 
@@ -189,10 +191,9 @@
             // 
             this.Label_UserName.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.Label_UserName.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.Label_UserName.Location = new System.Drawing.Point(300, 182);
-            this.Label_UserName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Label_UserName.Location = new System.Drawing.Point(200, 118);
             this.Label_UserName.Name = "Label_UserName";
-            this.Label_UserName.Size = new System.Drawing.Size(144, 35);
+            this.Label_UserName.Size = new System.Drawing.Size(96, 23);
             this.Label_UserName.TabIndex = 1;
             this.Label_UserName.Text = "&Id người dùng";
             // 
@@ -201,25 +202,13 @@
             this.Timer_Doi_Anh.Enabled = true;
             this.Timer_Doi_Anh.Interval = 1000;
             // 
-            // PictureBox1
-            // 
-            this.PictureBox1.Image = global::DoAnPhanMemBanVeXe_2.Properties.Resources.ferme;
-            this.PictureBox1.Location = new System.Drawing.Point(46, 156);
-            this.PictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.PictureBox1.Name = "PictureBox1";
-            this.PictureBox1.Size = new System.Drawing.Size(198, 185);
-            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictureBox1.TabIndex = 9;
-            this.PictureBox1.TabStop = false;
-            // 
             // Form_Cap_pass
             // 
             this.AcceptButton = this.btn_DongY;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(740, 394);
+            this.ClientSize = new System.Drawing.Size(483, 239);
             this.Controls.Add(this.Panel_Cappass);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form_Cap_pass";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
