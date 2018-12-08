@@ -525,7 +525,7 @@
             // 
             this.btn_TaiXe.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btn_TaiXe.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
-            this.btn_TaiXe.Image = global::DoAnPhanMemBanVeXe_2.Properties.Resources.login2;
+            this.btn_TaiXe.Image = global::DoAnPhanMemBanVeXe_2.Properties.Resources.login;
             this.btn_TaiXe.ImageFixedSize = new System.Drawing.Size(60, 60);
             this.btn_TaiXe.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.btn_TaiXe.Location = new System.Drawing.Point(29, 3);

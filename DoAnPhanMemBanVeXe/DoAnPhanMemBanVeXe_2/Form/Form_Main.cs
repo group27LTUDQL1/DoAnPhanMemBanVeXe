@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace DoAnPhanMemBanVeXe_2
 {
-    public partial class Form_Main : Form
+    public partial class Form_Main : DevComponents.DotNetBar.Office2007RibbonForm
     {
         public Form_Main()
         {
             InitializeComponent();
+        }
+
+        private void Form_MAIN_Load(object sender, EventArgs e)
+        {
+
         }
 
         

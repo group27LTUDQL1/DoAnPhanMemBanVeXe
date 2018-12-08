@@ -65,7 +65,7 @@ namespace DoAnPhanMemBanVeXe_2.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap add_user_icon {
             get {
-                object obj = ResourceManager.GetObject("add-user-icon", resourceCulture);
+                object obj = ResourceManager.GetObject("add_user_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -75,7 +75,7 @@ namespace DoAnPhanMemBanVeXe_2.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap bus_icon {
             get {
-                object obj = ResourceManager.GetObject("bus-icon", resourceCulture);
+                object obj = ResourceManager.GetObject("bus_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace DoAnPhanMemBanVeXe_2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bus_icon1 {
+        internal static System.Drawing.Bitmap button_cancel {
             get {
-                object obj = ResourceManager.GetObject("bus-icon1", resourceCulture);
+                object obj = ResourceManager.GetObject("button_cancel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,19 +103,9 @@ namespace DoAnPhanMemBanVeXe_2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap button_ok1 {
+        internal static System.Drawing.Bitmap cap_pass {
             get {
-                object obj = ResourceManager.GetObject("button_ok1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap button_ok2 {
-            get {
-                object obj = ResourceManager.GetObject("button_ok2", resourceCulture);
+                object obj = ResourceManager.GetObject("cap_pass", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +133,9 @@ namespace DoAnPhanMemBanVeXe_2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap database1 {
+        internal static System.Drawing.Bitmap db_add {
             get {
-                object obj = ResourceManager.GetObject("database1", resourceCulture);
+                object obj = ResourceManager.GetObject("db_add", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -215,7 +205,7 @@ namespace DoAnPhanMemBanVeXe_2.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap edit_user_icon {
             get {
-                object obj = ResourceManager.GetObject("edit-user-icon", resourceCulture);
+                object obj = ResourceManager.GetObject("edit_user_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,9 +223,9 @@ namespace DoAnPhanMemBanVeXe_2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap editdelete1 {
+        internal static System.Drawing.Bitmap exit {
             get {
-                object obj = ResourceManager.GetObject("editdelete1", resourceCulture);
+                object obj = ResourceManager.GetObject("exit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -243,9 +233,9 @@ namespace DoAnPhanMemBanVeXe_2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap exit {
+        internal static System.Drawing.Bitmap exit1 {
             get {
-                object obj = ResourceManager.GetObject("exit", resourceCulture);
+                object obj = ResourceManager.GetObject("exit1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -323,36 +313,6 @@ namespace DoAnPhanMemBanVeXe_2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap login1 {
-            get {
-                object obj = ResourceManager.GetObject("login1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap login2 {
-            get {
-                object obj = ResourceManager.GetObject("login2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap login3 {
-            get {
-                object obj = ResourceManager.GetObject("login3", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap logout {
             get {
                 object obj = ResourceManager.GetObject("logout", resourceCulture);
@@ -375,7 +335,7 @@ namespace DoAnPhanMemBanVeXe_2.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Money_icon {
             get {
-                object obj = ResourceManager.GetObject("Money-icon", resourceCulture);
+                object obj = ResourceManager.GetObject("Money_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -385,7 +345,27 @@ namespace DoAnPhanMemBanVeXe_2.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap payment_icon {
             get {
-                object obj = ResourceManager.GetObject("payment-icon", resourceCulture);
+                object obj = ResourceManager.GetObject("payment_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap phanquyen {
+            get {
+                object obj = ResourceManager.GetObject("phanquyen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap phanquyen1 {
+            get {
+                object obj = ResourceManager.GetObject("phanquyen1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -395,7 +375,17 @@ namespace DoAnPhanMemBanVeXe_2.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap remove_user_icon {
             get {
-                object obj = ResourceManager.GetObject("remove-user-icon", resourceCulture);
+                object obj = ResourceManager.GetObject("remove_user_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap save {
+            get {
+                object obj = ResourceManager.GetObject("save", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -405,7 +395,7 @@ namespace DoAnPhanMemBanVeXe_2.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap twitter_bus_icon {
             get {
-                object obj = ResourceManager.GetObject("twitter-bus-icon", resourceCulture);
+                object obj = ResourceManager.GetObject("twitter_bus_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -415,27 +405,7 @@ namespace DoAnPhanMemBanVeXe_2.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap twitter_bus_purple_icon {
             get {
-                object obj = ResourceManager.GetObject("twitter-bus-purple-icon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap twitter_bus_purple_icon1 {
-            get {
-                object obj = ResourceManager.GetObject("twitter-bus-purple-icon1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap twitter_bus_purple_icon2 {
-            get {
-                object obj = ResourceManager.GetObject("twitter-bus-purple-icon2", resourceCulture);
+                object obj = ResourceManager.GetObject("twitter_bus_purple_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -445,7 +415,17 @@ namespace DoAnPhanMemBanVeXe_2.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap upload_icon {
             get {
-                object obj = ResourceManager.GetObject("upload-icon", resourceCulture);
+                object obj = ResourceManager.GetObject("upload_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_icon {
+            get {
+                object obj = ResourceManager.GetObject("user_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -455,7 +435,7 @@ namespace DoAnPhanMemBanVeXe_2.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap user_icon1 {
             get {
-                object obj = ResourceManager.GetObject("user-icon1", resourceCulture);
+                object obj = ResourceManager.GetObject("user_icon1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -465,7 +445,7 @@ namespace DoAnPhanMemBanVeXe_2.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap user_icon11 {
             get {
-                object obj = ResourceManager.GetObject("user-icon11", resourceCulture);
+                object obj = ResourceManager.GetObject("user_icon11", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -475,7 +455,7 @@ namespace DoAnPhanMemBanVeXe_2.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap user_login_icon {
             get {
-                object obj = ResourceManager.GetObject("user-login-icon", resourceCulture);
+                object obj = ResourceManager.GetObject("user_login_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
