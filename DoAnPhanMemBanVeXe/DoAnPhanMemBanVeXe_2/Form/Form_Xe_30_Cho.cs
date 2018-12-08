@@ -24,6 +24,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         public Form_Xe_30_Cho()
         {
+            Load += Form_Xe_30_Cho_Load;
             InitializeComponent();
         }
 
