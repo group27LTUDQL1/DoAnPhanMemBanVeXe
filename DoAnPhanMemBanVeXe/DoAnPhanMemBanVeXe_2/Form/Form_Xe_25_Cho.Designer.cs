@@ -73,6 +73,7 @@
             this.btn_20.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_20.TabIndex = 20;
             this.btn_20.Text = "20";
+            this.btn_20.Click += new System.EventHandler(this.btn_20_Click);
             // 
             // btn_12
             // 
@@ -87,6 +88,7 @@
             this.btn_12.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_12.TabIndex = 22;
             this.btn_12.Text = "12";
+            this.btn_12.Click += new System.EventHandler(this.btn_12_Click);
             // 
             // btn_6
             // 
@@ -101,6 +103,7 @@
             this.btn_6.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_6.TabIndex = 16;
             this.btn_6.Text = "6";
+            this.btn_6.Click += new System.EventHandler(this.btn_6_Click);
             // 
             // btn_24
             // 
@@ -115,6 +118,7 @@
             this.btn_24.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_24.TabIndex = 19;
             this.btn_24.Text = "24";
+            this.btn_24.Click += new System.EventHandler(this.btn_24_Click);
             // 
             // btn_16
             // 
@@ -129,6 +133,7 @@
             this.btn_16.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_16.TabIndex = 17;
             this.btn_16.Text = "16";
+            this.btn_16.Click += new System.EventHandler(this.btn_16_Click);
             // 
             // btn_2
             // 
@@ -143,6 +148,7 @@
             this.btn_2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_2.TabIndex = 18;
             this.btn_2.Text = "2";
+            this.btn_2.Click += new System.EventHandler(this.btn_2_Click);
             // 
             // btn_13
             // 
@@ -157,6 +163,7 @@
             this.btn_13.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_13.TabIndex = 23;
             this.btn_13.Text = "13";
+            this.btn_13.Click += new System.EventHandler(this.btn_13_Click);
             // 
             // btn_19
             // 
@@ -171,6 +178,7 @@
             this.btn_19.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_19.TabIndex = 28;
             this.btn_19.Text = "19";
+            this.btn_19.Click += new System.EventHandler(this.btn_19_Click);
             // 
             // btn_14
             // 
@@ -185,6 +193,7 @@
             this.btn_14.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_14.TabIndex = 30;
             this.btn_14.Text = "14";
+            this.btn_14.Click += new System.EventHandler(this.btn_14_Click);
             // 
             // btn_11
             // 
@@ -199,6 +208,7 @@
             this.btn_11.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_11.TabIndex = 25;
             this.btn_11.Text = "11";
+            this.btn_11.Click += new System.EventHandler(this.btn_11_Click);
             // 
             // btn_22
             // 
@@ -213,6 +223,7 @@
             this.btn_22.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_22.TabIndex = 26;
             this.btn_22.Text = "22";
+            this.btn_22.Click += new System.EventHandler(this.btn_22_Click);
             // 
             // btn_8
             // 
@@ -227,6 +238,7 @@
             this.btn_8.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_8.TabIndex = 5;
             this.btn_8.Text = "8";
+            this.btn_8.Click += new System.EventHandler(this.btn_8_Click);
             // 
             // btn_10
             // 
@@ -241,6 +253,7 @@
             this.btn_10.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_10.TabIndex = 6;
             this.btn_10.Text = "10";
+            this.btn_10.Click += new System.EventHandler(this.btn_10_Click);
             // 
             // btn_23
             // 
@@ -255,6 +268,7 @@
             this.btn_23.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_23.TabIndex = 7;
             this.btn_23.Text = "23";
+            this.btn_23.Click += new System.EventHandler(this.btn_23_Click);
             // 
             // btn_5
             // 
@@ -269,6 +283,7 @@
             this.btn_5.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_5.TabIndex = 1;
             this.btn_5.Text = "5";
+            this.btn_5.Click += new System.EventHandler(this.btn_5_Click);
             // 
             // btn_18
             // 
@@ -283,6 +298,7 @@
             this.btn_18.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_18.TabIndex = 2;
             this.btn_18.Text = "18";
+            this.btn_18.Click += new System.EventHandler(this.btn_18_Click);
             // 
             // btn_9
             // 
@@ -297,6 +313,7 @@
             this.btn_9.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_9.TabIndex = 3;
             this.btn_9.Text = "9";
+            this.btn_9.Click += new System.EventHandler(this.btn_9_Click);
             // 
             // btn_21
             // 
@@ -311,6 +328,7 @@
             this.btn_21.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_21.TabIndex = 8;
             this.btn_21.Text = "21";
+            this.btn_21.Click += new System.EventHandler(this.btn_21_Click);
             // 
             // btn_4
             // 
@@ -325,6 +343,7 @@
             this.btn_4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_4.TabIndex = 13;
             this.btn_4.Text = "4";
+            this.btn_4.Click += new System.EventHandler(this.btn_4_Click);
             // 
             // btn_15
             // 
@@ -339,6 +358,7 @@
             this.btn_15.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_15.TabIndex = 14;
             this.btn_15.Text = "15";
+            this.btn_15.Click += new System.EventHandler(this.btn_15_Click);
             // 
             // btn_7
             // 
@@ -353,6 +373,7 @@
             this.btn_7.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_7.TabIndex = 15;
             this.btn_7.Text = "7";
+            this.btn_7.Click += new System.EventHandler(this.btn_7_Click);
             // 
             // btn_17
             // 
@@ -367,6 +388,7 @@
             this.btn_17.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_17.TabIndex = 12;
             this.btn_17.Text = "17";
+            this.btn_17.Click += new System.EventHandler(this.btn_17_Click);
             // 
             // btn_1
             // 
@@ -381,6 +403,7 @@
             this.btn_1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_1.TabIndex = 9;
             this.btn_1.Text = "1";
+            this.btn_1.Click += new System.EventHandler(this.btn_1_Click);
             // 
             // btn_3
             // 
@@ -395,6 +418,7 @@
             this.btn_3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_3.TabIndex = 11;
             this.btn_3.Text = "3";
+            this.btn_3.Click += new System.EventHandler(this.btn_3_Click);
             // 
             // PanelEx_Xe30
             // 
@@ -431,6 +455,7 @@
             this.btn_Thoat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_Thoat.TabIndex = 17;
             this.btn_Thoat.Text = "&Thoát";
+            this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
             // 
             // grb_25
             // 
@@ -509,6 +534,7 @@
             this.btn_TaiXe.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_TaiXe.TabIndex = 10;
             this.btn_TaiXe.Text = "Bác tài";
+            this.btn_TaiXe.Click += new System.EventHandler(this.btn_TaiXe_Click);
             // 
             // Form_Xe_25_Cho
             // 
@@ -518,6 +544,7 @@
             this.Controls.Add(this.PanelEx_Xe30);
             this.Name = "Form_Xe_25_Cho";
             this.Text = "Form_Xe_25_Cho";
+            this.Load += new System.EventHandler(this.Form_Xe_25_Cho_Load);
             this.PanelEx_Xe30.ResumeLayout(false);
             this.grb_25.ResumeLayout(false);
             this.ResumeLayout(false);
