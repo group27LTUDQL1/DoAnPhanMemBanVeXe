@@ -38,6 +38,8 @@
             this.lblChaoMung = new DevComponents.DotNetBar.Controls.ReflectionLabel();
             this.PanelEx1 = new DevComponents.DotNetBar.PanelEx();
             this.PanelLogin = new DevComponents.DotNetBar.PanelEx();
+            this.PictureBox2 = new System.Windows.Forms.PictureBox();
+            this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.LinkLabelLanguague = new System.Windows.Forms.LinkLabel();
             this.Label_HuongDan = new DevComponents.DotNetBar.LabelX();
             this.cmdExit = new DevComponents.DotNetBar.ButtonX();
@@ -50,8 +52,6 @@
             this.DockContainerItem2 = new DevComponents.DotNetBar.DockContainerItem();
             this.DockContainerItem1 = new DevComponents.DotNetBar.DockContainerItem();
             this.DockContainerItem4 = new DevComponents.DotNetBar.DockContainerItem();
-            this.PictureBox2 = new System.Windows.Forms.PictureBox();
-            this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.PanelEx1.SuspendLayout();
             this.PanelLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).BeginInit();
@@ -164,6 +164,28 @@
             this.PanelLogin.StyleMouseOver.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.PanelLogin.TabIndex = 1;
             // 
+            // PictureBox2
+            // 
+            this.PictureBox2.Image = global::DoAnPhanMemBanVeXe_2.Properties.Resources.bus_icon;
+            this.PictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.PictureBox2.Location = new System.Drawing.Point(37, 76);
+            this.PictureBox2.Name = "PictureBox2";
+            this.PictureBox2.Size = new System.Drawing.Size(157, 140);
+            this.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBox2.TabIndex = 12;
+            this.PictureBox2.TabStop = false;
+            // 
+            // PictureBox1
+            // 
+            this.PictureBox1.Image = global::DoAnPhanMemBanVeXe_2.Properties.Resources.user_login_icon;
+            this.PictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.PictureBox1.Location = new System.Drawing.Point(37, 76);
+            this.PictureBox1.Name = "PictureBox1";
+            this.PictureBox1.Size = new System.Drawing.Size(157, 140);
+            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBox1.TabIndex = 11;
+            this.PictureBox1.TabStop = false;
+            // 
             // LinkLabelLanguague
             // 
             this.LinkLabelLanguague.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -210,6 +232,7 @@
             this.cmdLogin.Size = new System.Drawing.Size(87, 23);
             this.cmdLogin.TabIndex = 5;
             this.cmdLogin.Text = "Đăng nhập";
+            this.cmdLogin.Click += new System.EventHandler(this.cmdLogin_Click);
             // 
             // txtUserName
             // 
@@ -293,28 +316,6 @@
             this.DockContainerItem4.Name = "DockContainerItem4";
             this.DockContainerItem4.Text = "DockContainerItem4";
             // 
-            // PictureBox2
-            // 
-            this.PictureBox2.Image = global::DoAnPhanMemBanVeXe_2.Properties.Resources.bus_icon;
-            this.PictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.PictureBox2.Location = new System.Drawing.Point(37, 76);
-            this.PictureBox2.Name = "PictureBox2";
-            this.PictureBox2.Size = new System.Drawing.Size(157, 140);
-            this.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictureBox2.TabIndex = 12;
-            this.PictureBox2.TabStop = false;
-            // 
-            // PictureBox1
-            // 
-            this.PictureBox1.Image = global::DoAnPhanMemBanVeXe_2.Properties.Resources.user_login_icon;
-            this.PictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.PictureBox1.Location = new System.Drawing.Point(37, 76);
-            this.PictureBox1.Name = "PictureBox1";
-            this.PictureBox1.Size = new System.Drawing.Size(157, 140);
-            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictureBox1.TabIndex = 11;
-            this.PictureBox1.TabStop = false;
-            // 
             // Form_Login
             // 
             this.AcceptButton = this.cmdLogin;
@@ -326,7 +327,8 @@
             this.Name = "Form_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Login_FormClosing);
+            this.Load += new System.EventHandler(this.Form_Login_Load);
             this.PanelEx1.ResumeLayout(false);
             this.PanelLogin.ResumeLayout(false);
             this.PanelLogin.PerformLayout();
