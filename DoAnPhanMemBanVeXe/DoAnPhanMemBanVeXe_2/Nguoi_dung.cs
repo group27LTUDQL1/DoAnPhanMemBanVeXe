@@ -167,13 +167,13 @@ namespace DoAnPhanMemBanVeXe_2
             _with2.SelectedValue = "IdNguoiDung";
             Xoa_lien_ket();           
             //Tao gia tri mac dinh la IdNguoiDung dong thu 0 cot 0 luc khoi dong vi IdNguoiDung la member ko lien ket duoc
-            /*fm.cbo_Username.Text = (String)fm.luoi_NguoiDung.Rows[0].Cells[0].Value;
+            fm.cbo_Username.Text = (String)fm.luoi_NguoiDung.Rows[0].Cells[0].Value;
             fm.txt_Password.DataBindings.Add("text", fm.luoi_NguoiDung.DataSource, "PassND");
             fm.txt_DiaChi.DataBindings.Add("text", fm.luoi_NguoiDung.DataSource, "DiaChi");
             fm.txt_HoTen.DataBindings.Add("text", fm.luoi_NguoiDung.DataSource, "HoTen");
             fm.txt_SoDienThoai.DataBindings.Add("text", fm.luoi_NguoiDung.DataSource, "SoDT");
             fm.date_NgaySinh.DataBindings.Add("text", fm.luoi_NguoiDung.DataSource, "NgaySinh");
-            fm.cbo_IdLoaiND.DataBindings.Add("text", fm.luoi_NguoiDung.DataSource, "IdLoaiND");*/
+            fm.cbo_IdLoaiND.DataBindings.Add("text", fm.luoi_NguoiDung.DataSource, "IdLoaiND");
         }
         #endregion
 
