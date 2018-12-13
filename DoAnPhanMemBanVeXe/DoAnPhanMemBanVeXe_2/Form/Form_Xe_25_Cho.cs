@@ -15,7 +15,7 @@ namespace DoAnPhanMemBanVeXe_2
 {
     public partial class Form_Xe_25_Cho : Form
     {
-        Form_Main fm = new Form_Main();
+        Form_Main fm;
         private string lenh;
         private string lenh1;
         private Ban_ve Ban_ve = new Ban_ve();
@@ -46,6 +46,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         private void Duyet_danh_sach_cho_ngoi()
         {
+            fm = new Form_Main();
             var _with1 = fm;
             lenh = "Select IdChuyen from ChuyenXe where IdTuyen = '" + _with1.cbo_TenTuyenVe.SelectedValue.ToString() + "'";
             lenh += " and  NgayDi =  '" + Strings.FormatDateTime(Convert.ToDateTime(_with1.cbo_NgayVe.SelectedValue.ToString()), DateFormat.ShortDate) + "' and Gio = '" + _with1.cbo_GioVe.SelectedValue.ToString() + "'";

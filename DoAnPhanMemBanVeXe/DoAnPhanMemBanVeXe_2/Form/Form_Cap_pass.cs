@@ -14,7 +14,7 @@ namespace DoAnPhanMemBanVeXe_2
 {
     public partial class Form_Cap_pass : DevComponents.DotNetBar.Office2007RibbonForm
     {
-        Form_Main fm = new Form_Main();
+        Form_Main fm;
         private bool flag = true;
         private Nguoi_dung Nguoi_dung = new Nguoi_dung();
 
@@ -25,6 +25,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         private void Form_Cap_pass_Load(object sender, EventArgs e)
         {
+            fm = new Form_Main();
             txt_IdNguoiDung.Text = fm.cbo_Username.Text;
             txt_IdNguoiDung.Enabled = false;
             txt_NewPassword.Focus();

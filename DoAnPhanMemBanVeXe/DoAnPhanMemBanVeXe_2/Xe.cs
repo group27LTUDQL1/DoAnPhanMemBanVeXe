@@ -14,7 +14,7 @@ namespace DoAnPhanMemBanVeXe_2
 {
     public class Xe
     {
-        Form_Main fm = new Form_Main();
+        Form_Main fm;
         private bool flag;
         private string lenh;
         private DataTable bang_xe;
@@ -22,6 +22,7 @@ namespace DoAnPhanMemBanVeXe_2
         private int vi_tri_hien_hanh;
         public void UpdateXe()
         {
+            fm = new Form_Main();
             Doc_bang_Xe();
             Tao_lien_ket();
             vi_tri_hien_hanh = 0;
@@ -54,6 +55,7 @@ namespace DoAnPhanMemBanVeXe_2
         #region "Doc bang xe da xu ly xong"
         private void Doc_bang_Xe()
         {
+            fm = new Form_Main();
             //Lam sach luoi sau moi lan cap nhat
             fm.Luoi_Xe.ClearSelection();
             lenh = "Select * from Xe";
@@ -65,6 +67,7 @@ namespace DoAnPhanMemBanVeXe_2
         #region "Xu ly cac nut di chuyen va xuat thong tin xe da hoan tat"
         private void Xuat_thong_tin_Xe()
         {
+            fm = new Form_Main();
             DataRow dong = bang_xe.Rows[vi_tri_hien_hanh];
             var _with2 = fm;
             _with2.cbo_SoXe.Text = dong["So_Xe"].ToString();
@@ -107,6 +110,7 @@ namespace DoAnPhanMemBanVeXe_2
         #region "Tao lien ket giua cac dieu khien voi datagridview da hoan tat"
         private void Tao_lien_ket()
         {
+            fm = new Form_Main();
             if (string.IsNullOrEmpty(fm.cbo_SoChoNgoi.Text))
             {
                 var _with3 = fm.cbo_SoChoNgoi;
@@ -127,16 +131,18 @@ namespace DoAnPhanMemBanVeXe_2
             //------------Cach1 nhung khong hay, ta nen huy vung nho cua bang sau moi lan xai xong
             //Form_Main.cbo_IdXe.Text = bang_xe.Rows(0)("Id_Xe").ToString 
             //-----------------Cach 2--------------------------
-            fm.cbo_SoXe.Text = fm.Luoi_Xe[0, 0].Value.ToString();
+            fm.cbo_SoXe.Text = (String)fm.Luoi_Xe.Rows[0].Cells[0].Value;
+            /*
             fm.cbo_HieuXe.DataBindings.Add("text", fm.Luoi_Xe.DataSource, "Hieu_Xe");
             fm.txt_DoiXe.DataBindings.Add("text", fm.Luoi_Xe.DataSource, "Doi_Xe");
-            fm.cbo_SoChoNgoi.DataBindings.Add("text", fm.Luoi_Xe.DataSource, "So_Cho_Ngoi");
+            fm.cbo_SoChoNgoi.DataBindings.Add("text", fm.Luoi_Xe.DataSource, "So_Cho_Ngoi");*/
         }
         #endregion
 
         #region "Xoa lien ket giua cac dieu khien voi datagridview da hoan tat"
         private void Xoa_lien_ket()
         {
+            fm = new Form_Main();
             fm.cbo_SoXe.DataBindings.Clear();
             fm.cbo_HieuXe.DataBindings.Clear();
             fm.txt_DoiXe.DataBindings.Clear();
@@ -155,6 +161,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         public void Sua_Xe()
         {
+            fm = new Form_Main();
             flag = false;
             Lock_Control(true);
             LockButton(true);
@@ -165,6 +172,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         public void Luu_thay_doi()
         {
+            fm = new Form_Main();
             Ket_noi.Tao_ket_noi();
             if (Ket_noi.connect.State == ConnectionState.Open)
             {
@@ -265,6 +273,7 @@ namespace DoAnPhanMemBanVeXe_2
         #region "Xu ly huy thao tac cap nhat da hoan tat"
         public void Huy_thao_tac()
         {
+            fm = new Form_Main();
             fm.Luoi_Xe.Enabled = true;
             Xoa_lien_ket();
             Lock_Control(false);
@@ -276,6 +285,7 @@ namespace DoAnPhanMemBanVeXe_2
         #region "Xoa xe hoan tat"
         public void Xoa_Xe()
         {
+            fm = new Form_Main();
             var qs = MessageBox.Show("Bạn chắc chắn muốn xóa tất cả thông tin về:" + Constants.vbNewLine + " - So xe: " + fm.cbo_SoXe.Text + Constants.vbNewLine + " - Hieu xe: " + fm.cbo_HieuXe.Text, "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if (qs == DialogResult.Yes)
             {
@@ -304,6 +314,7 @@ namespace DoAnPhanMemBanVeXe_2
         #region "Cac xu ly phu voi cac dieu khien da hoan tat"
         private void Lock_Control(bool f)
         {
+            fm = new Form_Main();
             var _with6 = fm;
             _with6.cbo_SoXe.Enabled = true;
             _with6.cbo_HieuXe.Enabled = f;
@@ -313,6 +324,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         private void Clear_Control()
         {
+            fm = new Form_Main();
             var _with7 = fm;
             _with7.cbo_SoXe.Text = "";
             _with7.cbo_HieuXe.Text = "";
@@ -322,6 +334,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         private void LockButton(bool dt)
         {
+            fm = new Form_Main();
             var _with8 = fm;
             _with8.btn_ThemXe.Enabled = !dt;
             _with8.btn_SuaXe.Enabled = !dt;
@@ -332,6 +345,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         private bool TestInfo()
         {
+            fm = new Form_Main();
             bool functionReturnValue = false;
             functionReturnValue = true;
             var _with9 = fm;

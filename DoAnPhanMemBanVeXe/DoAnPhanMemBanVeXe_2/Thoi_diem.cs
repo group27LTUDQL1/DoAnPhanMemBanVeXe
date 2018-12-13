@@ -14,7 +14,7 @@ namespace DoAnPhanMemBanVeXe_2
 {
     public class Thoi_diem
     {
-        Form_Main fm = new Form_Main();
+        Form_Main fm;
         private DataTable bang_thoi_diem;
         private DataTable bang_tuyen_xe;
         private string lenh;
@@ -30,6 +30,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         private void Hide()
         {
+            fm = new Form_Main();
             fm.rad_KhongLap.Hide();
             fm.rad_LapTuan.Hide();
             fm.lbl_Lap.Hide();
@@ -38,12 +39,14 @@ namespace DoAnPhanMemBanVeXe_2
 
         private void Show()
         {
+            fm = new Form_Main();
             fm.rad_KhongLap.Show();
             fm.rad_LapTuan.Show();
         }
 
         private void Doc_tuyen()
         {
+            fm = new Form_Main();
             lenh = "Select IdTuyen, TenTuyen from TuyenXe";
             bang_tuyen_xe = Ket_noi.Doc_bang(lenh);
             var _with1 = fm.cbo_GanTuyen;
@@ -58,6 +61,7 @@ namespace DoAnPhanMemBanVeXe_2
         #region "Doc thoi diem voi tao lien ket da xong"
         private void Doc_thoi_diem()
         {
+            fm = new Form_Main();
             lenh = "Select * from ThoiDiem";
             bang_thoi_diem = Ket_noi.Doc_bang(lenh);
             fm.luoi_ThoiDiem.DataSource = bang_thoi_diem;
@@ -65,6 +69,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         private void Tao_lien_ket()
         {
+            fm = new Form_Main();
             var _with3 = fm.cbo_MaThoiDiem;
             _with3.DataSource = bang_thoi_diem;
             _with3.DisplayMember = "IdThoiDiem";
@@ -81,6 +86,7 @@ namespace DoAnPhanMemBanVeXe_2
         #region "Xu ly ho tro button da xong"
         private void Clear_Control()
         {
+            fm = new Form_Main();
             var _with5 = fm;
             _with5.date_Chay.Text = "";
             _with5.date_NgayKetThuc.Text = "";
@@ -91,6 +97,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         private void LockButton(bool dt)
         {
+            fm = new Form_Main();
             var _with6 = fm;
             _with6.btn_ThemThoiDiem.Enabled = !dt;
             _with6.btn_SuaThoiDiem.Enabled = !dt;
@@ -102,6 +109,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         public void them()
         {
+            fm = new Form_Main();
             flag = true;
             LockButton(true);
             fm.lbl_Lap.Hide();
@@ -113,6 +121,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         public void Sua()
         {
+            fm = new Form_Main();
             fm.rad_LapTuan.Checked = false;
             fm.rad_KhongLap.Checked = true;
             Show();
@@ -123,6 +132,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         public void Luu()
         {
+            fm = new Form_Main();
             Ket_noi.Tao_ket_noi();
             if (Ket_noi.connect.State == ConnectionState.Open)
             {
@@ -257,6 +267,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         public void Huy()
         {
+            fm = new Form_Main();
             LockButton(false);
             Update_thoi_diem();
             fm.cbo_MaThoiDiem.Enabled = true;
@@ -265,6 +276,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         public void Xoa()
         {
+            fm = new Form_Main();
             var qs = MessageBox.Show("Bạn chắc chắn muốn xóa tất cả thông tin về:" + Constants.vbNewLine + " - Ma thoi diem: " + fm.cbo_MaThoiDiem.Text + Constants.vbNewLine + " - Ngay: " + fm.date_Chay.Text + Constants.vbNewLine + " - Giờ: " + fm.txt_GioChay.Text, "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if (qs == DialogResult.Yes)
             {
@@ -291,6 +303,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         private long layKhoangCach()
         {
+            fm = new Form_Main();
             long i = 0;
             i = DateAndTime.DateDiff(DateInterval.Day, Convert.ToDateTime(fm.date_Chay.Text), Convert.ToDateTime(fm.date_NgayKetThuc.Text), FirstDayOfWeek.System, FirstWeekOfYear.System);
             return i;
@@ -298,6 +311,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         private bool TestInfo()
         {
+            fm = new Form_Main();
             bool functionReturnValue = false;
             functionReturnValue = true;
             var _with8 = fm;
@@ -341,6 +355,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         public void Gan_tuyen()
         {
+            fm = new Form_Main();
             var _with9 = fm;
             if (string.IsNullOrEmpty(_with9.cbo_MaThoiDiem.Text))
             {

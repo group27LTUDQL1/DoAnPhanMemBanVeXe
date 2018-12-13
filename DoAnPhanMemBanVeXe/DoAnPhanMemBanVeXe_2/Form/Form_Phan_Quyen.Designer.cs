@@ -39,8 +39,8 @@
             this.ckb_chuyenXe = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.ckb_xe = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.ckb_tuyen = new DevComponents.DotNetBar.Controls.CheckBoxX();
-            this.btn_DongY = new DevComponents.DotNetBar.ButtonX();
             this.ButtonThoat = new DevComponents.DotNetBar.ButtonX();
+            this.btn_DongY = new DevComponents.DotNetBar.ButtonX();
             this.PanelEx1.SuspendLayout();
             this.grb_PhanQuyen.SuspendLayout();
             this.SuspendLayout();
@@ -242,25 +242,12 @@
             this.ckb_tuyen.TabIndex = 1;
             this.ckb_tuyen.Text = "Thao Tác Trên Bảng Tuyến Xe";
             // 
-            // btn_DongY
-            // 
-            this.btn_DongY.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btn_DongY.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
-            this.btn_DongY.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_DongY.ImageFixedSize = new System.Drawing.Size(50, 50);
-            this.btn_DongY.Location = new System.Drawing.Point(338, 85);
-            this.btn_DongY.Name = "btn_DongY";
-            this.btn_DongY.Size = new System.Drawing.Size(121, 56);
-            this.btn_DongY.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btn_DongY.TabIndex = 2;
-            this.btn_DongY.Text = "&Đồng ý";
-            this.btn_DongY.Click += new System.EventHandler(this.btn_DongY_Click);
-            // 
             // ButtonThoat
             // 
             this.ButtonThoat.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.ButtonThoat.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
             this.ButtonThoat.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonThoat.Image = global::DoAnPhanMemBanVeXe_2.Properties.Resources.exit1;
             this.ButtonThoat.ImageFixedSize = new System.Drawing.Size(40, 40);
             this.ButtonThoat.Location = new System.Drawing.Point(338, 165);
             this.ButtonThoat.Name = "ButtonThoat";
@@ -270,6 +257,21 @@
             this.ButtonThoat.Tag = "";
             this.ButtonThoat.Text = "&Thoát";
             this.ButtonThoat.Click += new System.EventHandler(this.ButtonThoat_Click);
+            // 
+            // btn_DongY
+            // 
+            this.btn_DongY.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btn_DongY.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb;
+            this.btn_DongY.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_DongY.Image = global::DoAnPhanMemBanVeXe_2.Properties.Resources.phanquyen1;
+            this.btn_DongY.ImageFixedSize = new System.Drawing.Size(50, 50);
+            this.btn_DongY.Location = new System.Drawing.Point(338, 85);
+            this.btn_DongY.Name = "btn_DongY";
+            this.btn_DongY.Size = new System.Drawing.Size(121, 56);
+            this.btn_DongY.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btn_DongY.TabIndex = 2;
+            this.btn_DongY.Text = "&Đồng ý";
+            this.btn_DongY.Click += new System.EventHandler(this.btn_DongY_Click);
             // 
             // Form_Phan_Quyen
             // 

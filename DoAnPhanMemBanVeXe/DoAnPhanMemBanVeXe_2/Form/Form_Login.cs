@@ -14,13 +14,14 @@ namespace DoAnPhanMemBanVeXe_2
 {
     public partial class Form_Login : Form
     {
-        Form_Main fm = new Form_Main();
+        Form_Main fm;
         private bool flag = false; // Dung kiem soat timer
         public string LoginLoaiND = "";
         public string LoginTenND = "";
 
         public Form_Login()
         {
+            Load += Form_Login_Load;
             InitializeComponent();
         }
 
@@ -76,6 +77,8 @@ namespace DoAnPhanMemBanVeXe_2
         #region "Event Timer_Tick da hoan tat"
         private void TimerClosing_Tick(object sender, EventArgs e)
         {
+            
+            fm = new Form_Main();
             this.Opacity -= 0.05;
             if (this.Opacity == 0)
             {

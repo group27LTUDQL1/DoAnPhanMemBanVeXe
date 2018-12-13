@@ -12,18 +12,20 @@ using System.Data.SqlClient;
 
 namespace DoAnPhanMemBanVeXe_2
 {
-    class Nguoi_dung
+    public class Nguoi_dung
     {
-        Form_Main fm = new Form_Main();
-        Form_Login fl = new Form_Login();
+        Form_Main fm;
+        Form_Login fl;
         private bool flag;
-        private System.Data.DataTable bang_Nguoi_Dung;
-
+        private DataTable bang_Nguoi_Dung;
         private int vi_tri_hien_hanh;
+
         public void UpdateNguoiDung()
         {
+            fm = new Form_Main();
+            fl = new Form_Login();
             if (fl.LoginLoaiND == "Quan_Ly" || fl.LoginLoaiND == "Admin")
-            {
+            {                
                 Doc_bang_Nguoi_Dung();
                 vi_tri_hien_hanh = 0;
                 Xuat_thong_tin_Nguoi_Dung();
@@ -33,7 +35,7 @@ namespace DoAnPhanMemBanVeXe_2
                 LockButton(false);
             }
             else
-            {
+            {                
                 Doc_bang_Nguoi_Dung();
                 vi_tri_hien_hanh = 0;
                 Xuat_thong_tin_Nguoi_Dung();
@@ -50,6 +52,8 @@ namespace DoAnPhanMemBanVeXe_2
         #region "Xu ly doc bang nguoi dung va phan loai nguoi dung de hien thi da hoan tat"
         private void Doc_bang_Nguoi_Dung()
         {
+            fm = new Form_Main();
+            fl = new Form_Login();
             //Lam sach luoi sau moi lan cap nhat
             fm.luoi_NguoiDung.ClearSelection();
             string lenh = null;
@@ -73,6 +77,7 @@ namespace DoAnPhanMemBanVeXe_2
         #region "Xu ly cac nut di chuyen va xuat thong tin nguoi dung da hoan tat"
         private void Xuat_thong_tin_Nguoi_Dung()
         {
+            fm = new Form_Main();
             DataRow dong = bang_Nguoi_Dung.Rows[vi_tri_hien_hanh];
             var _with1 = fm;
             _with1.cbo_Username.Text = dong["IdNguoiDung"].ToString();
@@ -126,14 +131,16 @@ namespace DoAnPhanMemBanVeXe_2
         #region "Tao lien ket giua cac dieu khien voi datagridview da hoan tat"
         private void Tao_lien_ket()
         {
+            
+            fm = new Form_Main();
+            fl = new Form_Login();
             SqlCommand query = new SqlCommand("select IdLoaiND from LoaiNguoiDung", Ket_noi.connect);
-            SqlDataReader dr = null;
             Ket_noi.connect.Open();
-            dr = query.ExecuteReader();
+            SqlDataReader dr = query.ExecuteReader();
             fm.cbo_IdLoaiND.Items.Clear();
             while (dr.Read() == true)
-            {
-                if (fl.LoginLoaiND == "Admin")
+                {
+                    if (fl.LoginLoaiND == "Admin")
                 {
                     fm.cbo_IdLoaiND.Items.Add(dr.GetValue(0).ToString());
                 }
@@ -158,21 +165,23 @@ namespace DoAnPhanMemBanVeXe_2
             _with2.DisplayMember = "IdNguoiDung";
             _with2.ValueMember = "IdNguoiDung";
             _with2.SelectedValue = "IdNguoiDung";
-            Xoa_lien_ket();
+            Xoa_lien_ket();           
             //Tao gia tri mac dinh la IdNguoiDung dong thu 0 cot 0 luc khoi dong vi IdNguoiDung la member ko lien ket duoc
-            fm.cbo_Username.Text = fm.luoi_NguoiDung[0, 0].Value.ToString();
+            /*fm.cbo_Username.Text = (String)fm.luoi_NguoiDung.Rows[0].Cells[0].Value;
             fm.txt_Password.DataBindings.Add("text", fm.luoi_NguoiDung.DataSource, "PassND");
             fm.txt_DiaChi.DataBindings.Add("text", fm.luoi_NguoiDung.DataSource, "DiaChi");
             fm.txt_HoTen.DataBindings.Add("text", fm.luoi_NguoiDung.DataSource, "HoTen");
             fm.txt_SoDienThoai.DataBindings.Add("text", fm.luoi_NguoiDung.DataSource, "SoDT");
             fm.date_NgaySinh.DataBindings.Add("text", fm.luoi_NguoiDung.DataSource, "NgaySinh");
-            fm.cbo_IdLoaiND.DataBindings.Add("text", fm.luoi_NguoiDung.DataSource, "IdLoaiND");
+            fm.cbo_IdLoaiND.DataBindings.Add("text", fm.luoi_NguoiDung.DataSource, "IdLoaiND");*/
         }
         #endregion
 
         #region "Xoa lien ket giua cac dieu khien voi datagridview da hoan tat"
         private void Xoa_lien_ket()
         {
+            
+            fm = new Form_Main();
             fm.txt_Password.DataBindings.Clear();
             fm.txt_DiaChi.DataBindings.Clear();
             fm.txt_HoTen.DataBindings.Clear();
@@ -185,6 +194,8 @@ namespace DoAnPhanMemBanVeXe_2
         #region "Them va sua thong tin nguoi dung da ly ly xong"
         public void Them_nguoi_dung()
         {
+            
+            fm = new Form_Main();
             flag = true;
             Lock_Control(true);
             LockButton(true);
@@ -194,6 +205,10 @@ namespace DoAnPhanMemBanVeXe_2
 
         public void Sua_thong_tin_ca_nhan()
         {
+            Form_Main fm;
+            Form_Login fl;
+            fm = new Form_Main();
+            fl = new Form_Login();
             flag = false;
             Lock_Control(true);
             LockButton(true);
@@ -206,6 +221,10 @@ namespace DoAnPhanMemBanVeXe_2
 
         public void Luu_thay_doi()
         {
+            Form_Main fm;
+            Form_Login fl;
+            fm = new Form_Main();
+            fl = new Form_Login();
             Ket_noi.Tao_ket_noi();
             if (Ket_noi.connect.State == ConnectionState.Open)
             {
@@ -345,7 +364,9 @@ namespace DoAnPhanMemBanVeXe_2
 
         #region "Xu ly xoa nguoi dung da hoan tat"
         public void Xoa_nguoi_dung()
-        {
+        {            
+            fm = new Form_Main();
+            fl = new Form_Login();
             if (Strings.Trim(fm.cbo_Username.Text) == fl.LoginTenND)
             {
                 DialogResult dg = MessageBox.Show("Ban không được quyền xóa thông tin của chính bạn được. ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -381,6 +402,8 @@ namespace DoAnPhanMemBanVeXe_2
         #region "Cac xu ly phu voi cac dieu khien da hoan tat"
         private void Lock_Control(bool f)
         {
+            
+            fm = new Form_Main();
             var _with4 = fm;
             _with4.cbo_Username.Enabled = true;
             _with4.txt_Password.Enabled = f;
@@ -395,6 +418,8 @@ namespace DoAnPhanMemBanVeXe_2
 
         private void Clear_Control()
         {
+            
+            fm = new Form_Main();
             var _with5 = fm;
             _with5.txt_Password.Text = "";
             _with5.txt_DiaChi.Text = "";
@@ -409,6 +434,8 @@ namespace DoAnPhanMemBanVeXe_2
 
         private void LockButton(bool dt)
         {
+            
+            fm = new Form_Main();
             var _with6 = fm;
             _with6.Button_Them.Enabled = !dt;
             _with6.Button_Sua.Enabled = !dt;
@@ -421,6 +448,8 @@ namespace DoAnPhanMemBanVeXe_2
 
         private bool TestInfo()
         {
+            
+            fm = new Form_Main();
             bool functionReturnValue = false;
             functionReturnValue = true;
             var _with7 = fm;

@@ -373,6 +373,16 @@ namespace DoAnPhanMemBanVeXe_2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap phanquyen11 {
+            get {
+                object obj = ResourceManager.GetObject("phanquyen11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap remove_user_icon {
             get {
                 object obj = ResourceManager.GetObject("remove_user_icon", resourceCulture);

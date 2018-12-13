@@ -14,7 +14,7 @@ namespace DoAnPhanMemBanVeXe_2
 {
     public class Ban_ve
     {
-        Form_Main fm = new Form_Main();
+        Form_Main fm;
         private DataTable bang_tuyen_xe;
         private DataTable bang_Thoi_diem_ngay;
         private DataTable bang_Thoi_diem_gio;
@@ -36,6 +36,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         private void doc_bang_ve()
         {
+            fm= new Form_Main();
             lenh = "Select IdVe, TenHanhKhach, SDTHanhKhach, TenTuyen, NgayDi, Gio, So_Xe from BanVe, ChuyenXe, TuyenXe ";
             lenh += " where BanVe.IdChuyen = ChuyenXe.IdChuyen and ChuyenXe.IdTuyen = TuyenXe.IdTuyen";
             bang_dat_ve = Ket_noi.Doc_bang(lenh);
@@ -54,6 +55,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         private void Clear_Controls()
         {
+            fm = new Form_Main();
             var _with2 = fm;
             _with2.cbo_TenTuyenVe.Text = "";
             _with2.cbo_NgayVe.Text = "";
@@ -63,6 +65,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         private void Doc_tuyen_xe()
         {
+            fm = new Form_Main();
             lenh = "Select Distinct ChuyenXe.IdTuyen, TenTuyen from ChuyenXe, TuyenXe where TuyenXe.IdTuyen = ChuyenXe.IdTuyen";
             bang_tuyen_xe = Ket_noi.Doc_bang(lenh);
             var _with3 = fm.cbo_TenTuyenVe;
@@ -73,6 +76,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         public void Chon_tuyen()
         {
+            fm = new Form_Main();
             if (fm.cbo_TenTuyenVe.SelectedIndex < 0)
                 return;
             Loc_ngay_theo_tuyen(fm.cbo_TenTuyenVe.SelectedValue.ToString());
@@ -80,6 +84,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         private void Loc_ngay_theo_tuyen(string IdTuyen)
         {
+            fm = new Form_Main();
             lenh = "Select Distinct NgayDi from ChuyenXe where IdTuyen = '" + IdTuyen + "'";
             bang_Thoi_diem_ngay = Ket_noi.Doc_bang(lenh);
             var _with4 = fm.cbo_NgayVe;
@@ -90,6 +95,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         public void Chon_ngay()
         {
+            fm = new Form_Main();
             if (string.IsNullOrEmpty(fm.cbo_GioVe.Text) & string.IsNullOrEmpty(fm.cbo_XeVe.Text))
             {
                 fm.cbo_NgayVe.Text = "";
@@ -101,6 +107,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         private void Loc_gio_theo_ngay(string Ngay)
         {
+            fm = new Form_Main();
             lenh = "Select Gio from ChuyenXe where NgayDi = '" + Ngay + "' and IdTuyen = '" + fm.cbo_TenTuyenVe.SelectedValue.ToString() + "'";
             bang_Thoi_diem_gio = Ket_noi.Doc_bang(lenh);
             var _with5 = fm.cbo_GioVe;
@@ -111,6 +118,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         public void Chon_xe()
         {
+            fm = new Form_Main();
             if (string.IsNullOrEmpty(fm.cbo_XeVe.Text))
             {
                 fm.cbo_GioVe.Text = "";
@@ -122,6 +130,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         private void Loc_xe_theo_gio(string Gio)
         {
+            fm = new Form_Main();
             lenh = "Select So_Xe from ChuyenXe where Gio = '" + Gio + "' and IdTuyen = '" + fm.cbo_TenTuyenVe.SelectedValue.ToString() + "' and NgayDi = '" + fm.cbo_NgayVe.SelectedValue.ToString() + "'";
             bang_Xe = Ket_noi.Doc_bang(lenh);
             var _with6 = fm.cbo_XeVe;
@@ -132,6 +141,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         public void Chon_thong_tin_xe()
         {
+            fm = new Form_Main();
             if (string.IsNullOrEmpty(fm.cbo_GioVe.Text))
             {
                 fm.cbo_XeVe.Text = "";
@@ -147,6 +157,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         private void Loc_thong_tin_theo_so_xe(string So_Xe)
         {
+            fm = new Form_Main();
             lenh = "Select * From Xe where So_Xe = '" + So_Xe + "'";
             bang_Thong_tin_xe = Ket_noi.Doc_bang(lenh);
             fm.luoi_XeVe.DataSource = bang_Thong_tin_xe;
@@ -155,6 +166,7 @@ namespace DoAnPhanMemBanVeXe_2
         //Xu ly nut chon cho ngoi
         public void Chon_cho_ngoi()
         {
+            fm = new Form_Main();
             var _with7 = fm;
             if (Kiem_tra_thong_tin_dat_ve())
             {
@@ -198,6 +210,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         private bool Kiem_tra_thong_tin_dat_ve()
         {
+            fm = new Form_Main();
             bool functionReturnValue = false;
             functionReturnValue = true;
             var _with8 = fm;

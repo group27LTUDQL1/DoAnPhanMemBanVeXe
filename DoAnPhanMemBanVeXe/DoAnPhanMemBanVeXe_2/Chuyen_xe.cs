@@ -14,7 +14,7 @@ namespace DoAnPhanMemBanVeXe_2
 {
     public class Chuyen_xe
     {
-        Form_Main fm = new Form_Main();
+        Form_Main fm;
         private Ban_ve Ban_ve = new Ban_ve();
         private DataTable bang_chuyen_xe;
         private DataTable bang_tuyen_xe;
@@ -38,6 +38,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         private void Doc_chuyen_xe()
         {
+            Form_Main fm = new Form_Main();
             fm.Luoi_Chuyen_xe.ClearSelection();
             lenh = "Select * from ChuyenXe";
             bang_chuyen_xe = Ket_noi.Doc_bang(lenh);
@@ -46,6 +47,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         private void Tao_lien_ket()
         {
+            fm= new Form_Main();
             if (bang_chuyen_xe.Rows.Count != 0)
             {
                 var _with1 = fm.cbo_IdChuyen;
@@ -53,18 +55,19 @@ namespace DoAnPhanMemBanVeXe_2
                 _with1.DisplayMember = "IdChuyen";
                 _with1.ValueMember = "IdChuyen";
                 Xoa_lien_ket();
-                fm.cbo_IdChuyen.Text = fm.Luoi_Chuyen_xe[0, 0].Value.ToString();
+                fm.cbo_IdChuyen.Text = (String)fm.Luoi_Chuyen_xe.Rows[0].Cells[0].Value;
 
-                var _with2 = fm;
+                /*var _with2 = fm;
                 _with2.cbo_IdTuyenChuyen.DataBindings.Add("Text", _with2.Luoi_Chuyen_xe.DataSource, "IdTuyen");
                 _with2.cbo_SoXeChuyen.DataBindings.Add("Text", _with2.Luoi_Chuyen_xe.DataSource, "So_Xe");
                 _with2.cbo_NgayDiChuyen.DataBindings.Add("Text", _with2.Luoi_Chuyen_xe.DataSource, "NgayDi");
-                _with2.cbo_GioDiChuyen.DataBindings.Add("Text", _with2.Luoi_Chuyen_xe.DataSource, "Gio");
+                _with2.cbo_GioDiChuyen.DataBindings.Add("Text", _with2.Luoi_Chuyen_xe.DataSource, "Gio");*/
             }
         }
 
         private void Xoa_lien_ket()
         {
+            fm = new Form_Main();
             var _with3 = fm;
             _with3.cbo_IdTuyenChuyen.DataBindings.Clear();
             _with3.cbo_SoXeChuyen.DataBindings.Clear();
@@ -74,6 +77,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         private void Lock_Control(bool f)
         {
+            fm = new Form_Main();
             var _with4 = fm;
             _with4.cbo_IdChuyen.Enabled = !f;
             _with4.cbo_IdTuyenChuyen.Enabled = f;
@@ -85,6 +89,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         private void Clear_Control()
         {
+            fm = new Form_Main();
             var _with5 = fm;
             _with5.cbo_IdChuyen.Text = "";
             _with5.cbo_IdTuyenChuyen.Text = "";
@@ -97,6 +102,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         private void LockButton(bool dt)
         {
+            fm = new Form_Main();
             var _with6 = fm;
             _with6.btn_ThemChuyen.Enabled = !dt;
             _with6.btn_SuaChuyen.Enabled = !dt;
@@ -136,6 +142,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         private void Doc_tuyen_xe()
         {
+            fm = new Form_Main();
             lenh = "Select IdTuyen from TuyenXe";
             bang_tuyen_xe = Ket_noi.Doc_bang(lenh);
             var _with7 = fm.cbo_IdTuyenChuyen;
@@ -146,6 +153,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         public void Chon_tuyen()
         {
+            fm = new Form_Main();
             if (fm.cbo_IdTuyenChuyen.SelectedIndex < 0)
                 return;
             //Nghia la ko chọn mục nào
@@ -154,6 +162,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         private void Loc_Thoi_diem_theo_Tuyen(string IdTuyen)
         {
+            fm = new Form_Main();
             lenh = "Select Distinct Ngay from ThoiDiem, ChiTietTuyen where IdTuyen = '" + IdTuyen + "' and ThoiDiem.IdThoiDiem = ChiTietTuyen.IdThoiDiem";
             bang_Chi_tiet_tuyen = Ket_noi.Doc_bang(lenh);
             var _with8 = fm.cbo_NgayDiChuyen;
@@ -164,6 +173,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         public void Chon_ngay()
         {
+            fm = new Form_Main();
             if (fm.cbo_NgayDiChuyen.SelectedIndex < 0)
                 return;
             //Nghia la ko chọn mục nào
@@ -172,6 +182,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         private void Loc_gio_theo_ngay(string ngay)
         {
+            fm = new Form_Main();
             lenh = "Select Gio from ThoiDiem where Ngay = '" + ngay + "'";
             bang_Thoi_diem = Ket_noi.Doc_bang(lenh);
             var _with9 = fm.cbo_GioDiChuyen;
@@ -182,6 +193,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         private void Doc_xe()
         {
+            fm = new Form_Main();
             lenh = "Select So_Xe from Xe";
             bang_xe = Ket_noi.Doc_bang(lenh);
             var _with10 = fm.cbo_SoXeChuyen;
@@ -192,6 +204,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         public void Luu()
         {
+            fm = new Form_Main();
             if (Ket_noi.connect.State == ConnectionState.Open)
             {
                 Ket_noi.connect.Close();
@@ -597,6 +610,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         private bool TestInfo()
         {
+            fm = new Form_Main();
             bool functionReturnValue = false;
             functionReturnValue = true;
             var _with12 = fm;
@@ -631,6 +645,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         public void Xoa()
         {
+            fm = new Form_Main();
             var qs = MessageBox.Show("Bạn chắc chắn muốn xóa tất cả thông tin về:" + Constants.vbNewLine + " - Chuyến xe: " + fm.cbo_IdChuyen.Text + Constants.vbNewLine + " - Tuyến xe: " + fm.cbo_IdTuyenChuyen.Text, "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if (qs == DialogResult.Yes)
             {
@@ -658,6 +673,7 @@ namespace DoAnPhanMemBanVeXe_2
         #region "Xu ly cac nut di chuyen va xuat thong tin xe da hoan tat"
         private void Xuat_thong_tin_Chuyen_xe()
         {
+            fm = new Form_Main();
             if (bang_chuyen_xe.Rows.Count != 0)
             {
                 DataRow dong = bang_chuyen_xe.Rows[vi_tri_hien_hanh];
