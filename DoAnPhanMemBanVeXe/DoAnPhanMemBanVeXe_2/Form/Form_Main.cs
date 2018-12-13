@@ -16,8 +16,17 @@ namespace DoAnPhanMemBanVeXe_2
 {
     public partial class Form_Main : DevComponents.DotNetBar.Office2007RibbonForm
     {
-       
 
+        Form_Login fl;//khởi tạo
+        private bool flag = true;
+        private Nguoi_dung Nguoi_dung = new Nguoi_dung();
+        private Xe Xe = new Xe();
+        private Tuyen_xe Tuyen_xe = new Tuyen_xe();
+        private Thoi_diem Thoi_diem = new Thoi_diem();
+        private Chuyen_xe Chuyen_Xe = new Chuyen_xe();
+        private Ban_ve Ban_ve = new Ban_ve();
+        private Form_Phan_Quyen Quyen = new Form_Phan_Quyen();
+        private Update_he_thong update_he_thong = new Update_he_thong();
         public Form_Main()
         {
             

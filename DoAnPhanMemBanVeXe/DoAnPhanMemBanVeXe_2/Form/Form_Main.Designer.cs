@@ -648,7 +648,7 @@
             this.tabControl1.Tabs.Add(this.TabItem_5);
             this.tabControl1.Tabs.Add(this.TabItem_6);
             this.tabControl1.Text = "tabControl1";
-            this.tabControl1.Click += new System.EventHandler(this.tabControl1_Click);
+            
             // 
             // tabControlPanel1
             // 
@@ -694,7 +694,7 @@
             this.btnEnd.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnEnd.TabIndex = 29;
             this.btnEnd.Text = "Last";
-            this.btnEnd.Click += new System.EventHandler(this.btnEnd_Click);
+           
             // 
             // btnNext
             // 
@@ -709,7 +709,7 @@
             this.btnNext.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnNext.TabIndex = 27;
             this.btnNext.Text = "Next";
-            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            
             // 
             // btnBack
             // 
@@ -724,7 +724,7 @@
             this.btnBack.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnBack.TabIndex = 24;
             this.btnBack.Text = "Previous";
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            
             // 
             // btnHead
             // 
@@ -739,7 +739,7 @@
             this.btnHead.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnHead.TabIndex = 22;
             this.btnHead.Text = "First";
-            this.btnHead.Click += new System.EventHandler(this.btnHead_Click);
+            
             // 
             // luoi_NguoiDung
             // 
@@ -788,9 +788,7 @@
             this.luoi_NguoiDung.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.luoi_NguoiDung.Size = new System.Drawing.Size(724, 239);
             this.luoi_NguoiDung.TabIndex = 26;
-            this.luoi_NguoiDung.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.luoi_NguoiDung_RowEnter);
-            this.luoi_NguoiDung.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.luoi_NguoiDung_RowHeaderMouseClick);
-            this.luoi_NguoiDung.MouseClick += new System.Windows.Forms.MouseEventHandler(this.luoi_NguoiDung_MouseClick);
+            
             // 
             // IdNguoiDung
             // 
@@ -1073,7 +1071,7 @@
             this.cbo_Username.Size = new System.Drawing.Size(138, 22);
             this.cbo_Username.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cbo_Username.TabIndex = 1;
-            this.cbo_Username.SelectedIndexChanged += new System.EventHandler(this.cbo_Username_SelectedIndexChanged);
+      
             // 
             // LabelX6
             // 
@@ -1205,7 +1203,7 @@
             this.Button_Them.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
             this.Button_Them.TabIndex = 21;
             this.Button_Them.Text = "&Thêm";
-            this.Button_Them.Click += new System.EventHandler(this.Button_Them_Click);
+           
             // 
             // Button_Sua
             // 
@@ -1224,7 +1222,7 @@
             this.Button_Sua.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
             this.Button_Sua.TabIndex = 23;
             this.Button_Sua.Text = "&Sửa";
-            this.Button_Sua.Click += new System.EventHandler(this.Button_Sua_Click);
+            
             // 
             // Button_Xoa
             // 
@@ -1241,7 +1239,7 @@
             this.Button_Xoa.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
             this.Button_Xoa.TabIndex = 25;
             this.Button_Xoa.Text = "&Xóa";
-            this.Button_Xoa.Click += new System.EventHandler(this.Button_Xoa_Click);
+            
             // 
             // Button_Luu
             // 
@@ -1258,7 +1256,7 @@
             this.Button_Luu.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
             this.Button_Luu.TabIndex = 28;
             this.Button_Luu.Text = "&Lưu";
-            this.Button_Luu.Click += new System.EventHandler(this.Button_Luu_Click);
+            
             // 
             // Button_Huy
             // 
@@ -1274,7 +1272,7 @@
             this.Button_Huy.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
             this.Button_Huy.TabIndex = 30;
             this.Button_Huy.Text = "&Hủy";
-            this.Button_Huy.Click += new System.EventHandler(this.Button_Huy_Click);
+            
             // 
             // Button_CapPass
             // 
@@ -1289,7 +1287,7 @@
             this.Button_CapPass.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
             this.Button_CapPass.TabIndex = 32;
             this.Button_CapPass.Text = "&Cấp Pass";
-            this.Button_CapPass.Click += new System.EventHandler(this.Button_CapPass_Click);
+            
             // 
             // Button_PhanQuyen
             // 
@@ -1304,7 +1302,7 @@
             this.Button_PhanQuyen.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
             this.Button_PhanQuyen.TabIndex = 33;
             this.Button_PhanQuyen.Text = "&Phân Quyền";
-            this.Button_PhanQuyen.Click += new System.EventHandler(this.Button_PhanQuyen_Click);
+          
             // 
             // TabItem_NguoiDung
             // 
@@ -1532,7 +1530,7 @@
             this.btn_ChonChoNgoi.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_ChonChoNgoi.TabIndex = 3;
             this.btn_ChonChoNgoi.Text = "Chọn chỗ ngồi";
-            this.btn_ChonChoNgoi.Click += new System.EventHandler(this.btn_ChonChoNgoi_Click);
+            
             // 
             // LabelX27
             // 
@@ -1702,7 +1700,7 @@
             this.cbo_TenTuyenVe.Size = new System.Drawing.Size(179, 22);
             this.cbo_TenTuyenVe.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cbo_TenTuyenVe.TabIndex = 1;
-            this.cbo_TenTuyenVe.SelectedIndexChanged += new System.EventHandler(this.cbo_TenTuyenVe_SelectedIndexChanged);
+            
             // 
             // cbo_GioVe
             // 
@@ -1717,7 +1715,7 @@
             this.cbo_GioVe.Size = new System.Drawing.Size(84, 23);
             this.cbo_GioVe.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cbo_GioVe.TabIndex = 1;
-            this.cbo_GioVe.SelectedIndexChanged += new System.EventHandler(this.cbo_GioVe_SelectedIndexChanged);
+            
             // 
             // cbo_NgayVe
             // 
@@ -1733,7 +1731,7 @@
             this.cbo_NgayVe.Size = new System.Drawing.Size(121, 22);
             this.cbo_NgayVe.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cbo_NgayVe.TabIndex = 1;
-            this.cbo_NgayVe.SelectedIndexChanged += new System.EventHandler(this.cbo_NgayVe_SelectedIndexChanged);
+           
             // 
             // cbo_XeVe
             // 
@@ -1748,7 +1746,7 @@
             this.cbo_XeVe.Size = new System.Drawing.Size(132, 23);
             this.cbo_XeVe.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cbo_XeVe.TabIndex = 1;
-            this.cbo_XeVe.SelectedIndexChanged += new System.EventHandler(this.cbo_XeVe_SelectedIndexChanged);
+            
             // 
             // LabelX26
             // 
@@ -1851,7 +1849,7 @@
             this.btn_LastChuyen.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_LastChuyen.TabIndex = 31;
             this.btn_LastChuyen.Text = "Last";
-            this.btn_LastChuyen.Click += new System.EventHandler(this.btn_LastChuyen_Click);
+            
             // 
             // btn_NextChuyen
             // 
@@ -1866,7 +1864,7 @@
             this.btn_NextChuyen.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_NextChuyen.TabIndex = 30;
             this.btn_NextChuyen.Text = "Next";
-            this.btn_NextChuyen.Click += new System.EventHandler(this.btn_NextChuyen_Click);
+            
             // 
             // btn_PreviousChuyen
             // 
@@ -1881,7 +1879,7 @@
             this.btn_PreviousChuyen.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_PreviousChuyen.TabIndex = 29;
             this.btn_PreviousChuyen.Text = "Previous";
-            this.btn_PreviousChuyen.Click += new System.EventHandler(this.btn_PreviousChuyen_Click);
+            
             // 
             // btn_FirstChuyen
             // 
@@ -1896,7 +1894,7 @@
             this.btn_FirstChuyen.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_FirstChuyen.TabIndex = 28;
             this.btn_FirstChuyen.Text = "First";
-            this.btn_FirstChuyen.Click += new System.EventHandler(this.btn_FirstChuyen_Click);
+            
             // 
             // Luoi_Chuyen_xe
             // 
@@ -1942,7 +1940,7 @@
             this.Luoi_Chuyen_xe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Luoi_Chuyen_xe.Size = new System.Drawing.Size(812, 258);
             this.Luoi_Chuyen_xe.TabIndex = 22;
-            this.Luoi_Chuyen_xe.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Luoi_Chuyen_xe_CellContentClick);
+            
             // 
             // cot1
             // 
@@ -2036,7 +2034,7 @@
             this.cbo_NgayDiChuyen.Size = new System.Drawing.Size(98, 24);
             this.cbo_NgayDiChuyen.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cbo_NgayDiChuyen.TabIndex = 2;
-            this.cbo_NgayDiChuyen.SelectedIndexChanged += new System.EventHandler(this.cbo_NgayDiChuyen_SelectedIndexChanged);
+            
             // 
             // cbo_IdTuyenChuyen
             // 
@@ -2050,7 +2048,7 @@
             this.cbo_IdTuyenChuyen.Size = new System.Drawing.Size(138, 24);
             this.cbo_IdTuyenChuyen.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cbo_IdTuyenChuyen.TabIndex = 1;
-            this.cbo_IdTuyenChuyen.SelectedIndexChanged += new System.EventHandler(this.cbo_IdTuyenChuyen_SelectedIndexChanged);
+            
             // 
             // cbo_IdChuyen
             // 
@@ -2166,7 +2164,7 @@
             this.btn_ThemChuyen.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_ThemChuyen.TabIndex = 23;
             this.btn_ThemChuyen.Text = "Thêm";
-            this.btn_ThemChuyen.Click += new System.EventHandler(this.btn_ThemChuyen_Click);
+            
             // 
             // btn_SuaChuyen
             // 
@@ -2183,7 +2181,7 @@
             this.btn_SuaChuyen.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_SuaChuyen.TabIndex = 27;
             this.btn_SuaChuyen.Text = "Sửa";
-            this.btn_SuaChuyen.Click += new System.EventHandler(this.btn_SuaChuyen_Click);
+            
             // 
             // btn_XoaChuyen
             // 
@@ -2200,7 +2198,7 @@
             this.btn_XoaChuyen.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_XoaChuyen.TabIndex = 24;
             this.btn_XoaChuyen.Text = "Xóa";
-            this.btn_XoaChuyen.Click += new System.EventHandler(this.btn_XoaChuyen_Click);
+            
             // 
             // btn_LuuChuyen
             // 
@@ -2217,7 +2215,7 @@
             this.btn_LuuChuyen.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_LuuChuyen.TabIndex = 26;
             this.btn_LuuChuyen.Text = "Lưu";
-            this.btn_LuuChuyen.Click += new System.EventHandler(this.btn_LuuChuyen_Click);
+            
             // 
             // btn_HuyChuyen
             // 
@@ -2234,7 +2232,7 @@
             this.btn_HuyChuyen.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_HuyChuyen.TabIndex = 25;
             this.btn_HuyChuyen.Text = "Hủy";
-            this.btn_HuyChuyen.Click += new System.EventHandler(this.btn_HuyChuyen_Click);
+            
             // 
             // TabItem_5
             // 
@@ -2278,7 +2276,7 @@
             this.btn_SuaThoiDiem.Style = DevComponents.DotNetBar.eDotNetBarStyle.Windows7;
             this.btn_SuaThoiDiem.TabIndex = 37;
             this.btn_SuaThoiDiem.Text = "Sửa";
-            this.btn_SuaThoiDiem.Click += new System.EventHandler(this.btn_SuaThoiDiem_Click);
+            
             // 
             // btn_LuuThoiDiem
             // 
@@ -2291,7 +2289,7 @@
             this.btn_LuuThoiDiem.Style = DevComponents.DotNetBar.eDotNetBarStyle.Windows7;
             this.btn_LuuThoiDiem.TabIndex = 35;
             this.btn_LuuThoiDiem.Text = "Lưu";
-            this.btn_LuuThoiDiem.Click += new System.EventHandler(this.btn_LuuThoiDiem_Click);
+           
             // 
             // btn_XoaThoiDiem
             // 
@@ -2304,7 +2302,7 @@
             this.btn_XoaThoiDiem.Style = DevComponents.DotNetBar.eDotNetBarStyle.Windows7;
             this.btn_XoaThoiDiem.TabIndex = 36;
             this.btn_XoaThoiDiem.Text = "Xóa";
-            this.btn_XoaThoiDiem.Click += new System.EventHandler(this.btn_XoaThoiDiem_Click);
+            
             // 
             // btn_ThemThoiDiem
             // 
@@ -2317,7 +2315,7 @@
             this.btn_ThemThoiDiem.Style = DevComponents.DotNetBar.eDotNetBarStyle.Windows7;
             this.btn_ThemThoiDiem.TabIndex = 34;
             this.btn_ThemThoiDiem.Text = "Thêm";
-            this.btn_ThemThoiDiem.Click += new System.EventHandler(this.btn_ThemThoiDiem_Click);
+            
             // 
             // luoi_ThoiDiem
             // 
@@ -2439,7 +2437,7 @@
             this.btn_GanTuyen.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_GanTuyen.TabIndex = 13;
             this.btn_GanTuyen.Text = "Đồng Ý";
-            this.btn_GanTuyen.Click += new System.EventHandler(this.btn_GanTuyen_Click);
+            
             // 
             // txt_TenTuyen
             // 
@@ -2558,7 +2556,7 @@
             this.btn_HuyThoiDiem.Style = DevComponents.DotNetBar.eDotNetBarStyle.Windows7;
             this.btn_HuyThoiDiem.TabIndex = 21;
             this.btn_HuyThoiDiem.Text = "Hủy";
-            this.btn_HuyThoiDiem.Click += new System.EventHandler(this.btn_HuyThoiDiem_Click);
+           
             // 
             // rad_LapTuan
             // 
@@ -2570,7 +2568,7 @@
             this.rad_LapTuan.TabStop = true;
             this.rad_LapTuan.Text = "Lặp theo tuần";
             this.rad_LapTuan.UseVisualStyleBackColor = true;
-            this.rad_LapTuan.CheckedChanged += new System.EventHandler(this.rad_LapTuan_CheckedChanged);
+           
             // 
             // rad_KhongLap
             // 
@@ -2802,7 +2800,7 @@
             this.btn_XemChiTietTuyen.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_XemChiTietTuyen.TabIndex = 53;
             this.btn_XemChiTietTuyen.Text = "Xem chi tiết tuyến";
-            this.btn_XemChiTietTuyen.Click += new System.EventHandler(this.btn_XemChiTietTuyen_Click);
+            
             // 
             // btn_Last_Tuyen
             // 
@@ -2817,7 +2815,7 @@
             this.btn_Last_Tuyen.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_Last_Tuyen.TabIndex = 46;
             this.btn_Last_Tuyen.Text = "Last";
-            this.btn_Last_Tuyen.Click += new System.EventHandler(this.btn_Last_Tuyen_Click);
+           
             // 
             // btn_Next_Tuyen
             // 
@@ -2832,7 +2830,7 @@
             this.btn_Next_Tuyen.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_Next_Tuyen.TabIndex = 45;
             this.btn_Next_Tuyen.Text = "Next";
-            this.btn_Next_Tuyen.Click += new System.EventHandler(this.btn_Next_Tuyen_Click);
+            
             // 
             // btn_Previous_Tuyen
             // 
@@ -2847,7 +2845,7 @@
             this.btn_Previous_Tuyen.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_Previous_Tuyen.TabIndex = 44;
             this.btn_Previous_Tuyen.Text = "Previous";
-            this.btn_Previous_Tuyen.Click += new System.EventHandler(this.btn_Previous_Tuyen_Click);
+            
             // 
             // btn_First_Tuyen
             // 
@@ -2862,7 +2860,7 @@
             this.btn_First_Tuyen.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_First_Tuyen.TabIndex = 43;
             this.btn_First_Tuyen.Text = "First";
-            this.btn_First_Tuyen.Click += new System.EventHandler(this.btn_First_Tuyen_Click);
+           
             // 
             // GroupPanel5
             // 
@@ -3118,7 +3116,7 @@
             this.btn_ThemTuyen.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
             this.btn_ThemTuyen.TabIndex = 47;
             this.btn_ThemTuyen.Text = "&Thêm";
-            this.btn_ThemTuyen.Click += new System.EventHandler(this.btn_ThemTuyen_Click);
+            
             // 
             // btn_SuaTuyen
             // 
@@ -3135,7 +3133,7 @@
             this.btn_SuaTuyen.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
             this.btn_SuaTuyen.TabIndex = 48;
             this.btn_SuaTuyen.Text = "&Sửa";
-            this.btn_SuaTuyen.Click += new System.EventHandler(this.btn_SuaTuyen_Click);
+            
             // 
             // btn_XoaTuyen
             // 
@@ -3152,7 +3150,7 @@
             this.btn_XoaTuyen.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
             this.btn_XoaTuyen.TabIndex = 49;
             this.btn_XoaTuyen.Text = "&Xóa";
-            this.btn_XoaTuyen.Click += new System.EventHandler(this.btn_XoaTuyen_Click);
+            
             // 
             // btn_LuuTuyen
             // 
@@ -3169,7 +3167,7 @@
             this.btn_LuuTuyen.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
             this.btn_LuuTuyen.TabIndex = 50;
             this.btn_LuuTuyen.Text = "&Lưu";
-            this.btn_LuuTuyen.Click += new System.EventHandler(this.btn_LuuTuyen_Click);
+            
             // 
             // btn_HuyTuyen
             // 
@@ -3185,7 +3183,7 @@
             this.btn_HuyTuyen.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
             this.btn_HuyTuyen.TabIndex = 51;
             this.btn_HuyTuyen.Text = "&Hủy";
-            this.btn_HuyTuyen.Click += new System.EventHandler(this.btn_HuyTuyen_Click);
+          
             // 
             // TabItem_3
             // 
@@ -3237,7 +3235,7 @@
             this.btn_LuuXe.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
             this.btn_LuuXe.TabIndex = 28;
             this.btn_LuuXe.Text = "&Lưu";
-            this.btn_LuuXe.Click += new System.EventHandler(this.btn_LuuXe_Click);
+            
             // 
             // btn_HuyXe
             // 
@@ -3253,7 +3251,7 @@
             this.btn_HuyXe.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
             this.btn_HuyXe.TabIndex = 30;
             this.btn_HuyXe.Text = "&Hủy";
-            this.btn_HuyXe.Click += new System.EventHandler(this.btn_HuyXe_Click);
+            
             // 
             // btn_Xe_End
             // 
@@ -3268,7 +3266,7 @@
             this.btn_Xe_End.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_Xe_End.TabIndex = 24;
             this.btn_Xe_End.Text = "Last";
-            this.btn_Xe_End.Click += new System.EventHandler(this.btn_Xe_End_Click);
+           
             // 
             // btn_Xe_Next
             // 
@@ -3283,7 +3281,7 @@
             this.btn_Xe_Next.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_Xe_Next.TabIndex = 29;
             this.btn_Xe_Next.Text = "Next";
-            this.btn_Xe_Next.Click += new System.EventHandler(this.btn_Xe_Next_Click);
+        
             // 
             // btn_Xe_Back
             // 
@@ -3298,7 +3296,7 @@
             this.btn_Xe_Back.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_Xe_Back.TabIndex = 26;
             this.btn_Xe_Back.Text = "Previous";
-            this.btn_Xe_Back.Click += new System.EventHandler(this.btn_Xe_Back_Click);
+            
             // 
             // btn_Top
             // 
@@ -3313,7 +3311,7 @@
             this.btn_Top.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_Top.TabIndex = 21;
             this.btn_Top.Text = "First";
-            this.btn_Top.Click += new System.EventHandler(this.btn_Top_Click);
+           
             // 
             // grb_Xe
             // 
@@ -3514,7 +3512,7 @@
             this.Luoi_Xe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Luoi_Xe.Size = new System.Drawing.Size(768, 282);
             this.Luoi_Xe.TabIndex = 31;
-            this.Luoi_Xe.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.Luoi_Xe_RowEnter);
+           
             // 
             // So_Xe
             // 
@@ -3555,7 +3553,7 @@
             this.btn_SuaXe.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
             this.btn_SuaXe.TabIndex = 27;
             this.btn_SuaXe.Text = "&Sửa";
-            this.btn_SuaXe.Click += new System.EventHandler(this.btn_SuaXe_Click);
+            
             // 
             // btn_ThemXe
             // 
@@ -3572,7 +3570,7 @@
             this.btn_ThemXe.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
             this.btn_ThemXe.TabIndex = 23;
             this.btn_ThemXe.Text = "&Thêm";
-            this.btn_ThemXe.Click += new System.EventHandler(this.btn_ThemXe_Click);
+      
             // 
             // btn_XoaXe
             // 
@@ -3589,7 +3587,7 @@
             this.btn_XoaXe.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
             this.btn_XoaXe.TabIndex = 25;
             this.btn_XoaXe.Text = "&Xóa";
-            this.btn_XoaXe.Click += new System.EventHandler(this.btn_XoaXe_Click);
+         
             // 
             // TabItem_2
             // 
@@ -3618,11 +3616,11 @@
             // 
             // Timer1
             // 
-            this.Timer1.Tick += new System.EventHandler(this.Timer1_Tick);
+          
             // 
             // Timer2
             // 
-            this.Timer2.Tick += new System.EventHandler(this.Timer2_Tick);
+           
             // 
             // btn_BanVe
             // 
@@ -3639,7 +3637,7 @@
             this.btn_BanVe.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_BanVe.TabIndex = 4;
             this.btn_BanVe.Text = "Bán vé";
-            this.btn_BanVe.Click += new System.EventHandler(this.btn_BanVe_Click);
+         
             // 
             // btn_ChuyenXe
             // 
@@ -3656,7 +3654,7 @@
             this.btn_ChuyenXe.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_ChuyenXe.TabIndex = 3;
             this.btn_ChuyenXe.Text = "Kiểm soát lịch trình";
-            this.btn_ChuyenXe.Click += new System.EventHandler(this.btn_ChuyenXe_Click);
+           
             // 
             // btn_QuanLyTuyenXe
             // 
@@ -3672,7 +3670,7 @@
             this.btn_QuanLyTuyenXe.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_QuanLyTuyenXe.TabIndex = 2;
             this.btn_QuanLyTuyenXe.Text = "Quản lý tuyến xe";
-            this.btn_QuanLyTuyenXe.Click += new System.EventHandler(this.btn_QuanLyTuyenXe_Click);
+          
             // 
             // btn_QuanLyXe
             // 
@@ -3689,7 +3687,7 @@
             this.btn_QuanLyXe.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_QuanLyXe.TabIndex = 1;
             this.btn_QuanLyXe.Text = "Quản lý xe";
-            this.btn_QuanLyXe.Click += new System.EventHandler(this.btn_QuanLyXe_Click);
+       
             // 
             // btn_QuanLyND
             // 
@@ -3706,7 +3704,7 @@
             this.btn_QuanLyND.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_QuanLyND.TabIndex = 0;
             this.btn_QuanLyND.Text = "Quản lý người dùng";
-            this.btn_QuanLyND.Click += new System.EventHandler(this.btn_QuanLyND_Click);
+            
             // 
             // ButtonX_Close
             // 
@@ -3721,7 +3719,7 @@
             this.ButtonX_Close.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ButtonX_Close.TabIndex = 9;
             this.ButtonX_Close.Text = "Exit";
-            this.ButtonX_Close.Click += new System.EventHandler(this.ButtonX_Close_Click);
+            
             // 
             // ButtonX_Logout
             // 
@@ -3737,7 +3735,7 @@
             this.ButtonX_Logout.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ButtonX_Logout.TabIndex = 8;
             this.ButtonX_Logout.Text = "LogOut";
-            this.ButtonX_Logout.Click += new System.EventHandler(this.ButtonX_Logout_Click);
+      
             // 
             // buttonX14
             // 
@@ -3749,7 +3747,7 @@
             this.buttonX14.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.buttonX14.TabIndex = 1;
             this.buttonX14.Text = "Giới thiệu";
-            this.buttonX14.Click += new System.EventHandler(this.buttonX14_Click);
+       
             // 
             // expandableSplitter1
             // 
@@ -3835,8 +3833,8 @@
             this.Controls.Add(this.ribbonControl1);
             this.Name = "Form_Main";
             this.Text = "Form_MAIN";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Main_FormClosed);
-            this.Load += new System.EventHandler(this.Form_Main_Load);
+           
+           
             this.ribbonControl1.ResumeLayout(false);
             this.ribbonControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControl1)).EndInit();
