@@ -83,7 +83,7 @@ namespace DoAnPhanMemBanVeXe_2
             UpdateTuyenXe();
             Update_thoi_diem();
             Update_Chuyen_xe();
-            Ban_ve.Update_Ve_xe();
+            Update_Ve_xe_ban_ve();
             Quyen.UpdateQuyen();
             Timer1.Interval = 1000;
 
@@ -497,27 +497,27 @@ namespace DoAnPhanMemBanVeXe_2
         #region "Da xong"
         private void cbo_TenTuyenVe_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Ban_ve.Chon_tuyen();
+            Chon_tuyen_ban_ve();
         }
 
         private void cbo_NgayVe_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Ban_ve.Chon_ngay();
+            Chon_ngay_ban_ve();
         }
 
         private void cbo_GioVe_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Ban_ve.Chon_xe();
+            Chon_xe_ban_ve();
         }
 
         private void cbo_XeVe_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Ban_ve.Chon_thong_tin_xe();
+            Chon_thong_tin_xe();
         }
 
         private void btn_ChonChoNgoi_Click(object sender, EventArgs e)
         {
-            Ban_ve.Chon_cho_ngoi();
+            Chon_cho_ngoi();
         }
 
         private void Button_PhanQuyen_Click(object sender, EventArgs e)
@@ -2836,7 +2836,222 @@ namespace DoAnPhanMemBanVeXe_2
         #endregion
         #endregion
 
+        //Xu ly Ban_Ve
+        #region "Xử lý class  Chuyen_Xe hoàn tất"
+        private DataTable bang_tuyen_xe_ban_ve;
+        private DataTable bang_Thoi_diem_ngay;
+        private DataTable bang_Thoi_diem_gio;
+        private DataTable bang_Xe_ban_ve;
 
+        private DataTable bang_Thong_tin_xe;
+        private DataTable bang_dat_ve;
+        public string IdChuyen;
+
+        public string So_cho_ngoi;
+
+        public void Update_Ve_xe_ban_ve()
+        {
+            Doc_tuyen_xe_ban_ve();
+            doc_bang_ve_ban_ve();
+            Clear_Controls_ban_ve();
+        }
+
+        private void doc_bang_ve_ban_ve()
+        {
+            //fm = new Form_Main();
+            lenh = "Select IdVe, TenHanhKhach, SDTHanhKhach, TenTuyen, NgayDi, Gio, So_Xe from BanVe, ChuyenXe, TuyenXe ";
+            lenh += " where BanVe.IdChuyen = ChuyenXe.IdChuyen and ChuyenXe.IdTuyen = TuyenXe.IdTuyen";
+            bang_dat_ve = Ket_noi.Doc_bang(lenh);
+            var _with1 = cbo_MaSoVe;
+            _with1.DataSource = bang_dat_ve;
+            _with1.ValueMember = "IdVe";
+            _with1.DisplayMember = "IdVe";
+
+            //Tao lien ket
+            luoi_ThongTinDatVe.DataSource = bang_dat_ve;
+
+        }
+
+
+
+
+        private void Clear_Controls_ban_ve()
+        {
+            //fm = new Form_Main();
+            var _with2 = this;
+            _with2.cbo_TenTuyenVe.Text = "";
+            _with2.cbo_NgayVe.Text = "";
+            _with2.cbo_GioVe.Text = "";
+            _with2.cbo_XeVe.Text = "";
+        }
+
+        private void Doc_tuyen_xe_ban_ve()
+        {
+            //fm = new Form_Main();
+            lenh = "Select Distinct ChuyenXe.IdTuyen, TenTuyen from ChuyenXe, TuyenXe where TuyenXe.IdTuyen = ChuyenXe.IdTuyen";
+            bang_tuyen_xe = Ket_noi.Doc_bang(lenh);
+            var _with3 = cbo_TenTuyenVe;
+            _with3.DataSource = bang_tuyen_xe_ban_ve;
+            _with3.DisplayMember = "TenTuyen";
+            _with3.ValueMember = "IdTuyen";
+        }
+
+        public void Chon_tuyen_ban_ve()
+        {
+            //fm = new Form_Main();
+            if (cbo_TenTuyenVe.SelectedIndex < 0)
+                return;
+            Loc_ngay_theo_tuyen(cbo_TenTuyenVe.SelectedValue.ToString());
+        }
+
+        private void Loc_ngay_theo_tuyen(string IdTuyen)
+        {
+            //fm = new Form_Main();
+            lenh = "Select Distinct NgayDi from ChuyenXe where IdTuyen = '" + IdTuyen + "'";
+            bang_Thoi_diem_ngay = Ket_noi.Doc_bang(lenh);
+            var _with4 = cbo_NgayVe;
+            _with4.DataSource = bang_Thoi_diem_ngay;
+            _with4.ValueMember = "NgayDi";
+            _with4.DisplayMember = "NgayDi";
+        }
+
+        public void Chon_ngay_ban_ve()
+        {
+            //fm = new Form_Main();
+            if (string.IsNullOrEmpty(cbo_GioVe.Text) & string.IsNullOrEmpty(cbo_XeVe.Text))
+            {
+                cbo_NgayVe.Text = "";
+            }
+            if (cbo_NgayVe.SelectedIndex < 0)
+                return;
+            Loc_gio_theo_ngay_ban_ve(cbo_NgayVe.SelectedValue.ToString());
+        }
+
+        private void Loc_gio_theo_ngay_ban_ve(string Ngay)
+        {
+            //fm = new Form_Main();
+            lenh = "Select Gio from ChuyenXe where NgayDi = '" + Ngay + "' and IdTuyen = '" + cbo_TenTuyenVe.SelectedValue.ToString() + "'";
+            bang_Thoi_diem_gio = Ket_noi.Doc_bang(lenh);
+            var _with5 = cbo_GioVe;
+            _with5.DataSource = bang_Thoi_diem_gio;
+            _with5.ValueMember = "Gio";
+            _with5.DisplayMember = "Gio";
+        }
+
+        public void Chon_xe_ban_ve()
+        {
+            //fm = new Form_Main();
+            if (string.IsNullOrEmpty(cbo_XeVe.Text))
+            {
+                cbo_GioVe.Text = "";
+            }
+            if (cbo_GioVe.SelectedIndex < 0)
+                return;
+            Loc_xe_theo_gio_ban_ve(cbo_GioVe.SelectedValue.ToString());
+        }
+
+        private void Loc_xe_theo_gio_ban_ve(string Gio)
+        {
+            //fm = new Form_Main();
+            lenh = "Select So_Xe from ChuyenXe where Gio = '" + Gio + "' and IdTuyen = '" + cbo_TenTuyenVe.SelectedValue.ToString() + "' and NgayDi = '" + cbo_NgayVe.SelectedValue.ToString() + "'";
+            bang_Xe_ban_ve = Ket_noi.Doc_bang(lenh);
+            var _with6 = cbo_XeVe;
+            _with6.DataSource = bang_Xe_ban_ve;
+            _with6.ValueMember = "So_Xe";
+            _with6.DisplayMember = "So_Xe";
+        }
+
+        public void Chon_thong_tin_xe()
+        {
+            //fm = new Form_Main();
+            if (string.IsNullOrEmpty(cbo_GioVe.Text))
+            {
+                cbo_XeVe.Text = "";
+            }
+            if (!string.IsNullOrEmpty(cbo_TenTuyenVe.Text) & !string.IsNullOrEmpty(cbo_XeVe.Text) & !string.IsNullOrEmpty(cbo_GioVe.Text) & !string.IsNullOrEmpty(cbo_NgayVe.Text))
+            {
+                if (cbo_XeVe.SelectedIndex < 0)
+                    return;
+                Loc_thong_tin_theo_so_xe(cbo_XeVe.SelectedValue.ToString());
+
+            }
+        }
+
+        private void Loc_thong_tin_theo_so_xe(string So_Xe)
+        {
+            //fm = new Form_Main();
+            lenh = "Select * From Xe where So_Xe = '" + So_Xe + "'";
+            bang_Thong_tin_xe = Ket_noi.Doc_bang(lenh);
+            luoi_XeVe.DataSource = bang_Thong_tin_xe;
+        }
+
+        //Xu ly nut chon cho ngoi
+        public void Chon_cho_ngoi()
+        {
+            //fm = new Form_Main();
+            var _with7 = this;
+            if (Kiem_tra_thong_tin_dat_ve())
+            {
+                lenh = "Select So_Cho_Ngoi From Xe where So_Xe = '" + _with7.cbo_XeVe.SelectedValue.ToString() + "'";
+                bang_Thong_tin_xe = Ket_noi.Doc_bang(lenh);
+                So_cho_ngoi = bang_Thong_tin_xe.Rows[0]["So_Cho_Ngoi"].ToString();
+
+                if (Convert.ToInt32(So_cho_ngoi) == 7)
+                {
+                    Form_Xe_7_Cho frm_xe_7 = new Form_Xe_7_Cho();
+                    frm_xe_7.Show();
+                }
+
+                if (Convert.ToInt32(So_cho_ngoi) == 16)
+                {
+                    Form_Xe_16_Cho frm_xe_16 = new Form_Xe_16_Cho();
+                    frm_xe_16.Show();
+                }
+
+                if (Convert.ToInt32(So_cho_ngoi) == 25)
+                {
+                    Form_Xe_25_Cho frm_xe_25 = new Form_Xe_25_Cho();
+                    frm_xe_25.Show();
+                }
+
+                if (Convert.ToInt32(So_cho_ngoi) == 30)
+                {
+                    Form_Xe_30_Cho frm_xe_30 = new Form_Xe_30_Cho();
+                    frm_xe_30.Show();
+                }
+
+                if (Convert.ToInt32(So_cho_ngoi) == 45)
+                {
+                    Form_Xe_45_Cho frm_xe_45 = new Form_Xe_45_Cho();
+                    frm_xe_45.Show();
+                }
+
+            }
+
+        }
+
+        private bool Kiem_tra_thong_tin_dat_ve()
+        {
+            //fm = new Form_Main();
+            bool functionReturnValue = false;
+            functionReturnValue = true;
+            var _with8 = this;
+            if (string.IsNullOrEmpty(_with8.cbo_TenTuyenVe.Text) || string.IsNullOrEmpty(_with8.cbo_NgayVe.Text) || string.IsNullOrEmpty(_with8.cbo_GioVe.Text) || string.IsNullOrEmpty(_with8.cbo_XeVe.Text) || string.IsNullOrEmpty(_with8.txt_TenHanhKhach.Text) || string.IsNullOrEmpty(_with8.txt_SoDTHanhKhach.Text))
+            {
+                functionReturnValue = false;
+                MessageBox.Show("Phải nhập đầy đủ thông tin đặt vé!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                return functionReturnValue;
+            }
+
+            if (_with8.txt_SoDTHanhKhach.Text.Length > 12 || _with8.txt_SoDTHanhKhach.Text.Length < 9)
+            {
+                functionReturnValue = false;
+                MessageBox.Show("So điện thoại từ 9 đến 12 ký tự", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                return functionReturnValue;
+            }
+            return functionReturnValue;
+        }
+        #endregion
     }
 }
 
