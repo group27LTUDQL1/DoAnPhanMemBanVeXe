@@ -23,7 +23,6 @@ namespace DoAnPhanMemBanVeXe_2
 
         public Form_ChiTietTuyen()
         {
-            Load += Form_ChiTietTuyen_Load;
             InitializeComponent();
         }
 

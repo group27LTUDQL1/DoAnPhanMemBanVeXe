@@ -14,19 +14,18 @@ namespace DoAnPhanMemBanVeXe_2
 {
     public partial class Form_Login : Form
     {
-        Form_Main fm;
+        public Form_Main fm;
         private bool flag = false; // Dung kiem soat timer
-        public string LoginLoaiND = "";
-        public string LoginTenND = "";
+        public  string LoginLoaiND = "";
+        public  string LoginTenND = "";
 
         public Form_Login()
-        {
-            Load += Form_Login_Load;
+        {            
             InitializeComponent();
         }
-
+        
         #region "Event form load da hoan tat nhung chua hay"
-        private void Form_Login_Load(object sender, EventArgs e)
+        public void Form_Login_Load(object sender, EventArgs e)
         {
             Ket_noi.Tao_ket_noi();
             Kiem_tra_ket_noi();
@@ -75,7 +74,7 @@ namespace DoAnPhanMemBanVeXe_2
         }
 
         #region "Event Timer_Tick da hoan tat"
-        private void TimerClosing_Tick(object sender, EventArgs e)
+        public void TimerClosing_Tick(object sender, EventArgs e)
         {
             
             fm = new Form_Main();
@@ -94,7 +93,7 @@ namespace DoAnPhanMemBanVeXe_2
         #endregion
 
         #region "Event Login_Click da hoan tat"
-        private void cmdLogin_Click(object sender, EventArgs e)
+        public void cmdLogin_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtUserName.Text))
             {
@@ -205,6 +204,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         #endregion
 
-       
+
+        
     }
 }

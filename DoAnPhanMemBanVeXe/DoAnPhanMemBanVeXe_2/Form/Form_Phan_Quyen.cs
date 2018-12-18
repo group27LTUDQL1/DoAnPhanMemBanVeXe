@@ -20,8 +20,7 @@ namespace DoAnPhanMemBanVeXe_2
         private string lenh;
 
         public Form_Phan_Quyen()
-        {
-            Load += Form_Phan_Quyen_Load;
+        {          
             InitializeComponent();
         }
 

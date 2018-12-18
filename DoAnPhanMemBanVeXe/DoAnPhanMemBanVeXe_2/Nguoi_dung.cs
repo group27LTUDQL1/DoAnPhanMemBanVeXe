@@ -14,8 +14,8 @@ namespace DoAnPhanMemBanVeXe_2
 {
     public class Nguoi_dung
     {
-        Form_Main fm;
-        Form_Login fl;
+        public  Form_Main fm;
+        public  Form_Login fl;
         private bool flag;
         private DataTable bang_Nguoi_Dung;
         private int vi_tri_hien_hanh;
@@ -50,7 +50,7 @@ namespace DoAnPhanMemBanVeXe_2
         }
 
         #region "Xu ly doc bang nguoi dung va phan loai nguoi dung de hien thi da hoan tat"
-        private void Doc_bang_Nguoi_Dung()
+        public void Doc_bang_Nguoi_Dung()
         {
             fm = new Form_Main();
             fl = new Form_Login();
