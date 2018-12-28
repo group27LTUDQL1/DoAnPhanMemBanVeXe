@@ -2889,11 +2889,14 @@ namespace DoAnPhanMemBanVeXe_2
         {
             //fm = new Form_Main();
             lenh = "Select Distinct ChuyenXe.IdTuyen, TenTuyen from ChuyenXe, TuyenXe where TuyenXe.IdTuyen = ChuyenXe.IdTuyen";
-            bang_tuyen_xe = Ket_noi.Doc_bang(lenh);
+            bang_tuyen_xe_ban_ve = Ket_noi.Doc_bang(lenh);
             var _with3 = cbo_TenTuyenVe;
             _with3.DataSource = bang_tuyen_xe_ban_ve;
             _with3.DisplayMember = "TenTuyen";
             _with3.ValueMember = "IdTuyen";
+
+            //Tao lien ket
+            luoi_XeVe.DataSource = bang_tuyen_xe_ban_ve;
         }
 
         public void Chon_tuyen_ban_ve()
