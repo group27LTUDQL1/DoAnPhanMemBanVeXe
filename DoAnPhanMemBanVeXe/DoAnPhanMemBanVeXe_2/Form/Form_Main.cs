@@ -670,11 +670,11 @@ namespace DoAnPhanMemBanVeXe_2
             cbo_IdLoaiND.Items.Clear();
             while (dr.Read() == true)
             {
-                if (fl.LoginLoaiND == "Admin")
+                if (fl.LoaiND == "Admin")
                 {
                     cbo_IdLoaiND.Items.Add(dr.GetValue(0).ToString());
                 }
-                else if (fl.LoginLoaiND == "Quan_Ly")
+                else if (fl.LoaiND == "Quan_Ly")
                 {
                     if (dr.GetValue(0).ToString() != "Admin")
                     {
@@ -735,14 +735,14 @@ namespace DoAnPhanMemBanVeXe_2
 
         public void Sua_thong_tin_ca_nhan()
         {           
-            Form_Login fl;
+            //Form_Login fl;
             //fm = new Form_Main();
-            fl = new Form_Login();
+            //fl = new Form_Login();
             flag = false;
             Lock_Control(true);
             LockButton(true);
             cbo_Username.Focus();
-            cbo_Username.Text = fl.LoginTenND;
+            cbo_Username.Text = fl.TenND;
             cbo_Username.Enabled = false;
             luoi_NguoiDung.ReadOnly = false;
             cbo_IdLoaiND.Enabled = false;
@@ -750,9 +750,9 @@ namespace DoAnPhanMemBanVeXe_2
 
         public void Luu_thay_doi()
         {           
-            Form_Login fl;
+            //Form_Login fl;
             //fm = new Form_Main();
-            fl = new Form_Login();
+            //fl = new Form_Login();
             Ket_noi.Tao_ket_noi();
             if (Ket_noi.connect.State == ConnectionState.Open)
             {
@@ -825,7 +825,7 @@ namespace DoAnPhanMemBanVeXe_2
             {
                 if (TestInfo())
                 {
-                    if (cbo_Username.Text != fl.LoginTenND)
+                    if (cbo_Username.Text != fl.TenND)
                     {
                         DialogResult dg = MessageBox.Show("Ban chỉ có quyền sưa thông tin cá nhân của mình, " + Constants.vbNewLine + "Click OK đê tiếp tục sửa thông tin, Cancel để hủy thao tác", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                         if (dg == System.Windows.Forms.DialogResult.OK)
@@ -893,10 +893,10 @@ namespace DoAnPhanMemBanVeXe_2
         #region "Xu ly xoa nguoi dung da hoan tat"
         public void Xoa_nguoi_dung()
         {
-            Form_Login fl;
+            //Form_Login fl;
             //fm = new Form_Main();
-            fl = new Form_Login();
-            if (Strings.Trim(cbo_Username.Text) == fl.LoginTenND)
+            //fl = new Form_Login();
+            if (Strings.Trim(cbo_Username.Text) == fl.TenND)
             {
                 DialogResult dg = MessageBox.Show("Ban không được quyền xóa thông tin của chính bạn được. ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }

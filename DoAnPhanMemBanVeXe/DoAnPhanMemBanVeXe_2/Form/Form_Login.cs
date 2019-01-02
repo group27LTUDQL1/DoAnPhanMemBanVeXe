@@ -208,24 +208,23 @@ namespace DoAnPhanMemBanVeXe_2
         #endregion
 
 
-        public int getco()
+        /*public int getco()
         {
               if (LoginLoaiND == "Quan_Ly" || LoginLoaiND == "Admin")
                       co = 1;
             
             return this.co;
-        }
+        }*/
         public string LoaiND
         {
-            get
-            {
-                return this.LoginLoaiND;
-            } //get
-            set
-            {
-                this.LoginLoaiND = value;
-            } //set
-        } 
+            get{ return this.LoginLoaiND; } 
+            set{ this.LoginLoaiND = value; } 
+        }
+        public string TenND
+        {
+            get { return this.LoginTenND; }
+            set { this.LoginTenND = value; }
+        }
         public string username
         {
             get { return this.txtUserName.Text; }
