@@ -18,7 +18,7 @@ namespace DoAnPhanMemBanVeXe_2
         private bool flag = false; // Dung kiem soat timer
         public  string LoginLoaiND = "";
         public  string LoginTenND = "";
-
+        public int co = 0;
         public Form_Login()
         {            
             InitializeComponent();
@@ -77,7 +77,7 @@ namespace DoAnPhanMemBanVeXe_2
         public void TimerClosing_Tick(object sender, EventArgs e)
         {
             
-            fm = new Form_Main();
+            fm = new Form_Main() {fl=this};
             this.Opacity -= 0.05;
             if (this.Opacity == 0)
             {
@@ -138,6 +138,7 @@ namespace DoAnPhanMemBanVeXe_2
         public int Logged(string U, string P)
         {
             int functionReturnValue = 0;
+            
             string strSQL = "select IdNguoiDung, PassND, IdLoaiND from NguoiDung where IdNguoiDung = '" + U + "' ";
             SqlCommand Command = new SqlCommand(strSQL, Ket_noi.connect);
             Ket_noi.connect.Open();
@@ -154,6 +155,8 @@ namespace DoAnPhanMemBanVeXe_2
                     functionReturnValue = 0;
                     LoginLoaiND = DataReader.GetValue(2).ToString();
                     LoginTenND = DataReader.GetValue(0).ToString();
+                    //if (LoginLoaiND == "Quan_Ly" || LoginTenND == "Admin")
+                       // co = 1;
                 }
                 else
                 {
@@ -205,6 +208,29 @@ namespace DoAnPhanMemBanVeXe_2
         #endregion
 
 
-        
+        public int getco()
+        {
+              if (LoginLoaiND == "Quan_Ly" || LoginLoaiND == "Admin")
+                      co = 1;
+            
+            return this.co;
+        }
+        public string LoaiND
+        {
+            get
+            {
+                return this.LoginLoaiND;
+            } //get
+            set
+            {
+                this.LoginLoaiND = value;
+            } //set
+        } 
+        public string username
+        {
+            get { return this.txtUserName.Text; }
+            set { this.txtUserName.Text = value; }
+        }
+
     }
 }

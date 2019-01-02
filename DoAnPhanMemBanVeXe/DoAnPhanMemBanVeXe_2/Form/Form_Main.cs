@@ -17,7 +17,7 @@ namespace DoAnPhanMemBanVeXe_2
     public partial class Form_Main : DevComponents.DotNetBar.Office2007RibbonForm
     {
           
-        //public Form_Login fl;//khởi tạo
+        public Form_Login fl;//khởi tạo
         private bool flag = true;
         private Nguoi_dung Nguoi_dung = new Nguoi_dung();
         private Xe Xe = new Xe();
@@ -86,15 +86,15 @@ namespace DoAnPhanMemBanVeXe_2
             Update_Ve_xe_ban_ve();
             Quyen.UpdateQuyen();
             Timer1.Interval = 1000;
-
+            expandableSplitter1.Height = 500;
             Timer2.Interval = 100;
             Timer2.Start();
         }
         #region "Cac su kien Close, Logout cua FormMain da xu ly xong"
         private void ButtonX_Close_Click(object sender, EventArgs e)
         {
-            Form_Login fl;
-            fl = new Form_Login();
+            //Form_Login fl;
+            //fl = new Form_Login();
             this.WindowState = 0;
             do
             {
@@ -109,8 +109,8 @@ namespace DoAnPhanMemBanVeXe_2
 
         private void ButtonX_Logout_Click(object sender, EventArgs e)
         {
-            Form_Login fl;
-            fl = new Form_Login();
+            //Form_Login fl;
+            //fl = new Form_Login();
             fl.Visible = true;
             fl.Opacity = 100;
             fl.txtPassword.Clear();
@@ -121,8 +121,8 @@ namespace DoAnPhanMemBanVeXe_2
 
         private void Form_Main_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Form_Login fl;
-            fl = new Form_Login();
+            //Form_Login fl;
+            //fl = new Form_Login();
             fl.Visible = true;
             fl.Opacity = 100;
             fl.Timer1.Start();
@@ -551,9 +551,10 @@ namespace DoAnPhanMemBanVeXe_2
 
         public void UpdateNguoiDung()
         {
-            Form_Login fl;
-            fl = new Form_Login();
-            if (fl.LoginLoaiND != "Quan_Ly" || fl.LoginLoaiND != "Admin")
+            //Form_Login fl;
+            //fl = new Form_Login();
+            if (fl.LoaiND == "Quan_Ly" || fl.LoaiND == "Admin")
+            //if(fl.getco() == 1 )
             {
                 Doc_bang_Nguoi_Dung();
                 vi_tri_hien_hanh = 0;
@@ -581,18 +582,18 @@ namespace DoAnPhanMemBanVeXe_2
         #region "Xu ly doc bang nguoi dung va phan loai nguoi dung de hien thi da hoan tat"
         public void Doc_bang_Nguoi_Dung()
         {
-            Form_Login fl;
-            fl = new Form_Login();
+            //Form_Login fl;
+            //fl = new Form_Login();
             //Lam sach luoi sau moi lan cap nhat
             luoi_NguoiDung.ClearSelection();
             string lenh = null;
-            if (fl.LoginLoaiND == "Quan_Ly")
+            if (fl.LoaiND == "Quan_Ly")
             {
-                lenh = "Select * from NguoiDung where IdLoaiND = 'Nhan_Vien' or IdNguoiDung = '" + fl.LoginTenND + "'";
+                lenh = "Select * from NguoiDung where IdLoaiND = 'Nhan_Vien' or IdNguoiDung = '" + fl.LoaiND + "'";
             }
-            else if (fl.LoginLoaiND == "Nhan_Vien")
+            else if (fl.LoaiND == "Nhan_Vien")
             {
-                lenh = "Select * from NguoiDung where IdNguoiDung = '" + fl.txtUserName.Text + "'";
+                lenh = "Select * from NguoiDung where IdNguoiDung = '" + fl.username + "'";
             }
             else
             {

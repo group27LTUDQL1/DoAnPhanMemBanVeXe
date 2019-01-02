@@ -14,14 +14,17 @@ namespace DoAnPhanMemBanVeXe_2
 {
     public class Nguoi_dung
     {
-        public  Form_Main fm;
-        public  Form_Login fl;
+        public  Form_Main FM;
+        public  Form_Login FL;
         private bool flag;
         private DataTable bang_Nguoi_Dung;
         private int vi_tri_hien_hanh;
 
         public void UpdateNguoiDung()
         {
+           
+            var fl = FL;
+            var fm = FM;
             fm = new Form_Main();
             fl = new Form_Login();
             if (fl.LoginLoaiND == "Quan_Ly" || fl.LoginLoaiND == "Admin")
@@ -52,6 +55,8 @@ namespace DoAnPhanMemBanVeXe_2
         #region "Xu ly doc bang nguoi dung va phan loai nguoi dung de hien thi da hoan tat"
         public void Doc_bang_Nguoi_Dung()
         {
+            var fl = FL;
+            var fm = FM;
             fm = new Form_Main();
             fl = new Form_Login();
             //Lam sach luoi sau moi lan cap nhat
@@ -77,9 +82,10 @@ namespace DoAnPhanMemBanVeXe_2
         #region "Xu ly cac nut di chuyen va xuat thong tin nguoi dung da hoan tat"
         private void Xuat_thong_tin_Nguoi_Dung()
         {
-            fm = new Form_Main();
+            //
             DataRow dong = bang_Nguoi_Dung.Rows[vi_tri_hien_hanh];
-            var _with1 = fm;
+            var _with1 = FM;
+            _with1 = new Form_Main();
             _with1.cbo_Username.Text = dong["IdNguoiDung"].ToString();
             _with1.txt_Password.Text = dong["PassND"].ToString();
             _with1.txt_HoTen.Text = Convert.ToString(dong["HoTen"]);
@@ -131,7 +137,10 @@ namespace DoAnPhanMemBanVeXe_2
         #region "Tao lien ket giua cac dieu khien voi datagridview da hoan tat"
         private void Tao_lien_ket()
         {
+
             
+            var fm = FM;
+            var fl = FL;
             fm = new Form_Main();
             fl = new Form_Login();
             SqlCommand query = new SqlCommand("select IdLoaiND from LoaiNguoiDung", Ket_noi.connect);
@@ -180,7 +189,7 @@ namespace DoAnPhanMemBanVeXe_2
         #region "Xoa lien ket giua cac dieu khien voi datagridview da hoan tat"
         private void Xoa_lien_ket()
         {
-            
+            var fm = FM;
             fm = new Form_Main();
             fm.txt_Password.DataBindings.Clear();
             fm.txt_DiaChi.DataBindings.Clear();
@@ -194,7 +203,7 @@ namespace DoAnPhanMemBanVeXe_2
         #region "Them va sua thong tin nguoi dung da ly ly xong"
         public void Them_nguoi_dung()
         {
-            
+            var fm = FM;
             fm = new Form_Main();
             flag = true;
             Lock_Control(true);
@@ -205,8 +214,8 @@ namespace DoAnPhanMemBanVeXe_2
 
         public void Sua_thong_tin_ca_nhan()
         {
-            Form_Main fm;
-            Form_Login fl;
+            var fm = FM;
+            var fl = FL;
             fm = new Form_Main();
             fl = new Form_Login();
             flag = false;
@@ -221,8 +230,8 @@ namespace DoAnPhanMemBanVeXe_2
 
         public void Luu_thay_doi()
         {
-            Form_Main fm;
-            Form_Login fl;
+            var fm = FM;
+            var fl = FL;
             fm = new Form_Main();
             fl = new Form_Login();
             Ket_noi.Tao_ket_noi();
@@ -230,7 +239,8 @@ namespace DoAnPhanMemBanVeXe_2
             {
                 Ket_noi.connect.Close();
             }
-            var _with3 = fm;
+            var _with3 = FM;
+            _with3 = new Form_Main();
             //Them nguoi dung moi
             if (flag == true)
             {
@@ -364,7 +374,9 @@ namespace DoAnPhanMemBanVeXe_2
 
         #region "Xu ly xoa nguoi dung da hoan tat"
         public void Xoa_nguoi_dung()
-        {            
+        {
+            var fm = FM;
+            var fl = FL;
             fm = new Form_Main();
             fl = new Form_Login();
             if (Strings.Trim(fm.cbo_Username.Text) == fl.LoginTenND)
@@ -402,9 +414,10 @@ namespace DoAnPhanMemBanVeXe_2
         #region "Cac xu ly phu voi cac dieu khien da hoan tat"
         private void Lock_Control(bool f)
         {
-            
+            var fm = FM;
             fm = new Form_Main();
-            var _with4 = fm;
+            var _with4 = FM;
+            _with4 = new Form_Main();
             _with4.cbo_Username.Enabled = true;
             _with4.txt_Password.Enabled = f;
             _with4.txt_HoTen.Enabled = f;
@@ -418,9 +431,10 @@ namespace DoAnPhanMemBanVeXe_2
 
         private void Clear_Control()
         {
-            
+            var fm = FM;
             fm = new Form_Main();
-            var _with5 = fm;
+            var _with5 = FM;
+            _with5 = new Form_Main();
             _with5.txt_Password.Text = "";
             _with5.txt_DiaChi.Text = "";
             _with5.txt_HoTen.Text = "";
@@ -434,9 +448,10 @@ namespace DoAnPhanMemBanVeXe_2
 
         private void LockButton(bool dt)
         {
-            
+            var fm = FM;
             fm = new Form_Main();
-            var _with6 = fm;
+            var _with6 = FM;
+            _with6 = new Form_Main();
             _with6.Button_Them.Enabled = !dt;
             _with6.Button_Sua.Enabled = !dt;
             _with6.Button_Xoa.Enabled = !dt;
@@ -448,11 +463,12 @@ namespace DoAnPhanMemBanVeXe_2
 
         private bool TestInfo()
         {
-            
+            var fm = FM;
             fm = new Form_Main();
             bool functionReturnValue = false;
             functionReturnValue = true;
-            var _with7 = fm;
+            var _with7 = FM;
+            _with7 = new Form_Main();
             if (string.IsNullOrEmpty(Strings.Trim(_with7.cbo_Username.Text)) || string.IsNullOrEmpty(Strings.Trim(_with7.txt_Password.Text)) || string.IsNullOrEmpty(Strings.Trim(_with7.txt_HoTen.Text)) || string.IsNullOrEmpty(Strings.Trim(_with7.date_NgaySinh.Text)) || string.IsNullOrEmpty(Strings.Trim(_with7.cbo_IdLoaiND.Text)) || string.IsNullOrEmpty(Strings.Trim(_with7.txt_SoDienThoai.Text)) || string.IsNullOrEmpty(Strings.Trim(_with7.txt_DiaChi.Text)))
             {
                 functionReturnValue = false;
