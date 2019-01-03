@@ -14,7 +14,8 @@ namespace DoAnPhanMemBanVeXe_2
 {
     public class Tuyen_xe
     {
-        Form_Main fm;
+        public Form_Main fm;
+        
         private DataTable bang_tuyen_xe;
         private int vi_tri_hien_hanh;
         private string lenh;
@@ -22,12 +23,12 @@ namespace DoAnPhanMemBanVeXe_2
         private bool flag;
         public void UpdateTuyenXe()
         {
-            fm = new Form_Main();
+            fm = new Form_Main() { Tuyenxe = this };
             Doc_bang_tuyen_xe();
             Tao_lien_ket();
             vi_tri_hien_hanh = 0;
             Xuat_thong_tin_Tuyen_xe();
-            fm.luoi_Tuyen_xe.ReadOnly = true;
+            fm.luoiTuyenxe.ReadOnly = true;
             Lock_Control(false);
             LockButton(false);
         }
@@ -35,54 +36,54 @@ namespace DoAnPhanMemBanVeXe_2
         #region "Doc bang tuyen xe da xong"
         private void Doc_bang_tuyen_xe()
         {
-            fm = new Form_Main();
+            fm = new Form_Main() { Tuyenxe = this };
             //Lam sach luoi sau moi lan cap nhat
-            fm.luoi_Tuyen_xe.ClearSelection();
+            fm.luoiTuyenxe.ClearSelection();
             lenh = "Select * from TuyenXe";
             bang_tuyen_xe = Ket_noi.Doc_bang(lenh);
-            fm.luoi_Tuyen_xe.DataSource = bang_tuyen_xe;
+            fm.luoiTuyenxe.DataSource = bang_tuyen_xe;
         }
         #endregion
 
         #region "Tao lien ket giua cac dieu khien voi datagridview da hoan tat"
         private void Tao_lien_ket()
         {
-            fm = new Form_Main();
-            var _with1 = fm.cbo_IdTuyen;
-            _with1.DataSource = fm.luoi_Tuyen_xe.DataSource;
+            fm = new Form_Main() { Tuyenxe = this };
+            var _with1 = fm.cboIdTuyen;
+            _with1.DataSource = fm.luoiTuyenxe.DataSource;
             _with1.DisplayMember = "IdTuyen";
             _with1.ValueMember = "IdTuyen";
             _with1.SelectedValue = "IdTuyen";
             Xoa_lien_ket();
 
-            fm.cbo_IdTuyen.Text = (String)fm.luoi_Tuyen_xe.Rows[0].Cells[0].Value;
-            /*
-            fm.cbo_TenTuyen.DataBindings.Add("text", fm.luoi_Tuyen_xe.DataSource, "TenTuyen");
-            fm.cbo_DiaDiemDi.DataBindings.Add("text", fm.luoi_Tuyen_xe.DataSource, "DiaDiemDi");
-            fm.cbo_DiaDiemDen.DataBindings.Add("text", fm.luoi_Tuyen_xe.DataSource, "DiaDiemDen");*/
+            fm.cboIdTuyen.Text = (String)fm.luoiTuyenxe.Rows[0].Cells[0].Value;
+            
+            fm.cboTenTuyen.DataBindings.Add("text", fm.luoiTuyenxe.DataSource, "TenTuyen");
+            fm.cboDiaDiemDi.DataBindings.Add("text", fm.luoiTuyenxe.DataSource, "DiaDiemDi");
+            fm.cboDiaDiemDen.DataBindings.Add("text", fm.luoiTuyenxe.DataSource, "DiaDiemDen");
         }
         #endregion
 
         #region "Xoa lien ket giua cac dieu khien voi datagridview da hoan tat"
         private void Xoa_lien_ket()
         {
-            fm = new Form_Main();
-            fm.cbo_TenTuyen.DataBindings.Clear();
-            fm.cbo_DiaDiemDi.DataBindings.Clear();
-            fm.cbo_DiaDiemDen.DataBindings.Clear();
+            fm = new Form_Main() { Tuyenxe = this };
+            fm.cboTenTuyen.DataBindings.Clear();
+            fm.cboDiaDiemDi.DataBindings.Clear();
+            fm.cboDiaDiemDen.DataBindings.Clear();
         }
         #endregion
 
         #region "Xu ly cac nut di chuyen va xuat thong tin tuyen xe da hoan tat"
         private void Xuat_thong_tin_Tuyen_xe()
         {
-            fm = new Form_Main();
+            fm = new Form_Main() { Tuyenxe = this };
             DataRow dong = bang_tuyen_xe.Rows[vi_tri_hien_hanh];
             var _with2 = fm;
-            _with2.cbo_IdTuyen.Text = dong["IdTuyen"].ToString();
-            _with2.cbo_TenTuyen.Text = dong["TenTuyen"].ToString();
-            _with2.cbo_DiaDiemDi.Text = Convert.ToString(dong["DiaDiemDi"]);
-            _with2.cbo_DiaDiemDen.Text = dong["DiaDiemDen"].ToString();
+            _with2.cboIdTuyen.Text = dong["IdTuyen"].ToString();
+            _with2.cboTenTuyen.Text = dong["TenTuyen"].ToString();
+            _with2.cboDiaDiemDi.Text = Convert.ToString(dong["DiaDiemDi"]);
+            _with2.cboDiaDiemDen.Text = dong["DiaDiemDen"].ToString();
         }
 
         public void Di_chuyen_ve_sau()
@@ -119,32 +120,32 @@ namespace DoAnPhanMemBanVeXe_2
         #region "Them, sua tuyen da hoan tat"
         public void Them()
         {
-            fm = new Form_Main();
+            fm = new Form_Main() { Tuyenxe = this };
             flag = true;
             Lock_Control(true);
             LockButton(true);
             Clear_Control();
-            fm.luoi_Tuyen_xe.Enabled = false;
+            fm.luoiTuyenxe.Enabled = false;
             for (int i = 0; i <= bang_tuyen_xe.Rows.Count - 1; i++)
             {
-                fm.cbo_TenTuyen.Items.Add(bang_tuyen_xe.Rows[i]["TenTuyen"].ToString());
+                fm.cboTenTuyen.Items.Add(bang_tuyen_xe.Rows[i]["TenTuyen"].ToString());
             }
         }
 
         public void Sua()
         {
-            fm = new Form_Main();
+            fm = new Form_Main() { Tuyenxe = this };
             flag = false;
             Lock_Control(true);
             LockButton(true);
-            //Form_Main.cbo_SoXe.Enabled = False
-            fm.Luoi_Xe.ReadOnly = false;
-            fm.cbo_IdTuyen.Enabled = false;
+            fm.cboSoXe.Enabled = false;
+            fm.Luoixe.ReadOnly = false;
+            fm.cboIdTuyen.Enabled = false;
         }
 
         public void Luu()
         {
-            fm = new Form_Main();
+            fm = new Form_Main() { Tuyenxe = this };
             Ket_noi.Tao_ket_noi();
             if (Ket_noi.connect.State == ConnectionState.Open)
             {
@@ -166,10 +167,10 @@ namespace DoAnPhanMemBanVeXe_2
                         sqlDR = sqlCM.ExecuteReader();
                         while (sqlDR.Read() == true)
                         {
-                            if (sqlDR.GetValue(0).ToString() == _with3.cbo_IdTuyen.Text)
+                            if (sqlDR.GetValue(0).ToString() == _with3.cboIdTuyen.Text)
                             {
                                 flag = 1;
-                                MessageBox.Show("Mã số tuyến " + _with3.cbo_IdTuyen.Text + " đã tồn tại, vui lòng kiểm tra lại ma so tuyen bạn nhập!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                MessageBox.Show("Mã số tuyến " + _with3.cboIdTuyen.Text + " đã tồn tại, vui lòng kiểm tra lại ma so tuyen bạn nhập!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 return;
                             }
                         }
@@ -177,7 +178,7 @@ namespace DoAnPhanMemBanVeXe_2
                         if (flag == 0)
                         {
                             lenh = "Insert into TuyenXe";
-                            lenh += " Values ('" + _with3.cbo_IdTuyen.Text + "', '" + _with3.cbo_TenTuyen.Text + "', N'" + _with3.cbo_DiaDiemDi.Text + "', N'" + _with3.cbo_DiaDiemDen.Text + "')";
+                            lenh += " Values ('" + _with3.cboIdTuyen.Text + "', '" + _with3.cboTenTuyen.Text + "', N'" + _with3.cboDiaDiemDi.Text + "', N'" + _with3.cboDiaDiemDen.Text + "')";
                             SqlCommand bo_lenh = new SqlCommand(lenh, Ket_noi.connect);
                             Ket_noi.connect.Open();
                             try
@@ -187,7 +188,7 @@ namespace DoAnPhanMemBanVeXe_2
                                 UpdateTuyenXe();
                                 Lock_Control(false);
                                 LockButton(false);
-                                fm.luoi_Tuyen_xe.Enabled = true;
+                                fm.luoiTuyenxe.Enabled = true;
                                 Interaction.MsgBox("Đã cập nhật dữ liệu thành công", MsgBoxStyle.Information, "Thông báo");
                             }
                             catch (Exception ex)
@@ -211,7 +212,7 @@ namespace DoAnPhanMemBanVeXe_2
                     DialogResult dialog = MessageBox.Show("Ban có chắn chắc muốn sửa thông tin tuyến xe này." + Constants.vbNewLine + "Click OK đê đồng ý, Cancel để hủy.", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                     if (dialog == DialogResult.OK)
                     {
-                        lenh = "Update TuyenXe Set TenTuyen = '" + _with3.cbo_TenTuyen.Text + "', DiaDiemDi = N'" + _with3.cbo_DiaDiemDi.Text + "', DiaDiemDen = N'" + _with3.cbo_DiaDiemDen.Text + "' where IdTuyen = '" + _with3.cbo_IdTuyen.Text + "'";
+                        lenh = "Update TuyenXe Set TenTuyen = '" + _with3.cboTenTuyen.Text + "', DiaDiemDi = N'" + _with3.cboDiaDiemDi.Text + "', DiaDiemDen = N'" + _with3.cboDiaDiemDen.Text + "' where IdTuyen = '" + _with3.cboIdTuyen.Text + "'";
                         SqlCommand sqlqr = new SqlCommand(lenh, Ket_noi.connect);
                         try
                         {
@@ -221,7 +222,7 @@ namespace DoAnPhanMemBanVeXe_2
                             UpdateTuyenXe();
                             Lock_Control(false);
                             LockButton(false);
-                            fm.luoi_Tuyen_xe.Enabled = true;
+                            fm.luoiTuyenxe.Enabled = true;
                             Interaction.MsgBox("Đã cập nhật dữ liệu thành công", MsgBoxStyle.Information, "Thông báo");
                         }
                         catch (Exception ex)
@@ -242,8 +243,8 @@ namespace DoAnPhanMemBanVeXe_2
         #region "Xu ly huy thao tac cap nhat da hoan tat"
         public void Huy_thao_tac()
         {
-            fm = new Form_Main();
-            fm.luoi_Tuyen_xe.Enabled = true;
+            fm = new Form_Main() { Tuyenxe = this };
+            fm.luoiTuyenxe.Enabled = true;
             Xoa_lien_ket();
             Lock_Control(false);
             LockButton(false);
@@ -254,11 +255,11 @@ namespace DoAnPhanMemBanVeXe_2
         #region "Xoa tuyen hoan tat"
         public void Xoa()
         {
-            fm = new Form_Main();
-            var qs = MessageBox.Show("Bạn chắc chắn muốn xóa tất cả thông tin về:" + Constants.vbNewLine + " - Ma so tuyen: " + fm.cbo_IdTuyen.Text + Constants.vbNewLine + " - Ten tuyen: " + fm.cbo_TenTuyen.Text, "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            fm = new Form_Main() { Tuyenxe = this };
+            var qs = MessageBox.Show("Bạn chắc chắn muốn xóa tất cả thông tin về:" + Constants.vbNewLine + " - Ma so tuyen: " + fm.cboIdTuyen.Text + Constants.vbNewLine + " - Ten tuyen: " + fm.cboTenTuyen.Text, "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if (qs == DialogResult.Yes)
             {
-                string lenh = "Delete from TuyenXe where IdTuyen = '" + fm.cbo_IdTuyen.SelectedValue.ToString() + "'";
+                string lenh = "Delete from TuyenXe where IdTuyen = '" + fm.cboIdTuyen.SelectedValue.ToString() + "'";
                 SqlCommand query1 = new SqlCommand(lenh, Ket_noi.connect);
                 try
                 {
@@ -283,66 +284,66 @@ namespace DoAnPhanMemBanVeXe_2
         #region "Cac xu ly phu voi cac dieu khien da hoan tat"
         private void Lock_Control(bool f)
         {
-            fm = new Form_Main();
+            fm = new Form_Main() { Tuyenxe = this };
             var _with4 = fm;
-            _with4.cbo_IdTuyen.Enabled = true;
-            _with4.cbo_TenTuyen.Enabled = f;
-            _with4.cbo_DiaDiemDi.Enabled = f;
-            _with4.cbo_DiaDiemDen.Enabled = f;
+            _with4.cboIdTuyen.Enabled = true;
+            _with4.cboTenTuyen.Enabled = f;
+            _with4.cboDiaDiemDi.Enabled = f;
+            _with4.cboDiaDiemDen.Enabled = f;
         }
 
         private void Clear_Control()
         {
-            fm = new Form_Main();
+            fm = new Form_Main() { Tuyenxe = this };
             var _with5 = fm;
-            _with5.cbo_IdTuyen.Text = "";
-            _with5.cbo_TenTuyen.Text = "";
-            _with5.cbo_DiaDiemDi.Text = "";
-            _with5.cbo_DiaDiemDen.Text = "";
-            _with5.cbo_IdTuyen.Focus();
+            _with5.cboIdTuyen.Text = "";
+            _with5.cboTenTuyen.Text = "";
+            _with5.cboDiaDiemDi.Text = "";
+            _with5.cboDiaDiemDen.Text = "";
+            _with5.cboIdTuyen.Focus();
         }
 
         private void LockButton(bool dt)
         {
-            fm = new Form_Main();
+            fm = new Form_Main() { Tuyenxe = this };
             var _with6 = fm;
-            _with6.btn_ThemTuyen.Enabled = !dt;
-            _with6.btn_SuaTuyen.Enabled = !dt;
-            _with6.btn_XoaTuyen.Enabled = !dt;
-            _with6.btn_LuuTuyen.Enabled = dt;
-            _with6.btn_HuyTuyen.Enabled = dt;
+            _with6.btnThemTuyen.Enabled = !dt;
+            _with6.btnSuaTuyen.Enabled = !dt;
+            _with6.btnXoaTuyen.Enabled = !dt;
+            _with6.btnLuuTuyen.Enabled = dt;
+            _with6.btnHuyTuyen.Enabled = dt;
         }
 
         private bool TestInfo()
         {
-            fm = new Form_Main();
+            fm = new Form_Main() { Tuyenxe = this };
             bool functionReturnValue = false;
             functionReturnValue = true;
             var _with7 = fm;
-            if (string.IsNullOrEmpty(Strings.Trim(_with7.cbo_IdTuyen.Text)) || string.IsNullOrEmpty(Strings.Trim(_with7.cbo_TenTuyen.Text)) || string.IsNullOrEmpty(Strings.Trim(_with7.cbo_DiaDiemDi.Text)) || string.IsNullOrEmpty(Strings.Trim(_with7.cbo_DiaDiemDen.Text)))
+            if (string.IsNullOrEmpty(Strings.Trim(_with7.cboIdTuyen.Text)) || string.IsNullOrEmpty(Strings.Trim(_with7.cboTenTuyen.Text)) || string.IsNullOrEmpty(Strings.Trim(_with7.cboDiaDiemDi.Text)) || string.IsNullOrEmpty(Strings.Trim(_with7.cboDiaDiemDen.Text)))
             {
                 functionReturnValue = false;
                 Interaction.MsgBox("Bạn phải nhập đầy đủ thông tin!", MsgBoxStyle.Exclamation, "Thông báo lỗi");
             }
 
-            if (string.IsNullOrEmpty(Strings.Trim(_with7.cbo_IdTuyen.Text)))
+            if (string.IsNullOrEmpty(Strings.Trim(_with7.cboIdTuyen.Text)))
             {
-                _with7.cbo_IdTuyen.Focus();
+                _with7.cboIdTuyen.Focus();
                 return functionReturnValue;
             }
-            else if (string.IsNullOrEmpty(Strings.Trim(_with7.cbo_TenTuyen.Text)))
+            else if (string.IsNullOrEmpty(Strings.Trim(_with7.cboTenTuyen.Text)))
             {
-                _with7.cbo_TenTuyen.Focus();
+                _with7.cboTenTuyen.Focus();
                 return functionReturnValue;
             }
-            else if (string.IsNullOrEmpty(Strings.Trim(_with7.cbo_DiaDiemDi.Text)))
+            else if (string.IsNullOrEmpty(Strings.Trim(_with7.cboDiaDiemDi.Text)))
             {
-                _with7.cbo_DiaDiemDi.Focus();
+                _with7.cboDiaDiemDi.Focus();
                 return functionReturnValue;
             }
-            else if (string.IsNullOrEmpty(Strings.Trim(_with7.cbo_DiaDiemDen.Text)))
+            else if (string.IsNullOrEmpty(Strings.Trim(_with7.cboDiaDiemDen.Text)))
             {
-                _with7.cbo_DiaDiemDen.Focus();
+                _with7.cboDiaDiemDen.Focus();
                 return functionReturnValue;
             }
             return functionReturnValue;

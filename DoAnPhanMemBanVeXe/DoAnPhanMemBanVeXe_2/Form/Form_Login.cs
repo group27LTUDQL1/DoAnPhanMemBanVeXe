@@ -207,14 +207,6 @@ namespace DoAnPhanMemBanVeXe_2
 
         #endregion
 
-
-        /*public int getco()
-        {
-              if (LoginLoaiND == "Quan_Ly" || LoginLoaiND == "Admin")
-                      co = 1;
-            
-            return this.co;
-        }*/
         public string LoaiND
         {
             get{ return this.LoginLoaiND; } 

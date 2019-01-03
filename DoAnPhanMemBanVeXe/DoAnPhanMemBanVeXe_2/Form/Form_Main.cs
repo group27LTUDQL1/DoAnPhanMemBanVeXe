@@ -19,12 +19,12 @@ namespace DoAnPhanMemBanVeXe_2
           
         public Form_Login fl;//khởi tạo
         private bool flag = true;
-        private Nguoi_dung Nguoi_dung = new Nguoi_dung();
+        private Nguoi_dung Nguoidung = new Nguoi_dung();
         private Xe Xe = new Xe();
-        private Tuyen_xe Tuyen_xe = new Tuyen_xe();
-        private Thoi_diem Thoi_diem = new Thoi_diem();
-        private Chuyen_xe Chuyen_Xe = new Chuyen_xe();
-        private Ban_ve Ban_ve = new Ban_ve();
+        public Tuyen_xe Tuyenxe = new Tuyen_xe();
+        private Thoi_diem Thoidiem = new Thoi_diem();
+        private Chuyen_xe ChuyenXe = new Chuyen_xe();
+        private Ban_ve Banve = new Ban_ve();
         private Form_Phan_Quyen Quyen = new Form_Phan_Quyen();
         private Update_he_thong update_he_thong = new Update_he_thong();
 
@@ -76,7 +76,7 @@ namespace DoAnPhanMemBanVeXe_2
         }
         #endregion
         private void Form_Main_Load(object sender, EventArgs e)
-        {        
+        {            
             update_he_thong.update_();
             UpdateNguoiDung();
             UpdateXe();
@@ -661,9 +661,9 @@ namespace DoAnPhanMemBanVeXe_2
         #region "Tao lien ket giua cac dieu khien voi datagridview da hoan tat"
         private void Tao_lien_ket()
         {
-            Form_Login fl;
+            //Form_Login fl;
             //fm = new Form_Main();
-            fl = new Form_Login();
+            //fl = new Form_Login();
             SqlCommand query = new SqlCommand("select IdLoaiND from LoaiNguoiDung", Ket_noi.connect);
             Ket_noi.connect.Open();
             SqlDataReader dr = query.ExecuteReader();
@@ -1423,7 +1423,7 @@ namespace DoAnPhanMemBanVeXe_2
         //Xu ly Tuyen_Xe
         #region "Xử lý class Tuyen_Xe hoàn tất"
         private DataTable bang_tuyen_xe;        
-        private string lenh_tuyen_xe;
+        private string lenh_tuyen_xe;      
         public void UpdateTuyenXe()
         {
             //fm = new Form_Main();
@@ -1442,8 +1442,8 @@ namespace DoAnPhanMemBanVeXe_2
             //fm = new Form_Main();
             //Lam sach luoi sau moi lan cap nhat
             luoi_Tuyen_xe.ClearSelection();
-            lenh = "Select * from TuyenXe";
-            bang_tuyen_xe = Ket_noi.Doc_bang(lenh);
+            lenh_tuyen_xe = "Select * from TuyenXe";
+            bang_tuyen_xe = Ket_noi.Doc_bang(lenh_tuyen_xe);
             luoi_Tuyen_xe.DataSource = bang_tuyen_xe;
         }
         #endregion
@@ -1541,7 +1541,7 @@ namespace DoAnPhanMemBanVeXe_2
             flag = false;
             Lock_Control_tuyen_xe(true);
             LockButton_tuyen_xe(true);
-            //Form_Main.cbo_SoXe.Enabled = False
+            cbo_SoXe.Enabled = false;
             Luoi_Xe.ReadOnly = false;
             cbo_IdTuyen.Enabled = false;
         }
@@ -2262,8 +2262,8 @@ namespace DoAnPhanMemBanVeXe_2
         private void Doc_tuyen_xe_chuyen_xe()
         {
             //fm = new Form_Main();
-            lenh = "Select IdTuyen from TuyenXe";
-            bang_tuyen_xe = Ket_noi.Doc_bang(lenh);
+            lenh_chuyen_xe = "Select IdTuyen from TuyenXe";
+            bang_tuyen_xe_chuyen_xe = Ket_noi.Doc_bang(lenh_chuyen_xe);
             var _with7 = cbo_IdTuyenChuyen;
             _with7.DataSource = bang_tuyen_xe_chuyen_xe;
             _with7.DisplayMember = "IdTuyen";
@@ -2282,8 +2282,8 @@ namespace DoAnPhanMemBanVeXe_2
         private void Loc_Thoi_diem_theo_Tuyen(string IdTuyen)
         {
             //fm = new Form_Main();
-            lenh = "Select Distinct Ngay from ThoiDiem, ChiTietTuyen where IdTuyen = '" + IdTuyen + "' and ThoiDiem.IdThoiDiem = ChiTietTuyen.IdThoiDiem";
-            bang_Chi_tiet_tuyen_chuyen_xe = Ket_noi.Doc_bang(lenh);
+            lenh_chuyen_xe = "Select Distinct Ngay from ThoiDiem, ChiTietTuyen where IdTuyen = '" + IdTuyen + "' and ThoiDiem.IdThoiDiem = ChiTietTuyen.IdThoiDiem";
+            bang_Chi_tiet_tuyen_chuyen_xe = Ket_noi.Doc_bang(lenh_chuyen_xe);
             var _with8 = cbo_NgayDiChuyen;
             _with8.DataSource = bang_Chi_tiet_tuyen_chuyen_xe;
             _with8.ValueMember = "Ngay";
@@ -2302,8 +2302,8 @@ namespace DoAnPhanMemBanVeXe_2
         private void Loc_gio_theo_ngay(string ngay)
         {
             //fm = new Form_Main();
-            lenh = "Select Gio from ThoiDiem where Ngay = '" + ngay + "'";
-            bang_Thoi_diem_chuyen_xe = Ket_noi.Doc_bang(lenh);
+            lenh_chuyen_xe = "Select Gio from ThoiDiem where Ngay = '" + ngay + "'";
+            bang_Thoi_diem_chuyen_xe = Ket_noi.Doc_bang(lenh_chuyen_xe);
             var _with9 = cbo_GioDiChuyen;
             _with9.DataSource = bang_Thoi_diem_chuyen_xe;
             _with9.ValueMember = "Gio";
@@ -2313,8 +2313,8 @@ namespace DoAnPhanMemBanVeXe_2
         private void Doc_xe_chuyen_xe()
         {
             //fm = new Form_Main();
-            lenh = "Select So_Xe from Xe";
-            bang_xe = Ket_noi.Doc_bang(lenh);
+            lenh_chuyen_xe = "Select So_Xe from Xe";
+            bang_xe_chuyen_xe = Ket_noi.Doc_bang(lenh_chuyen_xe);
             var _with10 = cbo_SoXeChuyen;
             _with10.DataSource = bang_xe_chuyen_xe;
             _with10.ValueMember = "So_Xe";
@@ -2495,9 +2495,9 @@ namespace DoAnPhanMemBanVeXe_2
                         Ket_noi.connect.Close();
 
                         //Bat dau insert dulieu
-                        lenh = "Insert into ChuyenXe(IdTuyen, NgayDi, Gio, So_Xe)";
-                        lenh += " Values ('" + _with11.cbo_IdTuyenChuyen.Text + "', '" + _with11.cbo_NgayDiChuyen.Text + "', '" + _with11.cbo_GioDiChuyen.Text + "', '" + _with11.cbo_SoXeChuyen.Text + "')";
-                        SqlCommand bo_lenh = new SqlCommand(lenh, Ket_noi.connect);
+                        lenh_chuyen_xe = "Insert into ChuyenXe(IdTuyen, NgayDi, Gio, So_Xe)";
+                        lenh_chuyen_xe += " Values ('" + _with11.cbo_IdTuyenChuyen.Text + "', '" + _with11.cbo_NgayDiChuyen.Text + "', '" + _with11.cbo_GioDiChuyen.Text + "', '" + _with11.cbo_SoXeChuyen.Text + "')";
+                        SqlCommand bo_lenh = new SqlCommand(lenh_chuyen_xe, Ket_noi.connect);
                         Ket_noi.connect.Open();
                         try
                         {
@@ -2699,8 +2699,8 @@ namespace DoAnPhanMemBanVeXe_2
                             }
                         }
                         Ket_noi.connect.Close();
-                        lenh = "Update ChuyenXe Set IdTuyen = '" + _with11.cbo_IdTuyenChuyen.Text + "', NgayDi = '" + _with11.cbo_NgayDiChuyen.Text + "', Gio = '" + _with11.cbo_GioDiChuyen.Text + "', So_Xe = '" + _with11.cbo_SoXeChuyen.Text + "' where IdChuyen = '" + _with11.cbo_IdTuyenChuyen.Text + "'";
-                        SqlCommand sqlqr = new SqlCommand(lenh, Ket_noi.connect);
+                        lenh_chuyen_xe = "Update ChuyenXe Set IdTuyen = '" + _with11.cbo_IdTuyenChuyen.Text + "', NgayDi = '" + _with11.cbo_NgayDiChuyen.Text + "', Gio = '" + _with11.cbo_GioDiChuyen.Text + "', So_Xe = '" + _with11.cbo_SoXeChuyen.Text + "' where IdChuyen = '" + _with11.cbo_IdTuyenChuyen.Text + "'";
+                        SqlCommand sqlqr = new SqlCommand(lenh_chuyen_xe, Ket_noi.connect);
                         try
                         {
                             Ket_noi.connect.Open();
@@ -2724,7 +2724,7 @@ namespace DoAnPhanMemBanVeXe_2
                     }
                 }
             }
-            Ban_ve.Update_Ve_xe();
+            Update_Ve_xe_ban_ve();
         }
 
         private bool TestInfo_chuyen_xe()
@@ -2768,8 +2768,8 @@ namespace DoAnPhanMemBanVeXe_2
             var qs = MessageBox.Show("Bạn chắc chắn muốn xóa tất cả thông tin về:" + Constants.vbNewLine + " - Chuyến xe: " + cbo_IdChuyen.Text + Constants.vbNewLine + " - Tuyến xe: " + cbo_IdTuyenChuyen.Text, "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if (qs == DialogResult.Yes)
             {
-                string lenh = "Delete from ChuyenXe where IdChuyen = '" + cbo_IdChuyen.SelectedValue.ToString() + "'";
-                SqlCommand query1 = new SqlCommand(lenh, Ket_noi.connect);
+                string lenh_chuyen_xe = "Delete from ChuyenXe where IdChuyen = '" + cbo_IdChuyen.SelectedValue.ToString() + "'";
+                SqlCommand query1 = new SqlCommand(lenh_chuyen_xe, Ket_noi.connect);
                 try
                 {
                     Ket_noi.connect.Open();
@@ -3056,6 +3056,70 @@ namespace DoAnPhanMemBanVeXe_2
             return functionReturnValue;
         }
         #endregion
+
+
+
+
+        //tạo các properties 
+        public DataGridView luoiTuyenxe
+        {
+            get { return this.luoi_Tuyen_xe; }           
+        }
+
+        public DataGridView Luoixe
+        {
+            get { return this.Luoi_Xe; }
+        }
+
+        public ComboBox cboIdTuyen
+        {
+            get { return this.cbo_IdTuyen; }
+        }
+
+        public ComboBox cboTenTuyen
+        {
+            get { return this.cbo_TenTuyen; }
+        }
+
+        public ComboBox cboDiaDiemDi
+        {
+            get { return this.cbo_DiaDiemDi; }
+        }
+
+        public ComboBox cboDiaDiemDen
+        {
+            get { return this.cbo_DiaDiemDen; }
+        }
+
+        public ComboBox cboSoXe
+        {
+            get { return this.cbo_SoXe; }
+        }
+
+        public ButtonX btnThemTuyen
+        {
+            get { return this.btn_ThemTuyen; }
+        }
+
+        public ButtonX btnSuaTuyen
+        {
+            get { return this.btn_SuaTuyen; }
+        }
+
+        public ButtonX btnXoaTuyen
+        {
+            get { return this.btn_XoaTuyen; }
+        }
+
+        public ButtonX btnLuuTuyen
+        {
+            get { return this.btn_LuuTuyen; }
+        }
+
+        public ButtonX btnHuyTuyen
+        {
+            get { return this.btn_HuyTuyen; }
+        }
     }
 }
 
