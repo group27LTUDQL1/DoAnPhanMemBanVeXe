@@ -502,7 +502,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         private void cbo_NgayVe_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Chon_ngay_ban_ve();
+            //Chon_ngay_ban_ve();
         }
 
         private void cbo_GioVe_SelectedIndexChanged(object sender, EventArgs e)
@@ -2897,7 +2897,7 @@ namespace DoAnPhanMemBanVeXe_2
             _with3.ValueMember = "IdTuyen";
 
             //Tao lien ket
-            luoi_XeVe.DataSource = bang_tuyen_xe_ban_ve;
+            //luoi_XeVe.DataSource = bang_tuyen_xe_ban_ve;
         }
 
         public void Chon_tuyen_ban_ve()
@@ -2976,7 +2976,7 @@ namespace DoAnPhanMemBanVeXe_2
             {
                 if (cbo_XeVe.SelectedIndex < 0)
                     return;
-                Loc_thong_tin_theo_so_xe(cbo_XeVe.SelectedValue.ToString());
+                Loc_thong_tin_theo_so_xe(cbo_XeVe.Text);
 
             }
         }
@@ -2988,45 +2988,47 @@ namespace DoAnPhanMemBanVeXe_2
             bang_Thong_tin_xe = Ket_noi.Doc_bang(lenh);
             luoi_XeVe.DataSource = bang_Thong_tin_xe;
         }
-
+        public Form_Xe_16_Cho frm_xe_16;
         //Xu ly nut chon cho ngoi
         public void Chon_cho_ngoi()
         {
+
             //fm = new Form_Main();
             var _with7 = this;
             if (Kiem_tra_thong_tin_dat_ve())
             {
-                lenh = "Select So_Cho_Ngoi From Xe where So_Xe = '" + _with7.cbo_XeVe.SelectedValue.ToString() + "'";
+                lenh = "Select So_Cho_Ngoi From Xe where So_Xe = '" + _with7.cbo_XeVe.Text + "'";
                 bang_Thong_tin_xe = Ket_noi.Doc_bang(lenh);
                 So_cho_ngoi = bang_Thong_tin_xe.Rows[0]["So_Cho_Ngoi"].ToString();
 
                 if (Convert.ToInt32(So_cho_ngoi) == 7)
                 {
-                    Form_Xe_7_Cho frm_xe_7 = new Form_Xe_7_Cho();
+                    Form_Xe_7_Cho frm_xe_7 = new Form_Xe_7_Cho() { fm=this};
                     frm_xe_7.Show();
                 }
 
                 if (Convert.ToInt32(So_cho_ngoi) == 16)
                 {
-                    Form_Xe_16_Cho frm_xe_16 = new Form_Xe_16_Cho();
+                    
+                    frm_xe_16 = new Form_Xe_16_Cho() { fm = this };
                     frm_xe_16.Show();
                 }
 
                 if (Convert.ToInt32(So_cho_ngoi) == 25)
                 {
-                    Form_Xe_25_Cho frm_xe_25 = new Form_Xe_25_Cho();
+                    Form_Xe_25_Cho frm_xe_25 = new Form_Xe_25_Cho() { fm = this };
                     frm_xe_25.Show();
                 }
 
                 if (Convert.ToInt32(So_cho_ngoi) == 30)
                 {
-                    Form_Xe_30_Cho frm_xe_30 = new Form_Xe_30_Cho();
+                    Form_Xe_30_Cho frm_xe_30 = new Form_Xe_30_Cho() { fm = this };
                     frm_xe_30.Show();
                 }
 
                 if (Convert.ToInt32(So_cho_ngoi) == 45)
                 {
-                    Form_Xe_45_Cho frm_xe_45 = new Form_Xe_45_Cho();
+                    Form_Xe_45_Cho frm_xe_45 = new Form_Xe_45_Cho() { fm = this };
                     frm_xe_45.Show();
                 }
 
@@ -3119,6 +3121,48 @@ namespace DoAnPhanMemBanVeXe_2
         public ButtonX btnHuyTuyen
         {
             get { return this.btn_HuyTuyen; }
+        }
+
+        public string Tentuyen
+        {
+            get { return this.cbo_TenTuyenVe.SelectedValue.ToString(); }
+            set { this.cbo_TenTuyenVe.SelectedValue = value; }
+        }
+
+        public string Ngay
+        {
+            get { return this.cbo_NgayVe.Text; }
+            set { this.cbo_NgayVe.Text= value; }
+        }
+
+        public string Gio
+        {
+            get { return this.cbo_GioVe.Text; }
+            set { this.cbo_GioVe.Text = value; }
+        }
+
+        public string Ve
+        {
+            get { return this.cbo_XeVe.Text; }
+            set { this.cbo_XeVe.Text = value; }
+        }
+
+        /*public string Ve1
+        {
+            get { return this.cbo_XeVe.Text; }
+            set { this.cbo_XeVe.Text = value; }
+        }*/
+
+        public string SDT
+        {
+            get { return this.txt_SoDTHanhKhach.Text; }
+            set { this.txt_SoDTHanhKhach.Text = value; }
+        }
+
+        public string TenHK
+        {
+            get { return this.txt_TenHanhKhach.Text; }
+            set { this.txt_TenHanhKhach.Text = value; }
         }
     }
 }

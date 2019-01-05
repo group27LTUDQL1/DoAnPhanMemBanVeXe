@@ -15,7 +15,7 @@ namespace DoAnPhanMemBanVeXe_2
         {
             if (connect == null)
             {
-                string chuoi_ket_noi = @"Data Source=NGHIA69\SQLEXPRESS;Initial Catalog=QuanLyBenXe;Integrated Security=True";
+                string chuoi_ket_noi = @"Data Source=.\SQLEXPRESS;Initial Catalog=QuanLyBenXe;Integrated Security=True";
                 connect = new SqlConnection(chuoi_ket_noi);
             }
         }
@@ -23,7 +23,7 @@ namespace DoAnPhanMemBanVeXe_2
         public static DataTable Doc_bang(string lenh)
         {
             Tao_ket_noi();
-            System.Data.DataTable bang = new System.Data.DataTable();
+            DataTable bang = new DataTable();
             SqlDataAdapter bo_doc_ghi = new SqlDataAdapter(lenh, connect);
             bo_doc_ghi.FillSchema(bang, SchemaType.Source);
             bo_doc_ghi.Fill(bang);

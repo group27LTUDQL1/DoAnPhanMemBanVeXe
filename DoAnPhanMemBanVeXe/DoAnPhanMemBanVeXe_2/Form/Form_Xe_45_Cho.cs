@@ -15,7 +15,7 @@ namespace DoAnPhanMemBanVeXe_2
 {
     public partial class Form_Xe_45_Cho : Form
     {
-        Form_Main fm;
+        public Form_Main fm;
         private string lenh;
         private string lenh1;
         private Ban_ve Ban_ve = new Ban_ve();
@@ -29,7 +29,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         private void btn_Thoat_Click(object sender, EventArgs e)
         {
-            Ban_ve.Update_Ve_xe();
+            fm.Update_Ve_xe_ban_ve();
             this.Close();
         }
 
@@ -45,16 +45,16 @@ namespace DoAnPhanMemBanVeXe_2
 
         private void Duyet_danh_sach_cho_ngoi()
         {
-            fm = new Form_Main();
+            //fm = new Form_Main();
             var _with1 = fm;
-            lenh = "Select IdChuyen from ChuyenXe where IdTuyen = '" + _with1.cbo_TenTuyenVe.SelectedValue.ToString() + "'";
-            lenh += " and  NgayDi =  '" + Strings.FormatDateTime(Convert.ToDateTime(_with1.cbo_NgayVe.SelectedValue.ToString()), DateFormat.ShortDate) + "' and Gio = '" + _with1.cbo_GioVe.SelectedValue.ToString() + "'";
-            lenh += " and So_Xe = '" + _with1.cbo_XeVe.SelectedValue.ToString() + "'";
+            lenh = "Select IdChuyen from ChuyenXe where IdTuyen = '" + _with1.Tentuyen + "'";
+            lenh += " and  NgayDi =  '" + Strings.FormatDateTime(Convert.ToDateTime(_with1.Ngay), DateFormat.ShortDate) + "' and Gio = '" + _with1.Gio + "'";
+            lenh += " and So_Xe = '" + _with1.Ve + "'";
             //Lay Idchuyen cua chuyen do ra
             bang_dat_ve = Ket_noi.Doc_bang(lenh);
             IdChuyen = bang_dat_ve.Rows[0]["IdChuyen"].ToString();
 
-            lenh = "Select * from ChoNgoi where IdChuyen = '" + IdChuyen + "' and So_Xe = '" + fm.cbo_XeVe.SelectedValue.ToString() + "'";
+            lenh = "Select * from ChoNgoi where IdChuyen = '" + IdChuyen + "' and So_Xe = '" + fm.Ve + "'";
             SqlCommand com = new SqlCommand(lenh, Ket_noi.connect);
             try
             {
@@ -80,12 +80,12 @@ namespace DoAnPhanMemBanVeXe_2
 
         private void Duyet(DevComponents.DotNetBar.ButtonX but)
         {
-            DialogResult dg = MessageBox.Show("Ban có chắn chắc muốn đặt:" + Constants.vbNewLine + "- Xe: " + fm.cbo_XeVe.SelectedValue.ToString() + Constants.vbNewLine + "- Vị trí chỗ ngồi: " + but.Text, "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult dg = MessageBox.Show("Ban có chắn chắc muốn đặt:" + Constants.vbNewLine + "- Xe: " + fm.Ve + Constants.vbNewLine + "- Vị trí chỗ ngồi: " + but.Text, "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dg == System.Windows.Forms.DialogResult.Yes)
             {
-                lenh = "Insert into ChoNgoi Values('" + IdChuyen + "', '" + fm.cbo_XeVe.Text + "', '" + but.Text + "')";
+                lenh = "Insert into ChoNgoi Values('" + IdChuyen + "', '" + fm.Ve1 + "', '" + but.Text + "')";
                 lenh1 = "Insert into BanVe(IdChuyen, TenHanhKhach, SDTHanhKhach) ";
-                lenh1 += "Values('" + IdChuyen + "', N'" + fm.txt_TenHanhKhach.Text + "', '" + fm.txt_SoDTHanhKhach.Text + "')";
+                lenh1 += "Values('" + IdChuyen + "', N'" + fm.TenHK + "', '" + fm.SDT + "')";
                 SqlCommand com = new SqlCommand(lenh, Ket_noi.connect);
                 SqlCommand com1 = new SqlCommand(lenh1, Ket_noi.connect);
                 try
