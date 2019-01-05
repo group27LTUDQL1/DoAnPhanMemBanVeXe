@@ -83,7 +83,7 @@ namespace DoAnPhanMemBanVeXe_2
             DialogResult dg = MessageBox.Show("Ban có chắn chắc muốn đặt:" + Constants.vbNewLine + "- Xe: " + fm.Ve + Constants.vbNewLine + "- Vị trí chỗ ngồi: " + but.Text, "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dg == System.Windows.Forms.DialogResult.Yes)
             {
-                lenh = "Insert into ChoNgoi Values('" + IdChuyen + "', '" + fm.Ve1 + "', '" + but.Text + "')";
+                lenh = "Insert into ChoNgoi Values('" + IdChuyen + "', '" + fm.Ve + "', '" + but.Text + "')";
                 lenh1 = "Insert into BanVe(IdChuyen, TenHanhKhach, SDTHanhKhach) ";
                 lenh1 += "Values('" + IdChuyen + "', N'" + fm.TenHK + "', '" + fm.SDT + "')";
                 SqlCommand com = new SqlCommand(lenh, Ket_noi.connect);
