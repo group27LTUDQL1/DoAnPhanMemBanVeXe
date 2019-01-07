@@ -15,6 +15,7 @@ namespace DoAnPhanMemBanVeXe_2
     public partial class Form_Login : Form
     {
         public Form_Main fm;
+        public Form_Phan_Quyen frm_PhanQuyen;
         private bool flag = false; // Dung kiem soat timer
         public  string LoginLoaiND = "";
         public  string LoginTenND = "";
@@ -78,6 +79,7 @@ namespace DoAnPhanMemBanVeXe_2
         {
             
             fm = new Form_Main() {fl=this};
+           // frm_PhanQuyen = new Form_Phan_Quyen() { fl = this };
             this.Opacity -= 0.05;
             if (this.Opacity == 0)
             {

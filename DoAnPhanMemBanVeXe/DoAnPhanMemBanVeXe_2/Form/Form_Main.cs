@@ -23,6 +23,7 @@ namespace DoAnPhanMemBanVeXe_2
         public Form_Xe_25_Cho frm_xe_25;
         public Form_Xe_30_Cho frm_xe_30;
         public Form_Xe_45_Cho frm_xe_45;
+        public Form_Phan_Quyen frm_PhanQuyen;
         private bool flag = true;
         private Nguoi_dung Nguoidung = new Nguoi_dung();
         private Xe Xe = new Xe();
@@ -511,7 +512,7 @@ namespace DoAnPhanMemBanVeXe_2
         {
             if (cbo_IdLoaiND.Text == "Nhan_Vien")
             {
-                Form_Phan_Quyen frm_PhanQuyen = new Form_Phan_Quyen();
+                frm_PhanQuyen = new Form_Phan_Quyen() { fm=this,fl=this.fl};
                 frm_PhanQuyen.Show();
             }
             else
@@ -3134,12 +3135,6 @@ namespace DoAnPhanMemBanVeXe_2
             set { this.cbo_XeVe.Text = value; }
         }
 
-        /*public string Ve1
-        {
-            get { return this.cbo_XeVe.Text; }
-            set { this.cbo_XeVe.Text = value; }
-        }*/
-
         public string SDT
         {
             get { return this.txt_SoDTHanhKhach.Text; }
@@ -3152,7 +3147,10 @@ namespace DoAnPhanMemBanVeXe_2
             set { this.txt_TenHanhKhach.Text = value; }
         }
 
-     
+        private void tabControlPanel1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

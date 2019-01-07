@@ -14,8 +14,8 @@ namespace DoAnPhanMemBanVeXe_2
 {
     public partial class Form_Phan_Quyen : Form
     {
-        Form_Login fl;
-        Form_Main fm;
+        public Form_Login fl;
+        public Form_Main fm;
 
         private string lenh;
 
@@ -37,9 +37,9 @@ namespace DoAnPhanMemBanVeXe_2
         private void LoadQuyen()
         {
             
-            fm = new Form_Main();
-            fl = new Form_Login();
-            if (fl.LoginLoaiND == "Quan_Ly" || fl.LoginLoaiND == "Admin")
+            //fm = new Form_Main();
+            //fl = new Form_Login();
+            if (fm.fl.LoaiND == "Quan_Ly" || fm.fl.LoaiND == "Admin")
             {
                 grb_PhanQuyen.Enabled = true;
             }
@@ -163,9 +163,9 @@ namespace DoAnPhanMemBanVeXe_2
 
         public void UpdateQuyen()
         {
-            fm = new Form_Main();
-            fl = new Form_Login();
-            SqlCommand query = new SqlCommand("select * from PhanQuyen where IdNhanVien ='" + fl.LoginTenND + "'", Ket_noi.connect);
+            //fm = new Form_Main();
+            //fl = new Form_Login();
+            SqlCommand query = new SqlCommand("select * from PhanQuyen where IdNhanVien ='" + txt_IdNhanVien.Text+ "'", Ket_noi.connect);
             SqlDataReader DR = null;
             Ket_noi.connect.Open();
             DR = query.ExecuteReader();
