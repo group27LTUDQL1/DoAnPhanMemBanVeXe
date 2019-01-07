@@ -49,10 +49,10 @@ namespace DoAnPhanMemBanVeXe_2
         private void Duyet_danh_sach_cho_ngoi()
         {
             //fm = new Form_Main();
-            var _with1 = fm;
-            lenh = "Select IdChuyen from ChuyenXe where IdTuyen = '" + _with1.Tentuyen + "'";
-            lenh += " and  NgayDi =  '" + Strings.FormatDateTime(Convert.ToDateTime(_with1.Ngay), DateFormat.ShortDate) + "' and Gio = '" + _with1.Gio + "'";
-            lenh += " and So_Xe = '" + _with1.Ve + "'";
+            //var _with1 = fm;
+            lenh = "Select IdChuyen from ChuyenXe where IdTuyen = '" + fm.Tentuyen + "'";
+            lenh += " and  NgayDi =  '" + fm.Ngay + "' and Gio = '" + fm.Gio + "'";
+            lenh += " and So_Xe = '" + fm.Ve + "'";
             //Lay Idchuyen cua chuyen do ra
             bang_dat_ve = Ket_noi.Doc_bang(lenh);
             IdChuyen = bang_dat_ve.Rows[0]["IdChuyen"].ToString();
