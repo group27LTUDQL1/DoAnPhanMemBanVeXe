@@ -1775,14 +1775,14 @@ namespace DoAnPhanMemBanVeXe_2
         {
             //fm = new Form_Main();
             lenh = "Select IdTuyen, TenTuyen from TuyenXe";
-            bang_tuyen_xe = Ket_noi.Doc_bang(lenh);
+            bang_tuyen_xe_thoi_diem = Ket_noi.Doc_bang(lenh);
             var _with1 = cbo_GanTuyen;
-            _with1.DataSource = bang_tuyen_xe;
+            _with1.DataSource = bang_tuyen_xe_thoi_diem;
             _with1.DisplayMember = "IdTuyen";
             _with1.ValueMember = "IdTuyen";
             var _with2 = this;
             _with2.txt_TenTuyen.DataBindings.Clear();
-            _with2.txt_TenTuyen.DataBindings.Add("Text", bang_tuyen_xe, "TenTuyen");
+            _with2.txt_TenTuyen.DataBindings.Add("Text", bang_tuyen_xe_thoi_diem, "TenTuyen");
         }
 
         #region "Doc thoi diem voi tao lien ket da xong"
