@@ -15,7 +15,7 @@ namespace DoAnPhanMemBanVeXe_2
     public class Chuyen_xe
     {
         Form_Main fm;
-        private Ban_ve Ban_ve = new Ban_ve();
+        //private Ban_ve Ban_ve = new Ban_ve();
         private DataTable bang_chuyen_xe;
         private DataTable bang_tuyen_xe;
         private DataTable bang_Chi_tiet_tuyen;
@@ -605,7 +605,7 @@ namespace DoAnPhanMemBanVeXe_2
                     }
                 }
             }
-            Ban_ve.Update_Ve_xe();
+           // Ban_ve.Update_Ve_xe();
         }
 
         private bool TestInfo()

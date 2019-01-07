@@ -18,7 +18,7 @@ namespace DoAnPhanMemBanVeXe_2
         public Form_Main fm;
         private string lenh;
         private string lenh1;
-        private Ban_ve Ban_ve = new Ban_ve();
+        //private Ban_ve Ban_ve = new Ban_ve();
         private string IdChuyen;
         private DataTable bang_dat_ve;
 
@@ -42,14 +42,18 @@ namespace DoAnPhanMemBanVeXe_2
             fm.Update_Ve_xe_ban_ve();
             this.Close();
         }
-
+       
+        // Strings.FormatDateTime(Convert.ToDateTime(_with1.Ngay), DateFormat.ShortDate)
         private void Duyet_danh_sach_cho_ngoi()
         {
+
             //fm = new Form_Main();
             var _with1 = fm;
+            //DateTime dt= Convert.ToDateTime(_with1.Ngay);
+            //dt.ToString("MM/dd/yyyy");
             lenh = "Select IdChuyen from ChuyenXe where IdTuyen = '" + _with1.Tentuyen + "'";
             lenh += " and  NgayDi =  '" + Strings.FormatDateTime(Convert.ToDateTime(_with1.Ngay), DateFormat.ShortDate) + "' and Gio = '" + _with1.Gio + "'";
-            lenh += " and So_Xe = '" + _with1.cbo_XeVe.SelectedValue.ToString() + "'";
+            lenh += " and So_Xe = '" + _with1.Ve + "'";
             //Lay Idchuyen cua chuyen do ra
             bang_dat_ve = Ket_noi.Doc_bang(lenh);
             IdChuyen = bang_dat_ve.Rows[0]["IdChuyen"].ToString();
@@ -230,5 +234,6 @@ namespace DoAnPhanMemBanVeXe_2
         {
             Duyet(btn_24);
         }
+       
     }
 }

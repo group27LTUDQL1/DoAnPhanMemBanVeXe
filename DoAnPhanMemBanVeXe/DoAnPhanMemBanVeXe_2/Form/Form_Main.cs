@@ -18,13 +18,18 @@ namespace DoAnPhanMemBanVeXe_2
     {
           
         public Form_Login fl;//khởi tạo
+        public Form_Xe_7_Cho frm_xe_7;
+        public Form_Xe_16_Cho frm_xe_16;
+        public Form_Xe_25_Cho frm_xe_25;
+        public Form_Xe_30_Cho frm_xe_30;
+        public Form_Xe_45_Cho frm_xe_45;
         private bool flag = true;
         private Nguoi_dung Nguoidung = new Nguoi_dung();
         private Xe Xe = new Xe();
         public Tuyen_xe Tuyenxe = new Tuyen_xe();
         private Thoi_diem Thoidiem = new Thoi_diem();
         private Chuyen_xe ChuyenXe = new Chuyen_xe();
-        private Ban_ve Banve = new Ban_ve();
+        //private Ban_ve Banve = new Ban_ve();
         private Form_Phan_Quyen Quyen = new Form_Phan_Quyen();
         private Update_he_thong update_he_thong = new Update_he_thong();
 
@@ -495,26 +500,8 @@ namespace DoAnPhanMemBanVeXe_2
 
         //-------------------------------------------------Ban Ve-----------------------------------------------'
         #region "Da xong"
-        private void cbo_TenTuyenVe_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Chon_tuyen_ban_ve();
-        }
-
-        private void cbo_NgayVe_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //Chon_ngay_ban_ve();
-        }
-
-        private void cbo_GioVe_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Chon_xe_ban_ve();
-        }
-
-        private void cbo_XeVe_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Chon_thong_tin_xe();
-        }
-
+     
+        
         private void btn_ChonChoNgoi_Click(object sender, EventArgs e)
         {
             Chon_cho_ngoi();
@@ -2838,7 +2825,7 @@ namespace DoAnPhanMemBanVeXe_2
         #endregion
 
         //Xu ly Ban_Ve
-        #region "Xử lý class  Chuyen_Xe hoàn tất"
+        #region "Xử lý class  Ban_Ve hoàn tất"
         private DataTable bang_tuyen_xe_ban_ve;
         private DataTable bang_Thoi_diem_ngay;
         private DataTable bang_Thoi_diem_gio;
@@ -2852,7 +2839,7 @@ namespace DoAnPhanMemBanVeXe_2
 
         public void Update_Ve_xe_ban_ve()
         {
-            Doc_tuyen_xe_ban_ve();
+            //Doc_tuyen_xe_ban_ve();
             doc_bang_ve_ban_ve();
             Clear_Controls_ban_ve();
         }
@@ -2886,14 +2873,14 @@ namespace DoAnPhanMemBanVeXe_2
             _with2.cbo_XeVe.Text = "";
         }
 
-        private void Doc_tuyen_xe_ban_ve()
+        /*private void Doc_tuyen_xe_ban_ve()
         {
             //fm = new Form_Main();
             lenh = "Select Distinct ChuyenXe.IdTuyen, TenTuyen from ChuyenXe, TuyenXe where TuyenXe.IdTuyen = ChuyenXe.IdTuyen";
             bang_tuyen_xe_ban_ve = Ket_noi.Doc_bang(lenh);
             var _with3 = cbo_TenTuyenVe;
             _with3.DataSource = bang_tuyen_xe_ban_ve;
-            _with3.DisplayMember = "TenTuyen";
+            _with3.DisplayMember = "IdTuyen";
             _with3.ValueMember = "IdTuyen";
 
             //Tao lien ket
@@ -2907,7 +2894,7 @@ namespace DoAnPhanMemBanVeXe_2
                 return;
             Loc_ngay_theo_tuyen(cbo_TenTuyenVe.SelectedValue.ToString());
         }
-
+  
         private void Loc_ngay_theo_tuyen(string IdTuyen)
         {
             //fm = new Form_Main();
@@ -2976,10 +2963,10 @@ namespace DoAnPhanMemBanVeXe_2
             {
                 if (cbo_XeVe.SelectedIndex < 0)
                     return;
-                Loc_thong_tin_theo_so_xe(cbo_XeVe.Text);
+                Loc_thong_tin_theo_so_xe(cbo_XeVe.SelectedValue.ToString());
 
             }
-        }
+        }*/
 
         private void Loc_thong_tin_theo_so_xe(string So_Xe)
         {
@@ -2988,7 +2975,7 @@ namespace DoAnPhanMemBanVeXe_2
             bang_Thong_tin_xe = Ket_noi.Doc_bang(lenh);
             luoi_XeVe.DataSource = bang_Thong_tin_xe;
         }
-        public Form_Xe_16_Cho frm_xe_16;
+
         //Xu ly nut chon cho ngoi
         public void Chon_cho_ngoi()
         {
@@ -3003,7 +2990,7 @@ namespace DoAnPhanMemBanVeXe_2
 
                 if (Convert.ToInt32(So_cho_ngoi) == 7)
                 {
-                    Form_Xe_7_Cho frm_xe_7 = new Form_Xe_7_Cho() { fm=this};
+                    frm_xe_7 = new Form_Xe_7_Cho() { fm=this};
                     frm_xe_7.Show();
                 }
 
@@ -3016,19 +3003,19 @@ namespace DoAnPhanMemBanVeXe_2
 
                 if (Convert.ToInt32(So_cho_ngoi) == 25)
                 {
-                    Form_Xe_25_Cho frm_xe_25 = new Form_Xe_25_Cho() { fm = this };
+                    frm_xe_25 = new Form_Xe_25_Cho() { fm = this };
                     frm_xe_25.Show();
                 }
 
                 if (Convert.ToInt32(So_cho_ngoi) == 30)
                 {
-                    Form_Xe_30_Cho frm_xe_30 = new Form_Xe_30_Cho() { fm = this };
+                    frm_xe_30 = new Form_Xe_30_Cho() { fm = this };
                     frm_xe_30.Show();
                 }
 
                 if (Convert.ToInt32(So_cho_ngoi) == 45)
                 {
-                    Form_Xe_45_Cho frm_xe_45 = new Form_Xe_45_Cho() { fm = this };
+                    frm_xe_45 = new Form_Xe_45_Cho() { fm = this };
                     frm_xe_45.Show();
                 }
 
@@ -3125,14 +3112,14 @@ namespace DoAnPhanMemBanVeXe_2
 
         public string Tentuyen
         {
-            get { return this.cbo_TenTuyenVe.SelectedValue.ToString(); }
-            set { this.cbo_TenTuyenVe.SelectedValue = value; }
+            get { return this.cbo_TenTuyenVe.Text; }
+            set { this.cbo_TenTuyenVe.Text = value; }
         }
 
         public string Ngay
         {
             get { return this.cbo_NgayVe.Text; }
-            set { this.cbo_NgayVe.Text= value; }
+            set { this.cbo_NgayVe.Text = value; }
         }
 
         public string Gio
@@ -3164,7 +3151,9 @@ namespace DoAnPhanMemBanVeXe_2
             get { return this.txt_TenHanhKhach.Text; }
             set { this.txt_TenHanhKhach.Text = value; }
         }
+
+     
     }
 }
 
-        
+

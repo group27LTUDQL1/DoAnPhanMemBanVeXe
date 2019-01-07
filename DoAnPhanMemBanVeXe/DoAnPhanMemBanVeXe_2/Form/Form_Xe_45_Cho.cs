@@ -18,7 +18,7 @@ namespace DoAnPhanMemBanVeXe_2
         public Form_Main fm;
         private string lenh;
         private string lenh1;
-        private Ban_ve Ban_ve = new Ban_ve();
+        //private Ban_ve Ban_ve = new Ban_ve();
         private string IdChuyen;
         private DataTable bang_dat_ve;
 

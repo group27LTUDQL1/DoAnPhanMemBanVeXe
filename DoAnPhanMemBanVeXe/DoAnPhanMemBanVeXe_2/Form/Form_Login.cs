@@ -223,5 +223,7 @@ namespace DoAnPhanMemBanVeXe_2
             set { this.txtUserName.Text = value; }
         }
 
+        
+
     }
 }
