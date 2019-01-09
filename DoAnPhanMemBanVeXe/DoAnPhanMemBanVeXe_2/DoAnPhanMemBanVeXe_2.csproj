@@ -70,7 +70,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Chuyen_xe.cs" />
     <Compile Include="Form\Form_Login.cs">
       <SubType>Form</SubType>
     </Compile>
