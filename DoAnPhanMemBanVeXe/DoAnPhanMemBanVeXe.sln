@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2041
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoAnPhanMemBanVeXe_2", "DoAnPhanMemBanVeXe_2\DoAnPhanMemBanVeXe_2.csproj", "{0FE25F0A-6615-418E-82CB-723F461D547B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoAnPhanMemBanVeXe", "DoAnPhanMemBanVeXe\DoAnPhanMemBanVeXe.csproj", "{BF0B3844-9AA2-4EB0-A0C4-B977783DD808}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0FE25F0A-6615-418E-82CB-723F461D547B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0FE25F0A-6615-418E-82CB-723F461D547B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0FE25F0A-6615-418E-82CB-723F461D547B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0FE25F0A-6615-418E-82CB-723F461D547B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF0B3844-9AA2-4EB0-A0C4-B977783DD808}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF0B3844-9AA2-4EB0-A0C4-B977783DD808}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF0B3844-9AA2-4EB0-A0C4-B977783DD808}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF0B3844-9AA2-4EB0-A0C4-B977783DD808}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {6F6EFC9C-A047-4AE6-9D64-1953F897E61D}
+		SolutionGuid = {B5117EA4-5660-4860-868D-D6251EFBA0ED}
 	EndGlobalSection
 EndGlobal
